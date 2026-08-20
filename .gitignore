@@ -1,0 +1,41 @@
+# # eclipse
+bin
+
+# # idea
+
+# # gradle
+build
+
+# # $ other
+run
+
+# # Files from Forge MDK
+
+# # Generated files
+/generated/resources/*
+/fabric/src/generated/resources/cobblemon-common.accesswidener
+
+# # CobblemonMorph run
+/CobblemonMorph/run/saves/New World/entities
+/CobblemonMorph/run/saves/New World/poi
+/CobblemonMorph/run/saves/New World/region
+/CobblemonMorph/run/saves/New World/pokemon/playerpartystore/38
+/CobblemonMorph/run/saves/New World/playerdata
+/CobblemonMorph/run/saves/New World
+/CobblemonMorph/run/saves/New World/entities
+/CobblemonMorph/run/saves/New World/poi
+/CobblemonMorph/run/saves/New World/region
+/CobblemonMorph/run/saves/New World/stats
+/CobblemonMorph/run/saves/New World/serverconfig
+/CobblemonMorph/run/saves/New World/playerdata
+/CobblemonMorph/run/saves/New World/DIM1
+/CobblemonMorph/run/saves/New World/DIM-1
+/CobblemonMorph/run/saves/New World/data
+/CobblemonMorph/run/saves/New World/advancements
+/CobblemonMorph/run/saves/New World/cobblemonplayerdata
+/CobblemonMorph/run/showdown
+/CobblemonMorph/run/screenshots
+/CobblemonMorph/run/logs
+/CobblemonMorph/run/crash-reports
+/CobblemonMorph/run/config
+/CobblemonMorph/run/.architectury-transformer

@@ -1,0 +1,243 @@
+#PARSE_ESCAPES
+
+entity.morphcore.Morph.name=Morph
+
+# Keyboard bindings strings
+key.morphcore=MorphCore
+key.morphcore.action=Usar ação
+key.morphcore.creative_menu=Abrir menu morph do criativo
+key.morphcore.selector_menu=Abrir menu seletor de entidades
+key.morphcore.survival_menu=Abrir menu morph do sobrêvivencia
+key.morphcore.demorph=Demorph (Voltar para o jogador)
+
+# GUI
+morphcore.gui.body_parts.pick=Selecionar Morph
+morphcore.gui.body_parts.use_target=Usar trajeto
+morphcore.gui.body_parts.enabled=Habilitado
+morphcore.gui.body_parts.animate=Animar
+morphcore.gui.body_parts.animate_tooltip=This option enables animation of body part's transformations when parent morph gets animated
+morphcore.gui.body_parts.parts=Partes do corpo
+morphcore.gui.body_parts.limbs=Membros
+morphcore.gui.body_parts.open=Abrir partes do corpo
+morphcore.gui.body_parts.add_tooltip=Adicionar uma nova parte do corpo...
+morphcore.gui.body_parts.dupe_tooltip=Duplicar a parte do corpo atualmente selecionada...
+morphcore.gui.body_parts.remove_tooltip=Remover parte do corpo atualmente selecionada...
+morphcore.gui.body_parts.copy_tooltip=Copiar todas as partes do corpo...
+morphcore.gui.body_parts.paste_tooltip=Colar partes do corpo copiadas...
+morphcore.gui.body_parts.keys.select_prev=Selecione a parte anterior do corpo
+morphcore.gui.body_parts.keys.select_next=Selecione a próxima parte do corpo
+morphcore.gui.body_parts.context.copy=Copiar parte do corpo
+morphcore.gui.body_parts.context.paste=Colar parte do corpo
+
+morphcore.gui.add=Adicionar
+morphcore.gui.remove=Remover
+morphcore.gui.morph=Morph
+morphcore.gui.acquire=Adquirir
+morphcore.gui.acquired=Adquirido
+morphcore.gui.close=Fechar
+morphcore.gui.search=Pesquisar
+morphcore.gui.no_morph=Nenhum morph selecionado...
+morphcore.gui.morph_render_error=Ocorreu um erro ao renderizar esse morph
+
+morphcore.gui.selectors.title=Seletores de entidade
+morphcore.gui.selectors.tooltip=Com esse recurso, você pode adicionar morphs a entidades por nome específico ou tipo...
+morphcore.gui.selectors.add=Adicionar seletore
+morphcore.gui.selectors.remove=Remover seletor
+morphcore.gui.selectors.name=Nome
+morphcore.gui.selectors.type=Tipo
+morphcore.gui.selectors.match=NBT correspondente
+morphcore.gui.selectors.match_tooltip=Aqui você pode especificar uma tag NBT que deve corresponder parcialmente à tag NBT da entidade
+morphcore.gui.selectors.enabled=Habilitado
+
+morphcore.gui.morphs.keys.category=Navegação de morph
+morphcore.gui.morphs.keys.up=Selecionar morph acima
+morphcore.gui.morphs.keys.down=Selecionar morph abaixo
+morphcore.gui.morphs.keys.right=Selecionar morph à direita
+morphcore.gui.morphs.keys.left=Selecionar morph à esquerda
+
+morphcore.gui.creative.command=Copiar /morph command para o morph selecionado
+morphcore.gui.creative.edit=Editar
+morphcore.gui.creative.pick=Selecionar
+morphcore.gui.creative.quick=Editar rápido
+morphcore.gui.creative.presets=Predefinições
+morphcore.gui.creative.random=Predefinição aleatoria
+morphcore.gui.creative.keys.category=Menu de morph criativo
+morphcore.gui.creative.keys.exit=Sair do editor de morph
+morphcore.gui.creative.keys.edit=Editar morph atualmente selecionado
+morphcore.gui.creative.keys.focus=Barra de pesquisa em foco
+morphcore.gui.creative.keys.quick=Alternar menu de edição rápida
+morphcore.gui.creative.keys.acquire=Adquirir morph atualmente selecionado
+morphcore.gui.creative.keys.morph=Morph no morph atualmente selecionada
+morphcore.gui.creative.context.add_global=Adicionar aos morphs globais...
+morphcore.gui.creative.context.edit=Editar morph...
+morphcore.gui.creative.context.add_category=Adicionar uma nova categoria
+morphcore.gui.creative.context.rename_category=Renomear categoria
+morphcore.gui.creative.context.rename_category_modal=Dê um novo nome a determinada categoria...
+morphcore.gui.creative.context.remove_category=Remover categoria
+morphcore.gui.creative.context.remove_morph_modal=Tem certeza de que deseja remover esse morph? Irá desaparecer para sempre...
+morphcore.gui.creative.context.remove_category_modal=Tem certeza de que deseja remover esta categoria de morphs? Irá desaparecer para sempre...
+morphcore.gui.creative.context.clear_category=Remover todos os morphs
+morphcore.gui.creative.context.clear_category_modal=Tem certeza de que deseja remover todos os morphs nessa categoria? Irá desaparecer para sempre...
+morphcore.gui.creative.context.to_recent=Copiar para recente
+morphcore.gui.creative.context.remove_morph=Remover morph
+morphcore.gui.creative.context.copy_command=Copiar /morph command
+morphcore.gui.creative.context.copy=Copiar NBT
+morphcore.gui.creative.context.paste=Colar NBT
+morphcore.gui.creative.context.paste_modal=Cole ou insira a tag NBT do seu morph...
+
+morphcore.gui.survival.title=Menu morph do sobrêvivencia
+morphcore.gui.survival.keybind_tooltip=Com esse campo, você pode vincular uma tecla que irá transformá-lo nesse morph específico (quando você a pressiona neste menu ou no mundo)
+morphcore.gui.survival.only_favorites=Apenas favoritos
+morphcore.gui.survival.favorite=Favorito
+morphcore.gui.survival.keys.category=Menu morph do sobrêvivencia
+morphcore.gui.survival.keys.toggle_favorites=Alternar morphs favoritos
+morphcore.gui.survival.keys.focus_keybind=Tecla de foco
+
+morphcore.gui.editor.entity=Propriadades da entidade
+morphcore.gui.editor.settings=Opções do morph
+morphcore.gui.editor.keybind=Tecla
+morphcore.gui.editor.keybind_tooltip=Definir o atalho de teclado aqui permitirá que você se transforme nesse morph selecionado dessa tecla no mundo ou no menu de metamorfose de sobrevivência
+morphcore.gui.editor.display_name=Nome de exibição
+morphcore.gui.editor.health=Vida
+morphcore.gui.editor.speed=Velocidade
+morphcore.gui.editor.abilities=Abilidades
+morphcore.gui.editor.abilities_tooltip=Shift + clique nas habilidades da lista para selecionar múltiplas habilidades
+morphcore.gui.editor.attack=Ataque
+morphcore.gui.editor.action=Ação
+morphcore.gui.editor.reset=Redefinir
+morphcore.gui.editor.item_morph=Item
+morphcore.gui.editor.scale=Tamnho da entidade
+morphcore.gui.editor.texture=Selecionar textura...
+morphcore.gui.editor.texture_tooltip=Esse recurso não funcionará para todos os mobs, porque alguns mobs podem ter implementação de renderização personalizada
+morphcore.gui.editor.keys.category=Atalhos de teclado do editor Morph
+morphcore.gui.editor.keys.cycle=Alternar entre painéis de morphs
+morphcore.gui.creative.keys.onionskin=Alternar onion skins
+morphcore.gui.editor.shadow.all=Renderizar todos
+morphcore.gui.editor.shadow.noshadow=Sem sombra
+morphcore.gui.editor.shadow.onlyshadow=Apenas sombras
+morphcore.gui.editor.betterlights_shadow=Sombra
+
+morphcore.gui.editor.hitbox.enabled=Hitbox personalizada
+morphcore.gui.editor.hitbox.size=Tamanho
+morphcore.gui.editor.hitbox.width=Largura da hitbox
+morphcore.gui.editor.hitbox.height=Altura da hitbox
+morphcore.gui.editor.hitbox.sneaking_height=Altura agachado da Hitbox
+morphcore.gui.editor.hitbox.eye=Posição dos olhos
+morphcore.gui.editor.hitbox.eye_tooltip=Fator de altura dos olhos da altura, onde 0 está na parte inferior e 1 na parte superior da hitbox
+
+morphcore.gui.label.label=Título
+morphcore.gui.label.max_width=Largura máxima
+morphcore.gui.label.anchor=Âncora
+morphcore.gui.label.color=Cor do texto
+morphcore.gui.label.shadow=Sombra
+morphcore.gui.label.shadow_offset=Deslocamento da sombra
+morphcore.gui.label.shadow_color=Cor da sombra
+morphcore.gui.label.lighting=Iluminação
+morphcore.gui.label.lighting_tooltip=Quando desativado, o mapa de luzes do Minecraft não será aplicado, o que significa que brilhará no escuro. Pacotes de shaders, que têm efeito de bloom, farão com que esse morph pareça um letreiro néon
+morphcore.gui.label.background=Fundo
+morphcore.gui.label.billboard=Olhar para o jogador
+
+morphcore.gui.item.animation=Animação
+morphcore.gui.item.item_from_equipment=Do equipamento
+morphcore.gui.item.transform.none=Nenhum
+morphcore.gui.item.transform.third_person_left_hand=Left hand (3rd)
+morphcore.gui.item.transform.third_person_right_hand=Right hand (3rd)
+morphcore.gui.item.transform.first_person_left_hand=Left hand (1st)
+morphcore.gui.item.transform.first_person_right_hand=Right hand (1st)
+morphcore.gui.item.transform.head=Na cabeça
+morphcore.gui.item.transform.gui=Inventário
+morphcore.gui.item.transform.ground=No chão
+morphcore.gui.item.transform.fixed=Quadro de item
+morphcore.gui.item.equipment_slot.mainhand=Main hand
+morphcore.gui.item.equipment_slot.offhand=Off hand
+morphcore.gui.item.equipment_slot.feet=Feet
+morphcore.gui.item.equipment_slot.legs=Legs
+morphcore.gui.item.equipment_slot.chest=Chest
+morphcore.gui.item.equipment_slot.head=Head
+
+morphcore.gui.edit=Editar
+morphcore.gui.panels.nbt_data=Dados NBT
+morphcore.gui.panels.username=Nome de usuário
+morphcore.gui.panels.updating=Atualizando...
+
+morphcore.gui.animation.animates=Animar
+morphcore.gui.animation.ignored=Ignorado
+morphcore.gui.animation.animation_duration=Duração
+morphcore.gui.animation.pick_interpolation=Selecionar interpolação
+
+morphcore.gui.status.tight_space=Não há espaço suficiente para se transformar aqui
+
+# Config
+morphcore.config.title=MorphCore
+
+morphcore.config.acquiring.title=Aquisição de morphs
+morphcore.config.acquiring.tooltip=Todas as opções relacionadas às formas de obter morphs
+morphcore.config.acquiring.prevent_ghosts=Impedir fantasma
+morphcore.config.comments.acquiring.prevent_ghosts=Impede que fantasmas apareçam se o jogador já tiver o morph de um mob morto
+morphcore.config.acquiring.prevent_kill_acquire=Evitar adquirir matando
+morphcore.config.comments.acquiring.prevent_kill_acquire=Evite adquirir morphs matando morphs
+morphcore.config.acquiring.acquire_immediately=Adquir morphs imediatamente
+morphcore.config.comments.acquiring.acquire_immediately=Adquire morphs imediatamente após o jogador matar uma entidade em vez de gerar um fantasma
+
+morphcore.config.morphs.title=Morphs
+morphcore.config.morphs.tooltip=Todas as opções relacionadas ao morphing e configurações de transformação
+
+morphcore.config.morphs.keep_morphs=Reter morphs na morte
+morphcore.config.comments.morphs.keep_morphs=Reter morphs quando o jogador morrer
+morphcore.config.morphs.disable_pov=Desativar POV
+morphcore.config.comments.morphs.disable_pov=Desativa a modificação do ponto de vista. Solicitado por causa do MorePlayerModels
+morphcore.config.morphs.disable_health=Disable health scaling
+morphcore.config.comments.morphs.disable_health=Disable modifying health. Requested because of Tough as Nails
+morphcore.config.morphs.disable_morph_animation=Desativar animação de transformação
+morphcore.config.comments.morphs.disable_morph_animation=Desativa a animação de transformação
+morphcore.config.morphs.disable_morph_disguise=Disable morph hostility
+morphcore.config.comments.morphs.disable_morph_disguise=Disable the ability of morphs labeled as "hostile" to avoid being attacked by hostile mobs
+morphcore.config.morphs.disable_first_person_hand=Desabilitar mão em primeira pessoa
+morphcore.config.comments.morphs.disable_first_person_hand=Ocultar completamente a renderização manual em primeira pessoag
+morphcore.config.morphs.morph_in_tight_spaces=Permitir transformação em espaços apertados
+morphcore.config.comments.morphs.morph_in_tight_spaces=Permite a transformação mesmo que possa causar asfixia e permitir a passagem através das paredes
+morphcore.config.morphs.show_morph_idle_sounds=Mostrar sons inativos do morph
+morphcore.config.comments.morphs.show_morph_idle_sounds=Se os jogadores emitem sons de entidade inativa quando transformados
+morphcore.config.morphs.pause_gui_in_sp=Pause morph GUIs
+morphcore.config.comments.morphs.pause_gui_in_sp=Whether creative and survival morph GUIs should be paused in singleplayer
+morphcore.config.morphs.max_recent_morphs=Max. recent morphs
+morphcore.config.comments.morphs.max_recent_morphs=The maximum amount of recent morphs that can be added in the morph menu before being discarded
+morphcore.config.morphs.allow_morphing_into_category_morphs=Allow morphing into category morphs
+morphcore.config.comments.morphs.allow_morphing_into_category_morphs=When enabled, this option allows to morph into recent and custom category morphs while being in survival. This option also allows to open creative morph menu in survival
+morphcore.config.morphs.load_entity_morphs=Carregar morphs de entidades
+morphcore.config.comments.morphs.load_entity_morphs=Se os morphs de entidades devem ser carregados no menu de morph do criativo
+morphcore.config.morphs.render_bodypart_axis=Render Axis for body parts
+morphcore.config.comments.morphs.render_bodypart_axis=When enabled, body part axes are displayed in the body part editor GUI
+
+# OP access config
+op_access.config.morphcore.title=MorphCore
+op_access.config.morphcore.tooltip=Opções de acesso OP do MorphCore
+
+op_access.config.morphcore.entity_selectors=Seletores de entidades
+op_access.config.comments.morphcore.entity_selectors=Jogadores não-OP podem editar seletores de entidades?
+
+# Commands
+morphcore.commands.morph=Morph command. This command is responsible for morphing player into specified morph.\n\n/morph <username> [morph_name] [data_tag]
+morphcore.commands.acquire_morph=Acquire morph command. This command is responsible for sending a morph to a player in acquired morphs.\n\n/morph <username> <morph_name> [data_tag]
+morphcore.commands.morphcore=MorphCore server command. This command allows to manage MorphCore stuff on the server side.\n\n/morphcore reload <blacklist|morphs> - reloads MorphCore's blacklist or morph configuration
+
+morphcore.error.morph.not_player=A entidade %s não é um jogador!
+morphcore.error.morph.nbt=Ocorreu um erro durante a análise da tag de dados:\n%s
+morphcore.error.morph.factory=Não foi possível transformar em %2$s com a tag de dados fornecida
+morphcore.error.acquire=Não foi possível adquirir o morph pelo nome de %s!
+morphcore.success.morph=O jogador com o nome de %s foi transformado com sucesso em %s!
+morphcore.success.demorph=O jogador com o nome de %s foi destransformado com sucesso!
+morphcore.success.acquire=O jogador com o nome de %s foi adquirido o morph %s!
+
+# Morph categories
+morph.category.generic=Morphs não classificados
+morph.category.animal=Morphs animais
+morph.category.boss=Morphs chefe
+morph.category.acquired=Seus morphs
+morph.category.hostile=Morphs hostis
+morph.category.modded=Morphs de %s
+morph.category.recent=Morphs recentes
+
+# Morph sections and categories
+morph.section.entity=Morphs de entidade (MorphCore)
+morph.section.user=Morphs de usuário

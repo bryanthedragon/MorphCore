@@ -1,0 +1,225 @@
+#PARSE_ESCAPES
+
+entity.morphcore.Morph.name=Morph
+
+# Keyboard bindings strings
+key.morphcore=MorphCore
+key.morphcore.action=使用动作
+key.morphcore.creative_menu=打开创造模式伪装菜单
+key.morphcore.selector_menu=打开实体选择器菜单
+key.morphcore.survival_menu=打开生存模式伪装菜单
+key.morphcore.demorph=取消伪装（变回玩家）
+
+# GUI
+morphcore.gui.body_parts.pick=选择伪装
+morphcore.gui.body_parts.use_target=使用目标
+morphcore.gui.body_parts.enabled=启用
+morphcore.gui.body_parts.animate=动画
+morphcore.gui.body_parts.animate_tooltip=当父级伪装启用动画功能时，该选项可以将身体附件的变换信息直接动画化
+morphcore.gui.body_parts.parts=身体附件
+morphcore.gui.body_parts.limbs=肢体
+morphcore.gui.body_parts.open=打开身体附件
+morphcore.gui.body_parts.add_tooltip=添加一个新的身体附件...
+morphcore.gui.body_parts.dupe_tooltip=复制当前所选的身体附件...
+morphcore.gui.body_parts.remove_tooltip=移除当前所选的身体附件...
+morphcore.gui.body_parts.copy_tooltip=拷贝所有身体附件...
+morphcore.gui.body_parts.paste_tooltip=粘贴所有拷贝的身体附件...
+morphcore.gui.body_parts.keys.select_prev=选择前一个身体附件
+morphcore.gui.body_parts.keys.select_next=选择后一个身体附件
+morphcore.gui.body_parts.context.copy=拷贝身体附件
+morphcore.gui.body_parts.context.paste=粘贴身体附件
+
+morphcore.gui.add=添加
+morphcore.gui.remove=移除
+morphcore.gui.morph=伪装
+morphcore.gui.acquire=获取
+morphcore.gui.acquired=已获取
+morphcore.gui.close=关闭
+morphcore.gui.search=搜索
+morphcore.gui.no_morph=没有选中伪装...
+morphcore.gui.morph_render_error=渲染该伪装时发生错误
+
+morphcore.gui.selectors.title=实体选择器
+morphcore.gui.selectors.tooltip=通过此功能，您可以为指定名称或指定类型的实体添加伪装...
+morphcore.gui.selectors.add=添加选择器
+morphcore.gui.selectors.remove=移除选择器
+morphcore.gui.selectors.name=名称
+morphcore.gui.selectors.type=类型
+morphcore.gui.selectors.match=匹配 NBT
+morphcore.gui.selectors.match_tooltip=您可以在此处指定一个 NBT 标签，该标签必须与实体的 NBT 标签部分匹配
+morphcore.gui.selectors.enabled=启用
+
+morphcore.gui.morphs.keys.category=伪装列表导航
+morphcore.gui.morphs.keys.up=向上选择伪装
+morphcore.gui.morphs.keys.down=向下选择伪装
+morphcore.gui.morphs.keys.right=向右选择伪装
+morphcore.gui.morphs.keys.left=向左选择伪装
+
+morphcore.gui.creative.command=为所选的伪装拷贝 /morph 命令
+morphcore.gui.creative.edit=编辑
+morphcore.gui.creative.pick=选取
+morphcore.gui.creative.quick=快速编辑
+morphcore.gui.creative.presets=预设
+morphcore.gui.creative.random=随机预设
+morphcore.gui.creative.keys.category=创造模式伪装菜单
+morphcore.gui.creative.keys.exit=退出伪装编辑器
+morphcore.gui.creative.keys.edit=编辑当前所选的伪装
+morphcore.gui.creative.keys.focus=聚焦至搜索框
+morphcore.gui.creative.keys.quick=调出快速编辑菜单
+morphcore.gui.creative.keys.acquire=获取当前所选的伪装
+morphcore.gui.creative.keys.morph=伪装成当前所选的伪装
+morphcore.gui.creative.context.add_global=添加为全局伪装...
+morphcore.gui.creative.context.edit=编辑伪装...
+morphcore.gui.creative.context.add_category=添加新分类
+morphcore.gui.creative.context.rename_category=重命名分类
+morphcore.gui.creative.context.rename_category_modal=为该分类命名...
+morphcore.gui.creative.context.remove_category=移除分类
+morphcore.gui.creative.context.remove_morph_modal=您确定要移除该伪装吗？它将永远消失...
+morphcore.gui.creative.context.remove_category_modal=您确定要删除这一伪装分类吗？它将永远消失...
+morphcore.gui.creative.context.clear_category=移除所有伪装
+morphcore.gui.creative.context.clear_category_modal=您确定要删除该分类下的所有伪装吗？它们将永远消失...
+morphcore.gui.creative.context.to_recent=拷贝到最近的伪装
+morphcore.gui.creative.context.remove_morph=移除伪装
+morphcore.gui.creative.context.copy_command=拷贝 /morph 命令
+morphcore.gui.creative.context.copy=拷贝 NBT
+morphcore.gui.creative.context.paste=粘贴 NBT
+morphcore.gui.creative.context.paste_modal=粘贴或输入您伪装的 NBT 标签...
+
+morphcore.gui.survival.title=生存模式伪装菜单
+morphcore.gui.survival.keybind_tooltip=您可以通过此输入框绑定一个快捷键，该快捷键会让您变成这个伪装（当您在菜单或游戏世界中按下时触发）
+morphcore.gui.survival.only_favorites=仅显示收藏
+morphcore.gui.survival.favorite=收藏
+morphcore.gui.survival.keys.category=生存模式伪装菜单
+morphcore.gui.survival.keys.toggle_favorites=将伪装切换为收藏
+morphcore.gui.survival.keys.focus_keybind=聚焦快捷键
+
+morphcore.gui.editor.entity=实体参数
+morphcore.gui.editor.settings=伪装设置
+morphcore.gui.editor.keybind=快捷键
+morphcore.gui.editor.keybind_tooltip=在此设置快捷键后，你就可以按下这个按钮变形为当前的伪装，无论是在游戏还是在生存模式伪装菜单中都可以
+morphcore.gui.editor.display_name=显示名称
+morphcore.gui.editor.health=生命值
+morphcore.gui.editor.speed=速度
+morphcore.gui.editor.abilities=技能
+morphcore.gui.editor.abilities_tooltip=按住 Shift 并单击列表中的技能，即可进行多选
+morphcore.gui.editor.attack=攻击
+morphcore.gui.editor.action=动作
+morphcore.gui.editor.reset=重置
+morphcore.gui.editor.item_morph=物品
+morphcore.gui.editor.scale=实体缩放
+morphcore.gui.editor.texture=选取材质贴图...
+morphcore.gui.editor.texture_tooltip=该功能不一定适用于所有生物，因为部分生物拥有非常规的渲染实现。
+morphcore.gui.editor.keys.category=伪装编辑器快捷键
+morphcore.gui.editor.keys.cycle=在伪装面板间循环切换
+morphcore.gui.creative.keys.onionskin=切换洋葱皮开关
+morphcore.gui.editor.shadow.all=渲染全部
+morphcore.gui.editor.shadow.noshadow=不渲染阴影
+morphcore.gui.editor.shadow.onlyshadow=只渲染阴影
+
+morphcore.gui.editor.hitbox.enabled=自定义碰撞箱
+morphcore.gui.editor.hitbox.size=大小
+morphcore.gui.editor.hitbox.width=碰撞箱宽度
+morphcore.gui.editor.hitbox.height=碰撞箱高度
+morphcore.gui.editor.hitbox.sneaking_height=碰撞箱潜行状态高度
+morphcore.gui.editor.hitbox.eye=眼睛位置
+morphcore.gui.editor.hitbox.eye_tooltip=眼睛高度系数的高低，其中 0 表示在碰撞箱的底部，1 表示在碰撞箱的顶部
+
+morphcore.gui.label.label=标签
+morphcore.gui.label.max_width=最大宽度
+morphcore.gui.label.anchor=锚点
+morphcore.gui.label.color=文字颜色
+morphcore.gui.label.shadow=阴影
+morphcore.gui.label.shadow_offset=阴影偏移
+morphcore.gui.label.shadow_color=阴影颜色
+morphcore.gui.label.lighting=发光
+morphcore.gui.label.lighting_tooltip=禁用时，将不会应用 Minecraft 的光照图，这意味着它会在暗处发光。带有泛光（Bloom）效果的光影包，可以让这个伪装看起来像霓虹灯一样。
+morphcore.gui.label.background=背景
+morphcore.gui.label.billboard=看向玩家
+
+morphcore.gui.edit=编辑
+morphcore.gui.panels.nbt_data=NBT 数据
+morphcore.gui.panels.username=用户名
+morphcore.gui.panels.updating=更新中...
+
+morphcore.gui.animation.animates=动画
+morphcore.gui.animation.ignored=跳过
+morphcore.gui.animation.animation_duration=持续时间
+morphcore.gui.animation.pick_interpolation=选择插值
+
+morphcore.gui.status.tight_space=此处没有足够的空间来进行伪装
+
+# Config
+morphcore.config.title=MorphCore
+
+morphcore.config.acquiring.title=伪装获取
+morphcore.config.acquiring.tooltip=所有与伪装获取方式相关的选项
+
+morphcore.config.acquiring.prevent_ghosts=避免幽灵
+morphcore.config.comments.acquiring.prevent_ghosts=若玩家已有当前被杀死生物的伪装，则会避免幽灵的生成
+morphcore.config.acquiring.prevent_kill_acquire=避免通过击杀获取
+morphcore.config.comments.acquiring.prevent_kill_acquire=避免通过击杀生物的方式获取伪装
+morphcore.config.acquiring.acquire_immediately=立即获取伪装
+morphcore.config.comments.acquiring.acquire_immediately=在玩家杀死实体后立即获取伪装，而不是生成幽灵
+
+morphcore.config.morphs.title=伪装
+morphcore.config.morphs.tooltip=所有与伪装方式和伪装相关的设置
+
+morphcore.config.morphs.keep_morphs=死后保持伪装
+morphcore.config.comments.morphs.keep_morphs=在玩家死后继续保持伪装
+morphcore.config.morphs.disable_pov=禁用 POV
+morphcore.config.comments.morphs.disable_pov=禁用视点高度修改。应 MorePlayerModels 的要求加入该功能
+morphcore.config.morphs.disable_health=禁用生命值伸缩
+morphcore.config.comments.morphs.disable_health=禁用生命值修改。应意志坚定（Tough As Nails）的要求加入该功能
+morphcore.config.morphs.disable_morph_animation=禁用伪装动画
+morphcore.config.comments.morphs.disable_morph_animation=禁用伪装时的动画效果
+morphcore.config.morphs.disable_morph_disguise=禁用伪装无敌
+morphcore.config.comments.morphs.disable_morph_disguise=禁用带有“无敌”技能标签的伪装，避免被敌对生物攻击
+morphcore.config.morphs.disable_first_person_hand=禁用第一人称手臂
+morphcore.config.comments.morphs.disable_first_person_hand=完全隐藏第一人称手臂的显示
+morphcore.config.morphs.morph_in_tight_spaces=允许在狭窄空间伪装
+morphcore.config.comments.morphs.morph_in_tight_spaces=即使在可能造成窒息时进行伪装，并允许穿墙
+morphcore.config.morphs.show_morph_idle_sounds=播放伪装的空闲音效
+morphcore.config.comments.morphs.show_morph_idle_sounds=伪装后玩家是否发出实体的空闲音效
+morphcore.config.morphs.pause_gui_in_sp=打开伪装 GUI 后暂停
+morphcore.config.comments.morphs.pause_gui_in_sp=不论是创造模式或生存模式伪装菜单，在单人模式下打开伪装 GUI 后暂停游戏
+morphcore.config.morphs.max_recent_morphs=最近伪装最大值
+morphcore.config.comments.morphs.max_recent_morphs=在被丢弃之前可以添加到伪装菜单中最近的伪装的最大值
+morphcore.config.morphs.allow_morphing_into_category_morphs=允许伪装为分类中的伪装
+morphcore.config.comments.morphs.allow_morphing_into_category_morphs=启用后，该选项允许在生存模式下伪装为最近的和自定义分类伪装。该选项还允许你在生存模式下打开创造模式伪装菜单
+morphcore.config.morphs.load_entity_morphs=加载实体伪装
+morphcore.config.comments.morphs.load_entity_morphs=实体伪装是否会被加载至创造模式伪装菜单
+morphcore.config.morphs.render_bodypart_axis=为身体附件渲染座标轴
+morphcore.config.comments.morphs.render_bodypart_axis=启用后，身体附件的座标轴就会在身体附件编辑器 GUI 中进行显示。
+
+# OP access config
+op_access.config.morphcore.title=MorphCore
+op_access.config.morphcore.tooltip=MorphCore OP 访问权限选项
+
+op_access.config.morphcore.entity_selectors=实体选择器
+op_access.config.comments.morphcore.entity_selectors=非 OP 玩家是否可以编辑实体选择器？
+
+# Commands
+morphcore.commands.morph=伪装命令。该命令可以让玩家伪装成指定的伪装。\n\n/morph <用户名> [伪装名称] [数据标签]
+morphcore.commands.acquire_morph=获取伪装命令。该命令可以将伪装发送到指定玩家的已获取伪装列表。\n\n/morph <用户名> <伪装名称> [数据标签]
+morphcore.commands.morphcore=MorphCore 服务器命令。该命令可用于在服务端管理 MorphCore 的东西。\n\n/morphcore reload <blacklist|morphs> - 重新载入 MorphCore 的黑名单或伪装配置
+
+morphcore.error.morph.not_player=实体 %s 不是玩家！
+morphcore.error.morph.nbt=在解析数据标签: \n%s 时出现错误
+morphcore.error.morph.factory=无法通过给定的数据标签伪装为 %2$s
+morphcore.error.acquire=无法通过名称: %s 获取伪装！
+morphcore.success.morph=玩家 %s 成功伪装成了 %s！
+morphcore.success.demorph=玩家 %s 成功取消了伪装！
+morphcore.success.acquire=玩家 %s 成功获取了 %s 伪装！
+
+# Morph categories
+morph.category.generic=未分类伪装
+morph.category.animal=动物伪装
+morph.category.boss=Boss 伪装
+morph.category.acquired=您的伪装
+morph.category.hostile=敌对生物伪装
+morph.category.modded=来自 %s 的伪装
+morph.category.recent=最近的伪装
+
+# Morph sections and categories
+morph.section.entity=实体伪装（MorphCore）
+morph.section.user=玩家伪装

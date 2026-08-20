@@ -1,0 +1,33 @@
+package bryanthedragon.morph.config;
+
+import bryanthedragon.morph.MorphCore.MorphLib;
+import bryanthedragon.morph.network.morphlib.Dispatcher;
+import bryanthedragon.morph.network.morphlib.common.PacketConfig;
+
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.server.level.ServerPlayer;
+
+import net.minecraftforge.event.entity.player.PlayerEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+
+public class ConfigHandler
+{
+    @SubscribeEvent
+    public void onPlayerLogIn(PlayerEvent.PlayerLoggedInEvent event)
+    {
+        MinecraftServer server = event.player.getServer();
+
+        if (server == null || server.isSingleplayer() || !(event.player instanceof ServerPlayer))
+        {
+            return;
+        }
+
+        for (Config config : MorphLib.proxy.configs.modules.values())
+        {
+            if (config.hasSyncable())
+            {
+                Dispatcher.sendTo(new PacketConfig(config.filterSyncable(), true), (ServerPlayer) event.player);
+            }
+        }
+    }
+}
