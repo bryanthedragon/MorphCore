@@ -1,0 +1,88 @@
+package bryanthedragon.morph.client.gui.utils;
+
+import bryanthedragon.morph.client.gui.framework.elements.GuiElement;
+import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiLabel;
+import bryanthedragon.morph.client.gui.utils.keys.IKey;
+
+import net.minecraft.client.Minecraft;
+
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
+@OnlyIn(Dist.CLIENT)
+public class Elements
+{
+    public static GuiElement row(Minecraft mc, int margin, GuiElement... elements)
+    {
+        return row(mc, margin, 0, elements);
+    }
+
+    public static GuiElement row(Minecraft mc, int margin, int padding, GuiElement... elements)
+    {
+        return row(mc, margin, padding, 0, elements);
+    }
+
+    public static GuiElement row(Minecraft mc, int margin, int padding, int height, GuiElement... elements)
+    {
+        GuiElement element = new GuiElement(mc);
+
+        element.flex().row(margin).padding(padding).height(height);
+        element.add(elements);
+
+        return element;
+    }
+
+    public static GuiElement column(Minecraft mc, int margin, GuiElement... elements)
+    {
+        return column(mc, margin, 0, elements);
+    }
+
+    public static GuiElement column(Minecraft mc, int margin, int padding, GuiElement... elements)
+    {
+        return column(mc, margin, padding, 0, elements);
+    }
+
+    public static GuiElement column(Minecraft mc, int margin, int padding, int height, GuiElement... elements)
+    {
+        GuiElement element = new GuiElement(mc);
+
+        element.flex().column(margin).vertical().stretch().padding(padding).height(height);
+        element.add(elements);
+
+        return element;
+    }
+
+    public static GuiLabel label(IKey label)
+    {
+        return label(label, Minecraft.getInstance().font.lineHeight);
+    }
+
+    public static GuiLabel label(IKey label, Icon leftIcon, Icon rightIcon)
+    {
+        return label(label, Minecraft.getInstance().font.lineHeight, leftIcon, rightIcon);
+    }
+
+    public static GuiLabel label(IKey label, int height)
+    {
+        return label(label, height, 0xffffff);
+    }
+
+    public static GuiLabel label(IKey label, int height, Icon leftIcon, Icon rightIcon)
+    {
+        return label(label, height, 0xffffff, leftIcon, rightIcon);
+    }
+
+    public static GuiLabel label(IKey label, int height, int color)
+    {
+        return label(label, height, color, null, null);
+    }
+
+    public static GuiLabel label(IKey label, int height, int color, Icon leftIcon, Icon rightIcon)
+    {
+        GuiLabel element = new GuiLabel(Minecraft.getInstance(), label, color, leftIcon, rightIcon);
+
+        element.flex().h(height);
+
+        return element;
+    }
+}

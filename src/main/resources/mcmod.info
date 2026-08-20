@@ -1,0 +1,16 @@
+[
+	{
+		"modid": "morphcore",
+  		"name": "MorphCore",
+  		"description": "Allows players to morph into different mobs and more!",
+  		"version": "${version}",
+  		"mcversion": "${mcversion}",
+  		"url": "https://www.curseforge.com/minecraft/mc-mods/morphcore/",
+  		"updateJSON": "https://github.com/bryanthedragon/MorphCore/blob/main/version.json",
+  		"updateUrl": "",
+  		"authorList": ["bryanthedragon"],
+  		"credits": "",
+		"logoFile": "",
+		"screenshots": [],	
+	}
+]
