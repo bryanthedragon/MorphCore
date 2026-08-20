@@ -1,0 +1,128 @@
+package bryanthedragon.morph.api;
+
+import bryanthedragon.morph.MorphCore;
+import bryanthedragon.morph.api.events.AcquireMorphEvent;
+import bryanthedragon.morph.api.events.MorphEvent;
+import bryanthedragon.morph.api.morphs.AbstractMorph;
+import bryanthedragon.morph.capabilities.morphing.IMorphing;
+import bryanthedragon.morph.capabilities.morphing.Morphing;
+import bryanthedragon.morph.network.Dispatcher;
+import bryanthedragon.morph.network.common.creative.PacketAcquireMorph;
+import bryanthedragon.morph.network.common.creative.PacketMorph;
+import bryanthedragon.morph.network.common.survival.PacketMorphPlayer;
+import bryanthedragon.morph.network.common.survival.PacketMorphState;
+
+import net.minecraft.world.entity.player.Player;
+
+import net.minecraftforge.common.MinecraftForge;
+
+/**
+ * Morph API class
+ * 
+ * This class provides public API for morphing the player. Let me know which 
+ * methods I may add to simplify your life :D
+ * 
+ * Acquired morphs and favorites are sent only to the owner players. So you 
+ * can't access this information from the client side. However, you can hit me 
+ * up, and prove me why I should send that information to the other players :D
+ * 
+ * Use this API on the server side, please. Thanks!
+ */
+public class MorphAPI
+{
+    /**
+     * Demorph given player 
+     */
+    public static boolean demorph(Player player)
+    {
+        return morph(player, null, false);
+    }
+
+    /**
+     * Morph a player into given morph with given force flag. 
+     * 
+     * @return true, if player was morphed successfully
+     */
+    public static boolean morph(Player player, AbstractMorph morph, boolean force)
+    {
+        IMorphing morphing = Morphing.get(player);
+
+        if (morphing == null)
+        {
+            return false;
+        }
+
+        if (!force && !player.noClip && !MorphCore.morphInTightSpaces.get() && !EntityUtils.canPlayerMorphFit(player, morphing.getCurrentMorph(), morph))
+        {
+            if (!player.world.isRemote)
+            {
+                player.sendStatusMessage(new TextComponentTranslation("morphcore.gui.status.tight_space"), true);
+            }
+
+            return false;
+        }
+
+        MorphEvent.Pre event = new MorphEvent.Pre(player, morph, force);
+
+        if (MinecraftForge.EVENT_BUS.post(event))
+        {
+            return false;
+        }
+
+        boolean morphed = morphing.setCurrentMorph(event.morph, player, event.force);
+
+        if (!player.world.isRemote && morphed)
+        {
+            Dispatcher.sendTo(new PacketMorph(morph), (PlayerMP) player);
+            Dispatcher.sendToTracked(player, new PacketMorphPlayer(player.getEntityId(), morph));
+            Dispatcher.sendTo(new PacketMorphState(player, morphing), (PlayerMP) player);
+        }
+
+        if (morphed)
+        {
+            MinecraftForge.EVENT_BUS.post(new MorphEvent.Post(player, event.morph, force));
+        }
+
+        return morphed;
+    }
+
+    public static boolean acquire(Player player, AbstractMorph morph)
+    {
+        return acquire(player, morph, true);
+    }
+
+    /**
+     * Make given player acquire a given morph. Usable on both sides, but it's 
+     * better to use it on the server.
+     * 
+     * @return true, if player has acquired a morph
+     */
+    public static boolean acquire(Player player, AbstractMorph morph, boolean notify)
+    {
+        if (morph == null)
+        {
+            return false;
+        }
+
+        AcquireMorphEvent.Pre event = new AcquireMorphEvent.Pre(player, morph);
+
+        if (MinecraftForge.EVENT_BUS.post(event))
+        {
+            return false;
+        }
+
+        boolean acquired = Morphing.get(player).acquireMorph(event.morph);
+
+        if (notify && !player.world.isRemote && acquired)
+        {
+            Dispatcher.sendTo(new PacketAcquireMorph(event.morph), (PlayerMP) player);
+        }
+
+        if (acquired)
+        {
+            MinecraftForge.EVENT_BUS.post(new AcquireMorphEvent.Post(player, event.morph));
+        }
+
+        return acquired;
+    }
+}

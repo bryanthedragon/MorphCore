@@ -1,0 +1,221 @@
+#PARSE_ESCAPES
+
+entity.morphcore.Morph.name=Морф
+
+# Keyboard bindings strings
+key.morphcore=Метаморф
+key.morphcore.action=Использовать действие
+key.morphcore.creative_menu=Открыть меню превращения творчества
+key.morphcore.selector_menu=Открыть меню селекторов сущностей
+key.morphcore.survival_menu=Открыть меню превращения выживания
+key.morphcore.demorph=Сбросить морф (обратно стать игроком)
+
+# GUI
+morphcore.gui.body_parts.pick=Выбрать морф
+morphcore.gui.body_parts.use_target=Использовать цель
+morphcore.gui.body_parts.enabled=Включено
+morphcore.gui.body_parts.animate=Анимируется
+morphcore.gui.body_parts.animate_tooltip=Этот параметр включает анимацию трансформаций частей тела вместе с анимацией родительского морфа
+morphcore.gui.body_parts.parts=Части тела
+morphcore.gui.body_parts.limbs=Конечности
+morphcore.gui.body_parts.open=Открыть части тела
+morphcore.gui.body_parts.add_tooltip=Добавить новую часть тела...
+morphcore.gui.body_parts.dupe_tooltip=Клонировать выбранную часть тела...
+morphcore.gui.body_parts.remove_tooltip=Удалить выбранную часть тела...
+morphcore.gui.body_parts.copy_tooltip=Скопировать все части тела...
+morphcore.gui.body_parts.paste_tooltip=Вставить скопированные части тела...
+morphcore.gui.body_parts.keys.select_prev=Выбрать предыдущую часть тела
+morphcore.gui.body_parts.keys.select_next=Выбрать следующую часть тела
+morphcore.gui.body_parts.context.copy=Скопировать часть тела
+morphcore.gui.body_parts.context.paste=Вставить скопированную часть тела
+
+morphcore.gui.add=Добавить
+morphcore.gui.remove=Удалить
+morphcore.gui.morph=Превратиться
+morphcore.gui.acquire=Приобрести
+morphcore.gui.acquired=Приобретён
+morphcore.gui.close=Закрыть
+morphcore.gui.search=Поиск
+morphcore.gui.no_morph=Не выбрано ни одного морфа...
+morphcore.gui.morph_render_error=В отображении этого морфа произошла ошибка
+
+morphcore.gui.selectors.title=Селектор существ
+morphcore.gui.selectors.tooltip=С этой функцией, вы можете добавлять морфы существам по точному имени или типу...
+morphcore.gui.selectors.add=Добавить селектор
+morphcore.gui.selectors.remove=Удалить селектор
+morphcore.gui.selectors.name=Название
+morphcore.gui.selectors.type=Тип
+morphcore.gui.selectors.match=Сходящийся NBT
+morphcore.gui.selectors.match_tooltip=Здесь вы можете указать NBT-тэг который должен частично сходиться с NBT-тэгом существа
+morphcore.gui.selectors.enabled=Включён
+
+morphcore.gui.morphs.keys.category=Навигация по морфам
+morphcore.gui.morphs.keys.up=Выбрать морф сверху
+morphcore.gui.morphs.keys.down=Выбрать морф снизу
+morphcore.gui.morphs.keys.right=Выбрать морф справа
+morphcore.gui.morphs.keys.left=Выбрать морф слева
+
+morphcore.gui.creative.command=Копировать компанду /morph для выбранного морфа
+morphcore.gui.creative.edit=Редактировать
+morphcore.gui.creative.pick=Выбрать
+morphcore.gui.creative.quick=Быстрое редактирование
+morphcore.gui.creative.presets=Предустановки
+morphcore.gui.creative.random=Случайная предустановка
+morphcore.gui.creative.keys.category=Меню превращения творчества
+morphcore.gui.creative.keys.exit=Выйти из редактора морфов
+morphcore.gui.creative.keys.edit=Редактировать выбранный морф
+morphcore.gui.creative.keys.focus=Панель поиска
+morphcore.gui.creative.keys.quick=Включить меню быстрого редактирования
+morphcore.gui.creative.keys.acquire=Приобрести выбранный морф
+morphcore.gui.creative.keys.morph=Превратиться в выбранный морф
+morphcore.gui.creative.context.add_global=Добавить к глобальным морфам...
+morphcore.gui.creative.context.edit=Редактировать морф...
+morphcore.gui.creative.context.add_category=Добавить новую категорию
+morphcore.gui.creative.context.rename_category=Переименовать категорию
+morphcore.gui.creative.context.rename_category_modal=Дайте новое имя выбранной категории...
+morphcore.gui.creative.context.remove_category=Удалить категорию
+morphcore.gui.creative.context.remove_morph_modal=Уверенны, что хотите удалить этот морф? Он пропадёт навсегда...
+morphcore.gui.creative.context.remove_category_modal=Вы уверены, что хотите удалить эту категорию морфов? Она пропадёт навсегда...
+morphcore.gui.creative.context.clear_category=Удалить все морфы
+morphcore.gui.creative.context.clear_category_modal=Вы уверены, что хотите удалить все морфы из этой категории? Они пропадут оттуда навсегда... 
+morphcore.gui.creative.context.to_recent=Скопировать к недавним
+morphcore.gui.creative.context.remove_morph=Удалить морф
+morphcore.gui.creative.context.copy_command=Скопировать команду /morph
+morphcore.gui.creative.context.copy=Копировать NBT
+morphcore.gui.creative.context.paste=Вставить NBT
+morphcore.gui.creative.context.paste_modal=Вставьте или введите NBT-тэг вашего морфа...
+
+morphcore.gui.survival.title=Меню Превращения Выживания
+morphcore.gui.survival.keybind_tooltip=В этом поле вы можете назначить клавишу, на которую вы превратитесь в конкретный морф (всякий раз когда вы нажмёте её в этом меню или при игре)
+morphcore.gui.survival.only_favorites=Только избранные
+morphcore.gui.survival.favorite=Избранные
+morphcore.gui.survival.keys.category=Меню превращения выживания
+morphcore.gui.survival.keys.toggle_favorites=Включить избранные морфы
+morphcore.gui.survival.keys.focus_keybind=Клавиша
+
+morphcore.gui.editor.entity=Свойства сущности
+morphcore.gui.editor.settings=Параметры морфа
+morphcore.gui.editor.keybind=Комбинация клавиш
+morphcore.gui.editor.keybind_tooltip=Привязка морфа к клавише позволит вам превращаться в этот морф посредством нажатия назначенной клавиши либо при игре, либо в меню превращения выживания
+morphcore.gui.editor.display_name=Отображать имя
+morphcore.gui.editor.health=Здоровье
+morphcore.gui.editor.speed=Скорость
+morphcore.gui.editor.abilities=Способности
+morphcore.gui.editor.abilities_tooltip=Нажмите клавишу шифт и кликните на способности из списка, чтобы выбрать сразу несколько способностей
+morphcore.gui.editor.attack=Атака
+morphcore.gui.editor.action=Действие
+morphcore.gui.editor.reset=Сбросить
+morphcore.gui.editor.item_morph=Предмет
+morphcore.gui.editor.scale=Размер сущности
+morphcore.gui.editor.texture=Выбрать текстуру...
+morphcore.gui.editor.texture_tooltip=Эта опция работает не для всех мобов, так как у некоторых присутствует свой собственный метод рендера
+morphcore.gui.editor.keys.category=Клавиши редактора морфов
+morphcore.gui.editor.keys.cycle=Зацикливание между панелями морфов
+
+morphcore.gui.editor.hitbox.enabled=Пользовательский хитбокс
+morphcore.gui.editor.hitbox.size=Размер
+morphcore.gui.editor.hitbox.width=Ширина хитбокса
+morphcore.gui.editor.hitbox.height=Высота хитбокса
+morphcore.gui.editor.hitbox.sneaking_height=Высота хитбокса в крадущейся позе
+morphcore.gui.editor.hitbox.eye=Местоположение глаз
+morphcore.gui.editor.hitbox.eye_tooltip=Фактор высоты глаз от общей высоты, где 0 означает низ, а 1 - верх хитбокса
+
+morphcore.gui.label.label=Название
+morphcore.gui.label.max_width=Максимальная ширина
+morphcore.gui.label.anchor=Якорная точка
+morphcore.gui.label.color=Цвет текста
+morphcore.gui.label.shadow=Тень
+morphcore.gui.label.shadow_offset=Смещение тени
+morphcore.gui.label.shadow_color=Цвет тени
+morphcore.gui.label.lighting=Свечение
+morphcore.gui.label.lighting_tooltip=Если отключить этот параметр, то карта свечения из Майнкрафта не будет примененятся на морф, то есть морф применения будет светиться в темноте. С шейдерами, у которых есть опция блума (bloom), отключение этой настройки у морфа даст результат в виде "неонового" свечения
+morphcore.gui.label.background=Фон
+morphcore.gui.label.billboard=Смотреть на игрока
+
+morphcore.gui.edit=Редактировать
+morphcore.gui.panels.nbt_data=NBT-данные
+morphcore.gui.panels.username=Имя пользователя
+morphcore.gui.panels.updating=Обновление...
+
+morphcore.gui.animation.animates=Анимируется
+morphcore.gui.animation.ignored=Игнорируется
+morphcore.gui.animation.animation_duration=Длительность
+morphcore.gui.animation.pick_interpolation=Выбрать интерполяцию
+
+morphcore.gui.status.tight_space=Здесь не хватает места для превращения
+
+# Config
+morphcore.config.title=Метаморф
+
+morphcore.config.acquiring.title=Приобретение морфов
+morphcore.config.acquiring.tooltip=Все параметры, касающиеся получения морфов
+
+morphcore.config.acquiring.prevent_ghosts=Отключить появление призраков
+morphcore.config.comments.acquiring.prevent_ghosts=Отключить появление призраков если у игрока уже есть морф убитого существа
+morphcore.config.acquiring.prevent_kill_acquire=Отключить приобретение убийством
+morphcore.config.comments.acquiring.prevent_kill_acquire=Отключить приобретение морфов убийством морфов
+morphcore.config.acquiring.acquire_immediately=Приобретать морф мгновенно
+morphcore.config.comments.acquiring.acquire_immediately=Приобретать морфы сразу после того как игрок убивает существо вместо необходимости ловить призрака
+
+morphcore.config.morphs.title=Морфы
+morphcore.config.morphs.tooltip=Все параметры, касающиеся морфов и их настроек
+
+morphcore.config.morphs.keep_morphs=Сохранять приобретённые морфы после смерти
+morphcore.config.comments.morphs.keep_morphs=Сохранять приобретённые морфы после смерти игрока
+morphcore.config.morphs.disable_pov=Отключить поле зрения
+morphcore.config.comments.morphs.disable_pov=Отключить изменение значения поля зрения. Опцию запросили из-за проблем с модом MorePlayerModels (поставьте на true если у вас дёргается экран)
+morphcore.config.morphs.disable_health=Отключить масштабирование здоровья
+morphcore.config.comments.morphs.disable_health=Отключить изменение очков здоровья. Опцию запросили из-за мода Tough as Nails
+morphcore.config.morphs.disable_morph_animation=Отключить анимацию превращения
+morphcore.config.comments.morphs.disable_morph_animation=Отключает анимацию превращения (частицы и так далее)
+morphcore.config.morphs.disable_morph_disguise=Отключить враждебность морфов
+morphcore.config.comments.morphs.disable_morph_disguise=Отключает способности морфов с пометкой "враждебные" дабы не быть атакованным враждебными мобами
+morphcore.config.morphs.disable_first_person_hand=Отключить руку в режиме от первого лица
+morphcore.config.comments.morphs.disable_first_person_hand=Полностью отключить отображение руки в режиме от первого лица
+morphcore.config.morphs.morph_in_tight_spaces=Разрешить превращение в узких пространствах
+morphcore.config.comments.morphs.morph_in_tight_spaces=Разрешает превращение даже при возможности удушья, а также разрешает проходить сквозь стены
+morphcore.config.morphs.show_morph_idle_sounds=Проигрывать звуки бездействия морфов
+morphcore.config.comments.morphs.show_morph_idle_sounds=Проигрываются ли звуки бездействия морфа, в который превратился игрок
+morphcore.config.morphs.pause_gui_in_sp=Остановка интерфейса превращения
+morphcore.config.comments.morphs.pause_gui_in_sp=Происходит ли остановка времени при открытии интерфейса превращения режимов выживания и творчества в одиночной игре
+morphcore.config.morphs.max_recent_morphs=Максимальное количество недавних морфов
+morphcore.config.comments.morphs.max_recent_morphs=Максимально возможное количество недавних морфов, которые добавляются в меню морфов перед удалением
+morphcore.config.morphs.allow_morphing_into_category_morphs=Позволить превращение в категории морфов
+morphcore.config.comments.morphs.allow_morphing_into_category_morphs=Если включена, эта опция позволит превращаться в недавние морфы и морфы из пользовательских категорий во время нахождения в режиме выживания. Эта опция также позволяет открывать меню метаморфа из режима творчества в режиме выживания
+morphcore.config.morphs.load_entity_morphs=Загрузить морфы существ
+morphcore.config.comments.morphs.load_entity_morphs=Должны ли морфы существ быть загруженными в меню превращения творчества
+morphcore.config.morphs.render_bodypart_axis=Отображать оси частей тела 
+morphcore.config.comments.morphs.render_bodypart_axis=Если включена, опция будет показывать оси частей тела в интерфейса редактора
+
+# OP access config
+op_access.config.morphcore.title=Метаморф
+op_access.config.morphcore.tooltip=Настройки ОП-доступа к Метаморфу
+
+op_access.config.morphcore.entity_selectors=Селекторы сущностей
+op_access.config.comments.morphcore.entity_selectors=Может ли игрок, не являющийся оператором, редактировать селекторы сущностей?
+
+# Commands
+morphcore.commands.morph=Команда превращения. Эта команда отвечает за превращение игрока в какой-либо конкретный морф.\n\n/morph <username> [morph_name] [data_tag]
+morphcore.commands.acquire_morph=Команда приобретения морфа. Эта команда отвечает за добавление морфа в список морфов приобретённых игроком.\n\n/morph <username> <morph_name> [data_tag]
+morphcore.commands.morphcore=Серверная команда Метаморфа. Эта команда позволяет вам управлять серверными параметрами Метаморфа.\n\n/morphcore reload <blacklist|morphs> - перезагрузить черный список Метаморфа или конфигурацию морфа
+
+morphcore.error.morph.not_player=Сущность %s не является игроком!
+morphcore.error.morph.nbt=Произошла ошибка во время синтаксического анализа (парсинга) дата-тэга:\n%s
+morphcore.error.morph.factory=Невозможно превратиться в морф %2$s с заданным тэгом данных
+morphcore.error.acquire=Невозможно приобрести морф с названием %s!
+morphcore.success.morph=Игрок с никнеймом %s успешно превратился в морф %s!
+morphcore.success.demorph=Игрок с никнеймом %s успешно сбросил морф!
+morphcore.success.acquire=Игрок с никнеймом %s успешно приобрёл морф %s!
+
+# Morph categories
+morph.category.generic=Неотсортированные морфы
+morph.category.animal=Морфы животных
+morph.category.boss=Морфы боссов
+morph.category.acquired=Ваши морфы
+morph.category.hostile=Враждебные морфы
+morph.category.modded=Морфы из %s
+morph.category.recent=Последние морфы
+
+# Секции и категории морфов
+morph.section.entity=Морфы сущностей (Метаморфа)
+morph.section.user=Пользовательские морфы

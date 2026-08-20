@@ -1,0 +1,270 @@
+package bryanthedragon.morph.client.gui.survival;
+
+import bryanthedragon.morph.client.gui.framework.GuiBase;
+import bryanthedragon.morph.client.gui.framework.elements.GuiElement;
+import bryanthedragon.morph.client.gui.framework.elements.GuiScrollElement;
+import bryanthedragon.morph.client.gui.framework.elements.buttons.GuiButtonElement;
+import bryanthedragon.morph.client.gui.framework.elements.buttons.GuiToggleElement;
+import bryanthedragon.morph.client.gui.framework.elements.input.GuiKeybindElement;
+import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiDraw;
+import bryanthedragon.morph.client.gui.utils.Elements;
+import bryanthedragon.morph.client.gui.utils.keys.IKey;
+import bryanthedragon.morph.utils.ColorUtils;
+import bryanthedragon.morph.ClientProxy;
+import bryanthedragon.morph.MorphCore;
+import bryanthedragon.morph.api.MorphManager;
+import bryanthedragon.morph.api.morphs.AbstractMorph;
+import bryanthedragon.morph.capabilities.morphing.IMorphing;
+import bryanthedragon.morph.capabilities.morphing.Morphing;
+import bryanthedragon.morph.network.Dispatcher;
+import bryanthedragon.morph.network.common.creative.PacketMorph;
+import bryanthedragon.morph.network.common.survival.PacketFavorite;
+import bryanthedragon.morph.network.common.survival.PacketKeybind;
+import bryanthedragon.morph.network.common.survival.PacketRemoveMorph;
+import bryanthedragon.morph.network.common.survival.PacketSelectMorph;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.Gui;
+import net.minecraft.world.entity.player.Player;
+
+import org.lwjgl.glfw.GLFW;
+
+/**
+ * Survival morph menu GUI
+ * 
+ * This is menu which allows users to manage their acquired morphs, favorite them,
+ * setup keybinds, and when they're in creative mode, they can also manage
+ * recent and morphs from custom categories.
+ */
+public class GuiSurvivalScreen extends GuiBase
+{
+    public GuiSurvivalMorphs morphs;
+    public GuiElement sidebar;
+    public GuiToggleElement onlyFavorite;
+
+    public GuiButtonElement morph;
+    public GuiButtonElement remove;
+    public GuiKeybindElement keybind;
+    public GuiToggleElement favorite;
+
+    private boolean creative;
+    private boolean allowed;
+
+    public GuiSurvivalScreen()
+    {
+        super();
+
+        Minecraft mc = this.context.mc;
+
+        this.morph = new GuiButtonElement(mc, IKey.lang("morphcore.gui.morph"), this::morph);
+        this.remove = new GuiButtonElement(mc, IKey.lang("morphcore.gui.remove"), this::remove);
+        this.keybind = new GuiKeybindElement(mc, this::setKeybind);
+        this.keybind.tooltip(IKey.lang("morphcore.gui.survival.keybind_tooltip"));
+        this.favorite = new GuiToggleElement(mc, IKey.lang("morphcore.gui.survival.favorite"), this::favorite);
+
+        this.sidebar = new GuiScrollElement(mc);
+        this.sidebar.flex().relative(this.root).y(20).w(140).hTo(this.root.resizer(), 1F).column(5).stretch().height(20).padding(10);
+        this.sidebar.add(Elements.row(mc, 5, 0, 20, this.morph, this.remove), this.keybind, this.favorite);
+
+        this.onlyFavorite = new GuiToggleElement(mc, IKey.lang("morphcore.gui.survival.only_favorites"), (button) -> this.morphs.setFavorite(button.isToggled()));
+        this.onlyFavorite.flex().relative(this.root).x(1F).w(120).h(20).anchor(1F, 0F);
+
+        this.morphs = new GuiSurvivalMorphs(mc);
+        this.morphs.flex().relative(this.root).x(140).y(20).wTo(this.root.resizer(), 1F).hTo(this.root.resizer(), 1F).column(0).vertical().stretch().scroll();
+
+        this.root.flex().xy(0.5F, 0.5F).wh(1F, 1F).anchor(0.5F, 0.5F).maxW(500).maxH(300);
+        this.root.add(this.morphs, this.sidebar, this.onlyFavorite);
+
+        /* Setup keybinds */
+        IKey category = IKey.lang("morphcore.gui.survival.keys.category");
+
+        this.root.keys().register(this.morph.label, GLFW.GLFW_KEY_ENTER, () -> this.morph.clickItself(GuiBase.getCurrent())).category(category);
+        this.root.keys().register(this.remove.label, GLFW.GLFW_KEY_BACKSPACE, () -> this.remove.clickItself(GuiBase.getCurrent())).category(category);
+        this.root.keys().register(this.favorite.label, GLFW.GLFW_KEY_F, () -> this.favorite.clickItself(GuiBase.getCurrent())).category(category);
+        this.root.keys().register(IKey.lang("morphcore.gui.survival.keys.toggle_favorites"), GLFW.GLFW_KEY_O, () -> this.onlyFavorite.clickItself(GuiBase.getCurrent())).category(category);
+        this.root.keys().register(IKey.lang("morphcore.gui.survival.keys.focus_keybind"), GLFW.GLFW_KEY_K, () -> this.keybind.clickItself(GuiBase.getCurrent())).category(category);
+    }
+
+    public boolean doesGuiPauseGame()
+    {
+        return MorphCore.pauseGUIInSP.get();
+    }
+
+    /**
+     * Open the survival morph menu and update the morphs element
+     */
+    public GuiSurvivalScreen open()
+    {
+        Player player = Minecraft.getInstance().player;
+        IMorphing cap = Morphing.get(player);
+        boolean creative = player.isCreative();
+        boolean allowed = MorphCore.allowMorphingIntoCategoryMorphs.get();
+
+        if (this.creative != creative || this.allowed != allowed || creative || this.morphs.sections.isEmpty())
+        {
+            this.creative = creative;
+            this.allowed = allowed;
+            this.morphs.setupSections(creative, (section) -> this.fill(section.morph));
+        }
+
+        this.setSelected(cap.getCurrentMorph());
+
+        return this;
+    }
+
+    /**
+     * Set given morph selected
+     */
+    public void setSelected(AbstractMorph morph)
+    {
+        this.morphs.setSelected(morph);
+        this.fill(this.morphs.getSelected());
+    }
+
+    /**
+     * Fill the fields with the data from current morph
+     */
+    public void fill(AbstractMorph morph)
+    {
+        this.morph.setEnabled(morph != null);
+        this.remove.setEnabled(morph != null);
+        this.keybind.setEnabled(morph != null);
+        this.keybind.setKeybind(GLFW.GLFW_KEY_UNKNOWN);
+        this.favorite.setEnabled(morph != null);
+
+        if (morph != null)
+        {
+            this.favorite.toggled(morph.favorite);
+            this.keybind.setKeybind(morph.keybind);
+        }
+    }
+
+    /**
+     * Morph player into currently selected morph
+     */
+    private void morph(GuiButtonElement button)
+    {
+        AbstractMorph morph = this.morphs.getSelected();
+
+        if (morph != null)
+        {
+            if (this.morphs.isAcquiredSelected())
+            {
+                Dispatcher.sendToServer(new PacketSelectMorph(this.indexOf(morph)));
+            }
+            else
+            {
+                Dispatcher.sendToServer(new PacketMorph(morph));
+            }
+
+            this.closeScreen();
+        }
+    }
+
+    /**
+     * Remove currently selected morph
+     */
+    private void remove(GuiButtonElement button)
+    {
+        AbstractMorph morph = this.morphs.getSelected();
+
+        if (morph != null)
+        {
+            if (this.morphs.isAcquiredSelected())
+            {
+                Dispatcher.sendToServer(new PacketRemoveMorph(this.indexOf(morph)));
+            }
+            else
+            {
+                this.morphs.selected.category.remove(morph);
+            }
+
+            this.setSelected(null);
+        }
+    }
+
+    /**
+     * Set keybind of the current morph
+     */
+    private void setKeybind(int keybind)
+    {
+        AbstractMorph morph = this.morphs.getSelected();
+
+        if (morph != null)
+        {
+            if (keybind == ClientProxy.keys.keyDemorph.getKeyCode())
+            {
+                this.keybind.setKeybind(morph.keybind);
+
+                return;
+            }
+
+            keybind = keybind == GLFW.GLFW_KEY_ESCAPE ? -1 : keybind;
+            morph.keybind = keybind;
+
+            if (keybind == -1)
+            {
+                this.keybind.setKeybind(GLFW.GLFW_KEY_UNKNOWN);
+            }
+
+            if (this.morphs.isAcquiredSelected())
+            {
+                Dispatcher.sendToServer(new PacketKeybind(this.indexOf(morph), keybind));
+            }
+            else
+            {
+                this.morphs.selected.category.edit(morph);
+            }
+        }
+    }
+
+    /**
+     * Favorite or unfavorite current morph
+     */
+    private void favorite(GuiToggleElement button)
+    {
+        AbstractMorph morph = this.morphs.getSelected();
+
+        if (morph != null)
+        {
+            if (this.morphs.isAcquiredSelected())
+            {
+                Dispatcher.sendToServer(new PacketFavorite(this.indexOf(morph)));
+            }
+            else
+            {
+                morph.favorite = button.isToggled();
+                this.morphs.selected.category.edit(morph);
+            }
+        }
+    }
+
+    private int indexOf(AbstractMorph morph)
+    {
+        return this.morphs.acquired.getMorphs().indexOf(morph);
+    }
+
+    @Override
+    public void keyPressed(char typedChar, int keyCode)
+    {
+        if (keyCode == ClientProxy.keys.keyDemorph.getKeyCode())
+        {
+            Dispatcher.sendToServer(new PacketSelectMorph(-1));
+        }
+        else if (MorphManager.INSTANCE.list.keyTyped(this.mc.player, keyCode))
+        {
+            this.closeScreen();
+        }
+    }
+
+    @Override
+    public void drawScreen(int mouseX, int mouseY, float partialTicks)
+    {
+        GuiDraw.drawCustomBackground(this.root.area.x, this.root.area.y, this.root.area.w, this.root.area.h);
+        this.sidebar.area.draw(ColorUtils.HALF_BLACK);
+        Gui.drawRect(this.root.area.x, this.root.area.y, this.root.area.ex(), this.root.area.y + 20, 0xcc000000);
+        this.context.font.drawStringWithShadow(I18n.format("morphcore.gui.survival.title"), this.root.area.x + 6, this.root.area.y + 10 - this.context.font.FONT_HEIGHT / 2, 0xffffff);
+
+        super.drawScreen(mouseX, mouseY, partialTicks);
+    }
+}

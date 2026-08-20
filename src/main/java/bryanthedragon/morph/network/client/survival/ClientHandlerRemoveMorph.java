@@ -1,0 +1,18 @@
+package bryanthedragon.morph.network.client.survival;
+
+import bryanthedragon.morph.network.ClientMessageHandler;
+import bryanthedragon.morph.capabilities.morphing.Morphing;
+import bryanthedragon.morph.network.common.survival.PacketRemoveMorph;
+import net.minecraft.client.entity.PlayerSP;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+
+public class ClientHandlerRemoveMorph extends ClientMessageHandler<PacketRemoveMorph>
+{
+    @Override
+    @OnlyIn(Dist.CLIENT)
+    public void run(PlayerSP player, PacketRemoveMorph message)
+    {
+        Morphing.get(player).remove(message.index);
+    }
+}
