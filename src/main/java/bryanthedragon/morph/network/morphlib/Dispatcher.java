@@ -1,5 +1,7 @@
 package bryanthedragon.morph.network.morphlib;
 
+import bryanthedragon.morph.network.IMessage;
+
 import bryanthedragon.morph.MorphCore.MorphLib;
 import bryanthedragon.morph.network.AbstractDispatcher;
 import bryanthedragon.morph.network.morphlib.client.ClientHandlerAnswer;
@@ -19,9 +21,8 @@ import bryanthedragon.morph.network.morphlib.server.ServerHandlerDropItem;
 import bryanthedragon.morph.network.morphlib.server.ServerHandlerPermissionRequest;
 import bryanthedragon.morph.network.morphlib.server.ServerHandlerRequestConfigs;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.entity.player.PlayerMP;
-import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
-import net.minecraftforge.fml.relauncher.Side;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraftforge.api.distmarker.Dist;
 
 public class Dispatcher
 {
@@ -30,23 +31,23 @@ public class Dispatcher
         @Override
         public void register()
         {
-            register(PacketDropItem.class, ServerHandlerDropItem.class, Side.SERVER);
+            register(PacketDropItem.class, ServerHandlerDropItem.class, LogicalSide.SERVER);
 
             /* Config related packets */
-            register(PacketRequestConfigs.class, ServerHandlerRequestConfigs.class, Side.SERVER);
-            register(PacketConfig.class, ServerHandlerConfig.class, Side.SERVER);
-            register(PacketConfig.class, ClientHandlerConfig.class, Side.CLIENT);
+            register(PacketRequestConfigs.class, ServerHandlerRequestConfigs.class, LogicalSide.SERVER);
+            register(PacketConfig.class, ServerHandlerConfig.class, LogicalSide.SERVER);
+            register(PacketConfig.class, ClientHandlerConfig.class, LogicalSide.CLIENT);
 
             //TODO abstract confirm thing into server to client to server answer thing - see IAnswerRequest etc.
             /* Confirm related packets */
-            register(PacketConfirm.class, ClientHandlerConfirm.class, Side.CLIENT);
-            register(PacketConfirm.class, ServerHandlerConfirm.class, Side.SERVER);
+            register(PacketConfirm.class, ClientHandlerConfirm.class, LogicalSide.CLIENT);
+            register(PacketConfirm.class, ServerHandlerConfirm.class, LogicalSide.SERVER);
 
             /* client answer related packets */
-            register(PacketAnswer.class, ClientHandlerAnswer.class, Side.CLIENT);
-            register(PacketBoolean.class, ClientHandlerBoolean.class, Side.CLIENT);
+            register(PacketAnswer.class, ClientHandlerAnswer.class, LogicalSide.CLIENT);
+            register(PacketBoolean.class, ClientHandlerBoolean.class, LogicalSide.CLIENT);
 
-            register(PacketRequestPermission.class, ServerHandlerPermissionRequest.class, Side.SERVER);
+            register(PacketRequestPermission.class, ServerHandlerPermissionRequest.class, LogicalSide.SERVER);
         }
     };
 
@@ -61,7 +62,7 @@ public class Dispatcher
     /**
      * Send message to given player
      */
-    public static void sendTo(IMessage message, PlayerMP player)
+    public static void sendTo(IMessage message, ServerPlayer player)
     {
         DISPATCHER.sendTo(message, player);
     }

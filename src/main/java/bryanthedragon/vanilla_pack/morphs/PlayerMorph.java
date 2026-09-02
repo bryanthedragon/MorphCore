@@ -4,19 +4,22 @@ import com.mojang.authlib.GameProfile;
 
 import bryanthedragon.morph.api.morphs.AbstractMorph;
 import bryanthedragon.morph.api.morphs.EntityMorph;
-import net.minecraft.client.entity.EntityOtherPlayerMP;
-import net.minecraft.client.network.NetworkPlayerInfo;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.player.Player;
-import net.minecraft.entity.player.EnumPlayerModelParts;
+import net.minecraft.client.multiplayer.ClientLevel;
+import net.minecraft.client.multiplayer.PlayerInfo;
+import net.minecraft.client.player.RemotePlayer;
+import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.nbt.NBTUtil;
-import net.minecraft.tileentity.TileEntitySkull;
-import net.minecraft.util.EnumHandSide;
+import net.minecraft.nbt.NbtUtils;
+import net.minecraft.nbt.Tag;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.World;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraft.world.entity.HumanoidArm;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.PlayerModelPart;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.entity.SkullBlockEntity;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 /**
  * Player morph
@@ -46,7 +49,7 @@ public class PlayerMorph extends EntityMorph
     public void setProfile(String username)
     {
         this.profile = new GameProfile(null, username);
-        this.profile = TileEntitySkull.updateGameprofile(this.profile);
+        SkullBlockEntity.updateGameprofile(this.profile, (profile) -> this.profile = profile);
     }
 
     /**
@@ -57,13 +60,13 @@ public class PlayerMorph extends EntityMorph
     {
         LivingEntity created = null;
 
-        if (world.isRemote)
+        if (world.isClientSide)
         {
             created = this.getPlayerClient(world);
         }
         else
         {
-            created = new Player(world, this.profile)
+            created = new Player(world, BlockPos.ZERO, 0F, this.profile)
             {
                 @Override
                 public boolean isSpectator()
@@ -82,12 +85,12 @@ public class PlayerMorph extends EntityMorph
         created.deserializeNBT(this.entityData);
         created.deathTime = 0;
         created.hurtTime = 0;
-        created.limbSwing = 0;
-        created.setFire(0);
+        created.walkAnimation.setSpeed(0F);
+        created.clearFire();
 
         this.setEntity(created);
 
-        if (world.isRemote)
+        if (world.isClientSide)
         {
             this.setupRenderer();
         }
@@ -99,7 +102,7 @@ public class PlayerMorph extends EntityMorph
     @OnlyIn(Dist.CLIENT)
     private Player getPlayerClient(Level world)
     {
-        return new PlayerMorphClientEntity(world, this.profile);
+        return new PlayerMorphClientEntity((ClientLevel) world, this.profile);
     }
 
     /**
@@ -111,58 +114,58 @@ public class PlayerMorph extends EntityMorph
     protected void updateEntity(LivingEntity target)
     {
         Player entity = (Player) this.entity;
-        EnumHandSide hand = target.getPrimaryHand();
+        HumanoidArm hand = target.getMainArm();
 
-        hand = hand == EnumHandSide.LEFT ? EnumHandSide.RIGHT : EnumHandSide.LEFT;
-        entity.setPrimaryHand(hand);
+        hand = hand == HumanoidArm.LEFT ? HumanoidArm.RIGHT : HumanoidArm.LEFT;
+        entity.setMainArm(hand);
 
         /* Update the cape */
-        entity.prevChasingPosX = entity.chasingPosX;
-        entity.prevChasingPosY = entity.chasingPosY;
-        entity.prevChasingPosZ = entity.chasingPosZ;
-        double d0 = entity.posX - entity.chasingPosX;
-        double d1 = entity.posY - entity.chasingPosY;
-        double d2 = entity.posZ - entity.chasingPosZ;
+        entity.xCloakO = entity.xCloak;
+        entity.yCloakO = entity.yCloak;
+        entity.zCloakO = entity.zCloak;
+        double d0 = entity.getX() - entity.xCloak;
+        double d1 = entity.getY() - entity.yCloak;
+        double d2 = entity.getZ() - entity.zCloak;
 
         if (d0 > 10.0D)
         {
-            entity.chasingPosX = entity.posX;
-            entity.prevChasingPosX = entity.chasingPosX;
+            entity.xCloak = entity.getX();
+            entity.xCloakO = entity.xCloak;
         }
 
         if (d2 > 10.0D)
         {
-            entity.chasingPosZ = entity.posZ;
-            entity.prevChasingPosZ = entity.chasingPosZ;
+            entity.zCloak = entity.getZ();
+            entity.zCloakO = entity.zCloak;
         }
 
         if (d1 > 10.0D)
         {
-            entity.chasingPosY = entity.posY;
-            entity.prevChasingPosY = entity.chasingPosY;
+            entity.yCloak = entity.getY();
+            entity.yCloakO = entity.yCloak;
         }
 
         if (d0 < -10.0D)
         {
-            entity.chasingPosX = entity.posX;
-            entity.prevChasingPosX = entity.chasingPosX;
+            entity.xCloak = entity.getX();
+            entity.xCloakO = entity.xCloak;
         }
 
         if (d2 < -10.0D)
         {
-            entity.chasingPosZ = entity.posZ;
-            entity.prevChasingPosZ = entity.chasingPosZ;
+            entity.zCloak = entity.getZ();
+            entity.zCloakO = entity.zCloak;
         }
 
         if (d1 < -10.0D)
         {
-            entity.chasingPosY = entity.posY;
-            entity.prevChasingPosY = entity.chasingPosY;
+            entity.yCloak = entity.getY();
+            entity.yCloakO = entity.yCloak;
         }
 
-        entity.chasingPosX += d0 * 0.25D;
-        entity.chasingPosZ += d2 * 0.25D;
-        entity.chasingPosY += d1 * 0.25D;
+        entity.xCloak += d0 * 0.25D;
+        entity.zCloak += d2 * 0.25D;
+        entity.yCloak += d1 * 0.25D;
     }
 
     @Override
@@ -212,11 +215,11 @@ public class PlayerMorph extends EntityMorph
     {
         super.fromNBT(tag);
 
-        if (tag.hasKey("PlayerProfile", 10))
+        if (tag.contains("PlayerProfile", Tag.TAG_COMPOUND))
         {
-            this.profile = NBTUtil.readGameProfileFromNBT(tag.getCompoundTag("PlayerProfile"));
+            this.profile = NbtUtils.readGameProfile(tag.getCompound("PlayerProfile"));
         }
-        else if (tag.hasKey("Username"))
+        else if (tag.contains("Username"))
         {
             this.setProfile(tag.getString("Username"));
         }
@@ -231,8 +234,8 @@ public class PlayerMorph extends EntityMorph
         {
             CompoundTag profileTag = new CompoundTag();
 
-            NBTUtil.writeGameProfile(profileTag, this.profile);
-            tag.setTag("PlayerProfile", profileTag);
+            NbtUtils.writeGameProfile(profileTag, this.profile);
+            tag.put("PlayerProfile", profileTag);
         }
     }
 
@@ -244,7 +247,7 @@ public class PlayerMorph extends EntityMorph
      * environment.
      */
     @OnlyIn(Dist.CLIENT)
-    public static class PlayerMorphClientEntity extends EntityOtherPlayerMP
+    public static class PlayerMorphClientEntity extends RemotePlayer
     {
         public GameProfile profile;
         public boolean isBaby;
@@ -253,9 +256,9 @@ public class PlayerMorph extends EntityMorph
         /**
          * Player's network info
          */
-        public NetworkPlayerInfo info;
+        public PlayerInfo info;
 
-        public PlayerMorphClientEntity(Level world, GameProfile profile)
+        public PlayerMorphClientEntity(ClientLevel world, GameProfile profile)
         {
             super(world, profile);
 
@@ -269,23 +272,31 @@ public class PlayerMorph extends EntityMorph
         {
             if (this.info == null)
             {
-                this.info = new NetworkPlayerInfo(this.profile);
+                this.info = new PlayerInfo(this.profile, false);
             }
         }
 
         @Override
-        public boolean isChild()
+        protected PlayerInfo getPlayerInfo()
+        {
+            this.initiateNetworkInfo();
+
+            return this.info;
+        }
+
+        @Override
+        public boolean isBaby()
         {
             return this.isBaby;
         }
 
         @Override
-        public String getSkinType()
+        public String getModelName()
         {
             if (this.skinType.isEmpty())
             {
                 this.initiateNetworkInfo();
-                return this.info.getSkinType();
+                return this.info.getModelName();
             }
 
             return this.skinType.equals("alex") ? "slim" : "default";
@@ -295,54 +306,47 @@ public class PlayerMorph extends EntityMorph
          * Get this player's skin 
          */
         @Override
-        public ResourceLocation getLocationSkin()
+        public ResourceLocation getSkinTextureLocation()
         {
             this.initiateNetworkInfo();
-            return this.info.getLocationSkin();
+            return this.info.getSkinLocation();
         }
 
         /**
          * Get this player's custom cape skin 
          */
         @Override
-        public ResourceLocation getLocationCape()
+        public ResourceLocation getCloakTextureLocation()
         {
             this.initiateNetworkInfo();
-            return this.info.getLocationCape();
+            return this.info.getCapeLocation();
         }
 
         /**
          * This player is always wearing every part of the body 
          */
         @Override
-        @OnlyIn(Dist.CLIENT)
-        public boolean isWearing(EnumPlayerModelParts part)
+        public boolean isModelPartShown(PlayerModelPart part)
         {
             return true;
         }
 
         @Override
-        public boolean hasPlayerInfo()
+        public void readAdditionalSaveData(CompoundTag compound)
         {
-            return this.info != null;
-        }
-
-        @Override
-        public void readEntityFromNBT(CompoundTag compound)
-        {
-            super.readEntityFromNBT(compound);
+            super.readAdditionalSaveData(compound);
 
             this.isBaby = compound.getBoolean("IsBaby");
             this.skinType = compound.getString("SkinType");
         }
 
         @Override
-        public void writeEntityToNBT(CompoundTag compound)
+        public void addAdditionalSaveData(CompoundTag compound)
         {
-            super.writeEntityToNBT(compound);
+            super.addAdditionalSaveData(compound);
 
-            compound.setBoolean("IsBaby", this.isBaby);
-            compound.setString("SkinType", this.skinType);
+            compound.putBoolean("IsBaby", this.isBaby);
+            compound.putString("SkinType", this.skinType);
         }
     }
 }

@@ -1,10 +1,9 @@
 package bryanthedragon.morph.network;
 
 
-import org.spongepowered.asm.mixin.MixinEnvironment.Side;
+import net.minecraftforge.fml.LogicalSide;
 
 import bryanthedragon.morph.MorphCore;
-import bryanthedragon.morph.network.AbstractDispatcher;
 import bryanthedragon.morph.network.client.creative.ClientHandlerAcquireMorph;
 import bryanthedragon.morph.network.client.survival.ClientHandlerAcquiredMorphs;
 import bryanthedragon.morph.network.client.ClientHandlerBlacklist;
@@ -39,6 +38,7 @@ import bryanthedragon.morph.network.server.survival.ServerHandlerRemoveMorph;
 import bryanthedragon.morph.network.server.survival.ServerHandlerSelectMorph;
 import bryanthedragon.morph.network.server.creative.ServerHandlerSyncMorph;
 
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
 
 /**
@@ -52,37 +52,37 @@ public class Dispatcher
         public void register()
         {
             /* Action */
-            register(PacketAction.class, ServerHandlerAction.class, Side.SERVER);
+            register(PacketAction.class, ServerHandlerAction.class, LogicalSide.SERVER);
 
             /* Morphing */
-            register(PacketMorph.class, ClientHandlerMorph.class, Side.CLIENT);
-            register(PacketMorph.class, ServerHandlerMorph.class, Side.SERVER);
-            register(PacketMorphPlayer.class, ClientHandlerMorphPlayer.class, Side.CLIENT);
+            register(PacketMorph.class, ClientHandlerMorph.class, LogicalSide.CLIENT);
+            register(PacketMorph.class, ServerHandlerMorph.class, LogicalSide.SERVER);
+            register(PacketMorphPlayer.class, ClientHandlerMorphPlayer.class, LogicalSide.CLIENT);
 
-            register(PacketAcquireMorph.class, ClientHandlerAcquireMorph.class, Side.CLIENT);
-            register(PacketAcquireMorph.class, ServerHandlerAcquireMorph.class, Side.SERVER);
-            register(PacketAcquiredMorphs.class, ClientHandlerAcquiredMorphs.class, Side.CLIENT);
-            register(PacketSyncMorph.class, ServerHandlerSyncMorph.class, Side.SERVER);
+            register(PacketAcquireMorph.class, ClientHandlerAcquireMorph.class, LogicalSide.CLIENT);
+            register(PacketAcquireMorph.class, ServerHandlerAcquireMorph.class, LogicalSide.SERVER);
+            register(PacketAcquiredMorphs.class, ClientHandlerAcquiredMorphs.class, LogicalSide.CLIENT);
+            register(PacketSyncMorph.class, ServerHandlerSyncMorph.class, LogicalSide.SERVER);
 
-            register(PacketSelectMorph.class, ServerHandlerSelectMorph.class, Side.SERVER);
-            register(PacketClearAcquired.class, ServerHandlerClearAcquired.class, Side.SERVER);
+            register(PacketSelectMorph.class, ServerHandlerSelectMorph.class, LogicalSide.SERVER);
+            register(PacketClearAcquired.class, ServerHandlerClearAcquired.class, LogicalSide.SERVER);
 
             /* Morph state */
-            register(PacketMorphState.class, ClientHandlerMorphState.class, Side.CLIENT);
+            register(PacketMorphState.class, ClientHandlerMorphState.class, LogicalSide.CLIENT);
 
             /* Managing morphs */
-            register(PacketFavorite.class, ClientHandlerFavorite.class, Side.CLIENT);
-            register(PacketFavorite.class, ServerHandlerFavorite.class, Side.SERVER);
+            register(PacketFavorite.class, ClientHandlerFavorite.class, LogicalSide.CLIENT);
+            register(PacketFavorite.class, ServerHandlerFavorite.class, LogicalSide.SERVER);
 
-            register(PacketKeybind.class, ClientHandlerKeybind.class, Side.CLIENT);
-            register(PacketKeybind.class, ServerHandlerKeybind.class, Side.SERVER);
+            register(PacketKeybind.class, ClientHandlerKeybind.class, LogicalSide.CLIENT);
+            register(PacketKeybind.class, ServerHandlerKeybind.class, LogicalSide.SERVER);
 
-            register(PacketRemoveMorph.class, ClientHandlerRemoveMorph.class, Side.CLIENT);
-            register(PacketRemoveMorph.class, ServerHandlerRemoveMorph.class, Side.SERVER);
+            register(PacketRemoveMorph.class, ClientHandlerRemoveMorph.class, LogicalSide.CLIENT);
+            register(PacketRemoveMorph.class, ServerHandlerRemoveMorph.class, LogicalSide.SERVER);
 
             /* Syncing data */
-            register(PacketBlacklist.class, ClientHandlerBlacklist.class, Side.CLIENT);
-            register(PacketSettings.class, ClientHandlerSettings.class, Side.CLIENT);
+            register(PacketBlacklist.class, ClientHandlerBlacklist.class, LogicalSide.CLIENT);
+            register(PacketSettings.class, ClientHandlerSettings.class, LogicalSide.CLIENT);
         }
     };
 
@@ -97,7 +97,7 @@ public class Dispatcher
     /**
      * Send message to given player
      */
-    public static void sendTo(IMessage message, PlayerMP player)
+    public static void sendTo(IMessage message, ServerPlayer player)
     {
         DISPATCHER.sendTo(message, player);
     }

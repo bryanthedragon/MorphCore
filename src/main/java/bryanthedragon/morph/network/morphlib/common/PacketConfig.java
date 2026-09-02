@@ -1,9 +1,9 @@
 package bryanthedragon.morph.network.morphlib.common;
 
-import io.netty.buffer.ByteBuf;
+import bryanthedragon.morph.network.IMessage;
+
+import net.minecraft.network.FriendlyByteBuf;
 import bryanthedragon.morph.config.Config;
-import net.minecraftforge.fml.common.network.ByteBufUtils;
-import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 
 public class PacketConfig implements IMessage
 {
@@ -25,17 +25,17 @@ public class PacketConfig implements IMessage
     }
 
     @Override
-    public void fromBytes(ByteBuf buf)
+    public void fromBytes(FriendlyByteBuf buf)
     {
-        this.config = new Config(ByteBufUtils.readUTF8String(buf));
+        this.config = new Config(buf.readUtf());
         this.config.fromBytes(buf);
         this.overwrite = buf.readBoolean();
     }
 
     @Override
-    public void toBytes(ByteBuf buf)
+    public void toBytes(FriendlyByteBuf buf)
     {
-        ByteBufUtils.writeUTF8String(buf, this.config.id);
+        buf.writeUtf(this.config.id);
 
         this.config.toBytes(buf);
         buf.writeBoolean(this.overwrite);

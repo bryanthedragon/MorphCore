@@ -4,12 +4,12 @@ import bryanthedragon.morph.network.ServerMessageHandler;
 import bryanthedragon.morph.capabilities.morphing.IMorphing;
 import bryanthedragon.morph.capabilities.morphing.Morphing;
 import bryanthedragon.morph.network.common.creative.PacketClearAcquired;
-import net.minecraft.entity.player.PlayerMP;
+import net.minecraft.server.level.ServerPlayer;
 
 public class ServerHandlerClearAcquired extends ServerMessageHandler<PacketClearAcquired>
 {
     @Override
-    public void run(PlayerMP player, PacketClearAcquired message)
+    public void run(ServerPlayer player, PacketClearAcquired message)
     {
         IMorphing cap = Morphing.get(player);
 

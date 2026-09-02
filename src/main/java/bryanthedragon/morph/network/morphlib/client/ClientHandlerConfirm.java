@@ -6,9 +6,9 @@ import bryanthedragon.morph.network.ClientMessageHandler;
 import bryanthedragon.morph.network.morphlib.Dispatcher;
 import bryanthedragon.morph.network.morphlib.common.PacketConfirm;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.entity.PlayerSP;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraft.client.player.LocalPlayer;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 import java.util.Map.Entry;
 import java.util.TreeMap;
@@ -23,12 +23,12 @@ public class ClientHandlerConfirm extends ClientMessageHandler<PacketConfirm>
      */
     @Override
     @OnlyIn(Dist.CLIENT)
-    public void run(PlayerSP PlayerSP, PacketConfirm packet)
+    public void run(LocalPlayer LocalPlayer, PacketConfirm packet)
     {
         switch(packet.gui)
         {
             case MCSCREEN:
-                Minecraft.getInstance().displayGuiScreen(new GuiConfirmationScreen(packet.langKey, (value) ->
+                Minecraft.getInstance().setScreen(new GuiConfirmationScreen(packet.langKey, (value) ->
                 {
                     this.dispatchPacket(packet, value);
                 }));

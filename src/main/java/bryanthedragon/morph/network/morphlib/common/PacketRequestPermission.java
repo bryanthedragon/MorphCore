@@ -1,6 +1,6 @@
 package bryanthedragon.morph.network.morphlib.common;
 
-import io.netty.buffer.ByteBuf;
+import net.minecraft.network.FriendlyByteBuf;
 import bryanthedragon.morph.MorphCore.MorphLib;
 import bryanthedragon.morph.permissions.PermissionCategory;
 
@@ -47,14 +47,14 @@ public class PacketRequestPermission implements IAnswerRequest<Boolean>
     }
 
     @Override
-    public void fromBytes(ByteBuf buf)
+    public void fromBytes(FriendlyByteBuf buf)
     {
         this.callbackID = buf.readInt();
         this.request = MorphLib.permissionFactory.getPermission(buf.readInt());
     }
 
     @Override
-    public void toBytes(ByteBuf buf)
+    public void toBytes(FriendlyByteBuf buf)
     {
         buf.writeInt(this.callbackID);
         buf.writeInt(MorphLib.permissionFactory.getPermissionID(this.request));

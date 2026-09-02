@@ -1,10 +1,9 @@
 package bryanthedragon.morph.network;
 
-import net.minecraft.entity.player.PlayerMP;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
-import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
+import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.entity.BlockEntity;
 
 /**
  * This class passes operation from Netty to Minecraft (Server) Thread. This
@@ -15,19 +14,12 @@ import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
  */
 public abstract class ServerMessageHandler<T extends IMessage> extends AbstractMessageHandler<T>
 {
-    public abstract void run(final PlayerMP player, final T message);
+    public abstract void run(final ServerPlayer player, final T message);
 
     @Override
-    public IMessage handleServerMessage(final PlayerMP player, final T message)
+    public IMessage handleServerMessage(final ServerPlayer player, final T message)
     {
-        player.getServer().addScheduledTask(new Runnable()
-        {
-            @Override
-            public void run()
-            {
-                ServerMessageHandler.this.run(player, message);
-            }
-        });
+        player.getServer().execute(() -> ServerMessageHandler.this.run(player, message));
 
         return null;
     }
@@ -39,16 +31,16 @@ public abstract class ServerMessageHandler<T extends IMessage> extends AbstractM
     }
 
     /**
-     * Safe way to get a tile entity on the server without exposing code 
+     * Safe way to get a block entity on the server without exposing code 
      * to ACG (Arbitrary Chunk Generation) exploit (thanks to Paul Fulham)
      */
-    protected TileEntity getTE(PlayerMP player, BlockPos pos)
+    protected BlockEntity getTE(ServerPlayer player, BlockPos pos)
     {
-        Level world = player.getEntityWorld();
+        Level world = player.level();
 
-        if (world.isBlockLoaded(pos))
+        if (world.isLoaded(pos))
         {
-            return world.getTileEntity(pos);
+            return world.getBlockEntity(pos);
         }
 
         return null;

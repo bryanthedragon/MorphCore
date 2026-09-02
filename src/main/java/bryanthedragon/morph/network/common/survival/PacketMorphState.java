@@ -1,11 +1,12 @@
 package bryanthedragon.morph.network.common.survival;
 
-import io.netty.buffer.ByteBuf;
+import bryanthedragon.morph.network.IMessage;
+
+import net.minecraft.network.FriendlyByteBuf;
 import bryanthedragon.morph.api.morphs.AbstractMorph;
 import bryanthedragon.morph.api.morphs.EntityMorph;
 import bryanthedragon.morph.capabilities.morphing.IMorphing;
-import net.minecraft.entity.player.Player;
-import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
+import net.minecraft.world.entity.player.Player;
 
 public class PacketMorphState implements IMessage
 {
@@ -24,7 +25,7 @@ public class PacketMorphState implements IMessage
 
             if (morph instanceof EntityMorph)
             {
-                entityID = ((EntityMorph) morph).getEntity(player.world).getEntityId();
+                entityID = ((EntityMorph) morph).getEntity(player.level()).getId();
             }
 
             this.hasSquidAir = morphing.getHasSquidAir();
@@ -33,7 +34,7 @@ public class PacketMorphState implements IMessage
     }
 
     @Override
-    public void fromBytes(ByteBuf buf)
+    public void fromBytes(FriendlyByteBuf buf)
     {
         this.entityID = buf.readInt();
         this.hasSquidAir = buf.readBoolean();
@@ -41,7 +42,7 @@ public class PacketMorphState implements IMessage
     }
 
     @Override
-    public void toBytes(ByteBuf buf)
+    public void toBytes(FriendlyByteBuf buf)
     {
         buf.writeInt(this.entityID);
         buf.writeBoolean(this.hasSquidAir);

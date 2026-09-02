@@ -2,7 +2,7 @@ package bryanthedragon.morph.network.morphlib.server;
 
 import bryanthedragon.morph.network.ServerMessageHandler;
 import bryanthedragon.morph.network.morphlib.common.PacketConfirm;
-import net.minecraft.entity.player.PlayerMP;
+import net.minecraft.server.level.ServerPlayer;
 
 import java.util.Map.Entry;
 import java.util.TreeMap;
@@ -13,7 +13,7 @@ public class ServerHandlerConfirm extends ServerMessageHandler<PacketConfirm>
     private static TreeMap<Integer, Consumer<Boolean>> consumers = new TreeMap<Integer, Consumer<Boolean>>();
 
     @Override
-    public void run(PlayerMP PlayerMP, PacketConfirm packetConfirm)
+    public void run(ServerPlayer ServerPlayer, PacketConfirm packetConfirm)
     {
         if (consumers.containsKey(packetConfirm.consumerID))
         {

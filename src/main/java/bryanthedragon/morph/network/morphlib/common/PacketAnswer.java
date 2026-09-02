@@ -1,8 +1,9 @@
 package bryanthedragon.morph.network.morphlib.common;
 
-import io.netty.buffer.ByteBuf;
+import bryanthedragon.morph.network.IMessage;
+
+import net.minecraft.network.FriendlyByteBuf;
 import bryanthedragon.morph.utils.ByteBufUtils;
-import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -36,7 +37,7 @@ public class PacketAnswer<T extends Serializable> implements IMessage
     }
 
     @Override
-    public void fromBytes(ByteBuf buf)
+    public void fromBytes(FriendlyByteBuf buf)
     {
         this.callBackID = buf.readInt();
 
@@ -51,7 +52,7 @@ public class PacketAnswer<T extends Serializable> implements IMessage
     }
 
     @Override
-    public void toBytes(ByteBuf buf)
+    public void toBytes(FriendlyByteBuf buf)
     {
         buf.writeInt(this.callBackID);
         ByteBufUtils.writeObject(buf, this.answer);

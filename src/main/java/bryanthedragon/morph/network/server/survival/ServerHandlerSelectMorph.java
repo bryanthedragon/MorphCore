@@ -9,15 +9,15 @@ import bryanthedragon.morph.api.morphs.AbstractMorph;
 import bryanthedragon.morph.capabilities.morphing.IMorphing;
 import bryanthedragon.morph.capabilities.morphing.Morphing;
 import bryanthedragon.morph.network.common.survival.PacketSelectMorph;
-import net.minecraft.entity.player.PlayerMP;
-import net.minecraft.world.GameType;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.level.GameType;
 
 public class ServerHandlerSelectMorph extends ServerMessageHandler<PacketSelectMorph>
 {
     @Override
-    public void run(PlayerMP player, PacketSelectMorph message)
+    public void run(ServerPlayer player, PacketSelectMorph message)
     {
-        if (player.interactionManager.getGameType() == GameType.ADVENTURE)
+        if (player.gameMode.getGameModeForPlayer() == GameType.ADVENTURE)
         {
             return;
         }

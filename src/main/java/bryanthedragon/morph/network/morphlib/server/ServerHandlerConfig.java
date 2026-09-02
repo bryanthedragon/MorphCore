@@ -6,12 +6,12 @@ import bryanthedragon.morph.config.ConfigManager;
 import bryanthedragon.morph.network.ServerMessageHandler;
 import bryanthedragon.morph.network.morphlib.common.PacketConfig;
 import bryanthedragon.morph.utils.OpHelper;
-import net.minecraft.entity.player.PlayerMP;
+import net.minecraft.server.level.ServerPlayer;
 
 public class ServerHandlerConfig extends ServerMessageHandler<PacketConfig>
 {
     @Override
-    public void run(PlayerMP player, PacketConfig message)
+    public void run(ServerPlayer player, PacketConfig message)
     {
         if (!OpHelper.isPlayerOp(player))
         {

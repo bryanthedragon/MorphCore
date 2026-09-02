@@ -6,13 +6,13 @@ import bryanthedragon.morph.api.morphs.AbstractMorph;
 import bryanthedragon.morph.capabilities.morphing.IMorphing;
 import bryanthedragon.morph.capabilities.morphing.Morphing;
 import bryanthedragon.morph.network.common.survival.PacketAction;
-import net.minecraft.entity.player.PlayerMP;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.common.MinecraftForge;
 
 public class ServerHandlerAction extends ServerMessageHandler<PacketAction>
 {
     @Override
-    public void run(PlayerMP player, PacketAction message)
+    public void run(ServerPlayer player, PacketAction message)
     {
         IMorphing capability = Morphing.get(player);
 

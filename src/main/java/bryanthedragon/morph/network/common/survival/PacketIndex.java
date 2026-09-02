@@ -1,7 +1,8 @@
 package bryanthedragon.morph.network.common.survival;
 
-import io.netty.buffer.ByteBuf;
-import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
+import bryanthedragon.morph.network.IMessage;
+
+import net.minecraft.network.FriendlyByteBuf;
 
 public abstract class PacketIndex implements IMessage
 {
@@ -16,13 +17,13 @@ public abstract class PacketIndex implements IMessage
     }
 
     @Override
-    public void fromBytes(ByteBuf buf)
+    public void fromBytes(FriendlyByteBuf buf)
     {
         this.index = buf.readInt();
     }
 
     @Override
-    public void toBytes(ByteBuf buf)
+    public void toBytes(FriendlyByteBuf buf)
     {
         buf.writeInt(index);
     }

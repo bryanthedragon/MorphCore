@@ -3,7 +3,7 @@ package bryanthedragon.morph.network.server.creative;
 import bryanthedragon.morph.network.ServerMessageHandler;
 import bryanthedragon.morph.api.MorphAPI;
 import bryanthedragon.morph.network.common.creative.PacketAcquireMorph;
-import net.minecraft.entity.player.PlayerMP;
+import net.minecraft.server.level.ServerPlayer;
 
 /**
  * Server handler acquire morph
@@ -14,7 +14,7 @@ import net.minecraft.entity.player.PlayerMP;
 public class ServerHandlerAcquireMorph extends ServerMessageHandler<PacketAcquireMorph>
 {
     @Override
-    public void run(PlayerMP player, PacketAcquireMorph message)
+    public void run(ServerPlayer player, PacketAcquireMorph message)
     {
         if (player.isCreative() || player.isSpectator())
         {

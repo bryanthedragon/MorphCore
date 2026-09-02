@@ -1,6 +1,6 @@
 package bryanthedragon.morph.network.morphlib.common;
 
-import io.netty.buffer.ByteBuf;
+import net.minecraft.network.FriendlyByteBuf;
 
 public class PacketBoolean extends PacketAnswer<Boolean>
 {
@@ -13,14 +13,14 @@ public class PacketBoolean extends PacketAnswer<Boolean>
     }
 
     @Override
-    public void fromBytes(ByteBuf buf)
+    public void fromBytes(FriendlyByteBuf buf)
     {
         this.callBackID = buf.readInt();
         this.answer = buf.readBoolean();
     }
 
     @Override
-    public void toBytes(ByteBuf buf)
+    public void toBytes(FriendlyByteBuf buf)
     {
         buf.writeInt(this.callBackID);
         buf.writeBoolean(this.getValue());

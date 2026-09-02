@@ -1,12 +1,12 @@
 package bryanthedragon.morph.network.morphlib.common;
 
-import io.netty.buffer.ByteBuf;
+import bryanthedragon.morph.network.IMessage;
+
+import net.minecraft.network.FriendlyByteBuf;
 import bryanthedragon.morph.client.gui.utils.keys.IKey;
 import bryanthedragon.morph.client.gui.utils.keys.KeyParser;
 import bryanthedragon.morph.network.morphlib.client.ClientHandlerConfirm;
 import bryanthedragon.morph.network.morphlib.server.ServerHandlerConfirm;
-import net.minecraftforge.fml.common.network.ByteBufUtils;
-import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 
 import javax.annotation.Nullable;
 import java.util.Map;
@@ -35,7 +35,7 @@ public class PacketConfirm implements IMessage
     {}
 
     @Override
-    public void fromBytes(ByteBuf buf)
+    public void fromBytes(FriendlyByteBuf buf)
     {
         this.langKey = KeyParser.keyFromBytes(buf);
         this.gui = ClientHandlerConfirm.GUI.values()[buf.readInt()];
@@ -44,7 +44,7 @@ public class PacketConfirm implements IMessage
     }
 
     @Override
-    public void toBytes(ByteBuf buf)
+    public void toBytes(FriendlyByteBuf buf)
     {
         KeyParser.keyToBytes(buf, this.langKey);
         buf.writeInt(this.gui.ordinal());

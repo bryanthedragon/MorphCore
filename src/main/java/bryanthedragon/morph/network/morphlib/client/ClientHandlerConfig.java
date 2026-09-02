@@ -7,16 +7,16 @@ import bryanthedragon.morph.config.gui.GuiConfigPanel;
 import bryanthedragon.morph.network.ClientMessageHandler;
 import bryanthedragon.morph.network.morphlib.common.PacketConfig;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.entity.PlayerSP;
-import net.minecraft.client.gui.Screen;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraft.client.player.LocalPlayer;
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class ClientHandlerConfig extends ClientMessageHandler<PacketConfig>
 {
     @Override
     @OnlyIn(Dist.CLIENT)
-    public void run(PlayerSP player, PacketConfig message)
+    public void run(LocalPlayer player, PacketConfig message)
     {
         if (message.overwrite)
         {
@@ -26,7 +26,7 @@ public class ClientHandlerConfig extends ClientMessageHandler<PacketConfig>
         }
         else
         {
-            Screen screen = Minecraft.getInstance().currentScreen;
+            Screen screen = Minecraft.getInstance().screen;
 
             if (screen instanceof GuiDashboard)
             {

@@ -3,12 +3,18 @@ package bryanthedragon.morph.network.morphlib.client;
 import bryanthedragon.morph.MorphCore.MorphLib;
 import bryanthedragon.morph.network.AbstractDispatcher;
 import bryanthedragon.morph.network.ClientMessageHandler;
+import bryanthedragon.morph.network.morphlib.Dispatcher;
+import bryanthedragon.morph.network.morphlib.common.IAnswerRequest;
+import bryanthedragon.morph.network.morphlib.common.PacketAnswer;
 import bryanthedragon.morph.utils.Consumers;
 
 import net.minecraft.client.player.LocalPlayer;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 import java.io.Serializable;
@@ -28,7 +34,7 @@ public abstract class AbstractClientHandlerAnswer<T extends PacketAnswer> extend
 
     @Override
     @OnlyIn(Dist.CLIENT)
-    public void run(PlayerSP player, PacketAnswer message)
+    public void run(LocalPlayer player, PacketAnswer message)
     {
         CONSUMERS.consume(message.getCallbackID(), message.getValue());
         TIME.remove(message.getCallbackID());
@@ -103,7 +109,7 @@ public abstract class AbstractClientHandlerAnswer<T extends PacketAnswer> extend
      * @param answer
      * @param <T> the type of the registered Consumer input datatype.
      */
-    public static <T extends Serializable> void sendAnswerTo(PlayerMP receiver, PacketAnswer<T> answer)
+    public static <T extends Serializable> void sendAnswerTo(ServerPlayer receiver, PacketAnswer<T> answer)
     {
         Dispatcher.sendTo(answer, receiver);
     }

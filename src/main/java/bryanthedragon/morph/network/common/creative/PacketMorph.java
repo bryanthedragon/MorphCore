@@ -1,11 +1,12 @@
 package bryanthedragon.morph.network.common.creative;
 
-import io.netty.buffer.ByteBuf;
+import bryanthedragon.morph.network.IMessage;
+
+import net.minecraft.network.FriendlyByteBuf;
 import bryanthedragon.morph.utils.NBTUtils;
 import bryanthedragon.morph.api.MorphManager;
 import bryanthedragon.morph.api.MorphUtils;
 import bryanthedragon.morph.api.morphs.AbstractMorph;
-import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 
 public class PacketMorph implements IMessage
 {
@@ -20,13 +21,13 @@ public class PacketMorph implements IMessage
     }
 
     @Override
-    public void fromBytes(ByteBuf buf)
+    public void fromBytes(FriendlyByteBuf buf)
     {
         this.morph = MorphManager.INSTANCE.morphFromNBT(NBTUtils.readInfiniteTag(buf));
     }
 
     @Override
-    public void toBytes(ByteBuf buf)
+    public void toBytes(FriendlyByteBuf buf)
     {
         MorphUtils.morphToBuf(buf, this.morph);
     }

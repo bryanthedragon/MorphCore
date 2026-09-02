@@ -1,12 +1,12 @@
 package bryanthedragon.morph.network.common;
 
+import bryanthedragon.morph.network.IMessage;
+
 import java.util.Iterator;
 import java.util.Set;
 import java.util.TreeSet;
 
-import io.netty.buffer.ByteBuf;
-import net.minecraftforge.fml.common.network.ByteBufUtils;
-import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
+import net.minecraft.network.FriendlyByteBuf;
 
 public class PacketBlacklist implements IMessage
 {
@@ -21,16 +21,16 @@ public class PacketBlacklist implements IMessage
     }
 
     @Override
-    public void fromBytes(ByteBuf buf)
+    public void fromBytes(FriendlyByteBuf buf)
     {
         for (int i = 0, c = buf.readInt(); i < c; i++)
         {
-            this.blacklist.add(ByteBufUtils.readUTF8String(buf));
+            this.blacklist.add(buf.readUtf());
         }
     }
 
     @Override
-    public void toBytes(ByteBuf buf)
+    public void toBytes(FriendlyByteBuf buf)
     {
         buf.writeInt(this.blacklist.size());
 
@@ -38,7 +38,7 @@ public class PacketBlacklist implements IMessage
 
         while (it.hasNext())
         {
-            ByteBufUtils.writeUTF8String(buf, it.next());
+            buf.writeUtf(it.next());
         }
     }
 }

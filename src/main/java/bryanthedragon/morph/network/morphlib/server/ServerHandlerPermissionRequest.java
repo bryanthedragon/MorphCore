@@ -4,12 +4,12 @@ import bryanthedragon.morph.network.ServerMessageHandler;
 import bryanthedragon.morph.network.morphlib.client.ClientHandlerAnswer;
 import bryanthedragon.morph.network.morphlib.common.PacketRequestPermission;
 import bryanthedragon.morph.permissions.PermissionCategory;
-import net.minecraft.entity.player.PlayerMP;
+import net.minecraft.server.level.ServerPlayer;
 
 public class ServerHandlerPermissionRequest extends ServerMessageHandler<PacketRequestPermission>
 {
     @Override
-    public void run(PlayerMP player, PacketRequestPermission message)
+    public void run(ServerPlayer player, PacketRequestPermission message)
     {
         PermissionCategory perm = message.getPermissionRequest();
 

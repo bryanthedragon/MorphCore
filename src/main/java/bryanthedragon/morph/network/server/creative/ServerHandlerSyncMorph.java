@@ -4,12 +4,12 @@ import bryanthedragon.morph.network.ServerMessageHandler;
 import bryanthedragon.morph.capabilities.morphing.IMorphing;
 import bryanthedragon.morph.capabilities.morphing.Morphing;
 import bryanthedragon.morph.network.common.creative.PacketSyncMorph;
-import net.minecraft.entity.player.PlayerMP;
+import net.minecraft.server.level.ServerPlayer;
 
 public class ServerHandlerSyncMorph extends ServerMessageHandler<PacketSyncMorph>
 {
     @Override
-    public void run(PlayerMP player, PacketSyncMorph message)
+    public void run(ServerPlayer player, PacketSyncMorph message)
     {
         IMorphing cap = Morphing.get(player);
 

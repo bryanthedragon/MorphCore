@@ -1,10 +1,10 @@
 package bryanthedragon.morph.network;
 
-import io.netty.buffer.ByteBuf;
+import net.minecraft.network.FriendlyByteBuf;
 
 public interface IByteBufSerializable
 {
-    public void fromBytes(ByteBuf buffer);
+    public void fromBytes(FriendlyByteBuf buffer);
 
-    public void toBytes(ByteBuf buffer);
+    public void toBytes(FriendlyByteBuf buffer);
 }

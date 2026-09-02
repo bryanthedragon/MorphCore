@@ -1,12 +1,12 @@
 package bryanthedragon.morph.network.common;
 
+import bryanthedragon.morph.network.IMessage;
+
 import java.util.HashMap;
 import java.util.Map;
 
-import io.netty.buffer.ByteBuf;
+import net.minecraft.network.FriendlyByteBuf;
 import bryanthedragon.morph.api.MorphSettings;
-import net.minecraftforge.fml.common.network.ByteBufUtils;
-import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 
 /**
  * Packet that sents settings 
@@ -25,11 +25,11 @@ public class PacketSettings implements IMessage
     }
 
     @Override
-    public void fromBytes(ByteBuf buf)
+    public void fromBytes(FriendlyByteBuf buf)
     {
         for (int i = 0, c = buf.readInt(); i < c; i++)
         {
-            String key = ByteBufUtils.readUTF8String(buf);
+            String key = buf.readUtf();
             MorphSettings setting = new MorphSettings();
 
             setting.fromBytes(buf);
@@ -38,13 +38,13 @@ public class PacketSettings implements IMessage
     }
 
     @Override
-    public void toBytes(ByteBuf buf)
+    public void toBytes(FriendlyByteBuf buf)
     {
         buf.writeInt(this.settings.size());
 
         for (Map.Entry<String, MorphSettings> setting : this.settings.entrySet())
         {
-            ByteBufUtils.writeUTF8String(buf, setting.getKey());
+            buf.writeUtf(setting.getKey());
             setting.getValue().toBytes(buf);
         }
     }

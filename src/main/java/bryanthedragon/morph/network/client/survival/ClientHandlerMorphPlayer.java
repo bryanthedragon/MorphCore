@@ -4,20 +4,20 @@ import bryanthedragon.morph.network.ClientMessageHandler;
 import bryanthedragon.morph.capabilities.morphing.IMorphing;
 import bryanthedragon.morph.capabilities.morphing.MorphingProvider;
 import bryanthedragon.morph.network.common.survival.PacketMorphPlayer;
-import net.minecraft.client.entity.PlayerSP;
+import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.entity.player.Player;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraft.world.entity.player.Player;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class ClientHandlerMorphPlayer extends ClientMessageHandler<PacketMorphPlayer>
 {
     @Override
     @OnlyIn(Dist.CLIENT)
-    public void run(PlayerSP player, PacketMorphPlayer message)
+    public void run(LocalPlayer player, PacketMorphPlayer message)
     {
-        Entity entity = player.world.getEntityByID(message.id);
-        IMorphing capability = entity.getCapability(MorphingProvider.MORPHING_CAP, null);
+        Entity entity = player.level().getEntity(message.id);
+        IMorphing capability = entity.getCapability(MorphingProvider.MORPHING_CAP).orElse(null);
 
         if (capability != null)
         {

@@ -1,6 +1,6 @@
 package bryanthedragon.morph.network.common.creative;
 
-import io.netty.buffer.ByteBuf;
+import net.minecraft.network.FriendlyByteBuf;
 import bryanthedragon.morph.api.morphs.AbstractMorph;
 
 /**
@@ -28,7 +28,7 @@ public class PacketAcquireMorph extends PacketMorph
     }
 
     @Override
-    public void fromBytes(ByteBuf buf)
+    public void fromBytes(FriendlyByteBuf buf)
     {
         super.fromBytes(buf);
 
@@ -36,7 +36,7 @@ public class PacketAcquireMorph extends PacketMorph
     }
 
     @Override
-    public void toBytes(ByteBuf buf)
+    public void toBytes(FriendlyByteBuf buf)
     {
         super.toBytes(buf);
 

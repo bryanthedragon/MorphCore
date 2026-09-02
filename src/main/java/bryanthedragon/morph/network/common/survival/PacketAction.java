@@ -1,7 +1,8 @@
 package bryanthedragon.morph.network.common.survival;
 
-import io.netty.buffer.ByteBuf;
-import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
+import bryanthedragon.morph.network.IMessage;
+
+import net.minecraft.network.FriendlyByteBuf;
 
 public class PacketAction implements IMessage
 {
@@ -9,10 +10,10 @@ public class PacketAction implements IMessage
     {}
 
     @Override
-    public void fromBytes(ByteBuf buf)
+    public void fromBytes(FriendlyByteBuf buf)
     {}
 
     @Override
-    public void toBytes(ByteBuf buf)
+    public void toBytes(FriendlyByteBuf buf)
     {}
 }

@@ -1,6 +1,6 @@
 package bryanthedragon.morph.network.common.survival;
 
-import io.netty.buffer.ByteBuf;
+import net.minecraft.network.FriendlyByteBuf;
 
 public class PacketKeybind extends PacketIndex
 {
@@ -19,7 +19,7 @@ public class PacketKeybind extends PacketIndex
     }
 
     @Override
-    public void fromBytes(ByteBuf buf)
+    public void fromBytes(FriendlyByteBuf buf)
     {
         super.fromBytes(buf);
 
@@ -27,7 +27,7 @@ public class PacketKeybind extends PacketIndex
     }
 
     @Override
-    public void toBytes(ByteBuf buf)
+    public void toBytes(FriendlyByteBuf buf)
     {
         super.toBytes(buf);
 

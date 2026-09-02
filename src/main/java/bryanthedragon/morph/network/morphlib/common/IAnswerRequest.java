@@ -1,6 +1,7 @@
 package bryanthedragon.morph.network.morphlib.common;
 
-import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
+import bryanthedragon.morph.network.IMessage;
+
 
 import java.io.Serializable;
 import java.util.NoSuchElementException;

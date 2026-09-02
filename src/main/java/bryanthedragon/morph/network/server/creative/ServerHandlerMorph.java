@@ -4,12 +4,12 @@ import bryanthedragon.morph.network.ServerMessageHandler;
 import bryanthedragon.morph.MorphCore;
 import bryanthedragon.morph.api.MorphAPI;
 import bryanthedragon.morph.network.common.creative.PacketMorph;
-import net.minecraft.entity.player.PlayerMP;
+import net.minecraft.server.level.ServerPlayer;
 
 public class ServerHandlerMorph extends ServerMessageHandler<PacketMorph>
 {
     @Override
-    public void run(PlayerMP player, PacketMorph message)
+    public void run(ServerPlayer player, PacketMorph message)
     {
         if (MorphCore.proxy.canUse(player))
         {

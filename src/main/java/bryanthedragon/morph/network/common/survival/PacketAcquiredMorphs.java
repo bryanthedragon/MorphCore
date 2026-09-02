@@ -1,9 +1,10 @@
 package bryanthedragon.morph.network.common.survival;
 
-import io.netty.buffer.ByteBuf;
+import bryanthedragon.morph.network.IMessage;
+
+import net.minecraft.network.FriendlyByteBuf;
 import bryanthedragon.morph.api.MorphUtils;
 import bryanthedragon.morph.api.morphs.AbstractMorph;
-import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +27,7 @@ public class PacketAcquiredMorphs implements IMessage
     }
 
     @Override
-    public void fromBytes(ByteBuf buf)
+    public void fromBytes(FriendlyByteBuf buf)
     {
         for (int i = 0, c = buf.readInt(); i < c; i++)
         {
@@ -40,7 +41,7 @@ public class PacketAcquiredMorphs implements IMessage
     }
 
     @Override
-    public void toBytes(ByteBuf buf)
+    public void toBytes(FriendlyByteBuf buf)
     {
         buf.writeInt(this.morphs.size());
 
