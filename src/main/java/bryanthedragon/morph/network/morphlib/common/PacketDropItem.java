@@ -1,10 +1,10 @@
 package bryanthedragon.morph.network.morphlib.common;
 
 import io.netty.buffer.ByteBuf;
-import net.minecraft.item.ItemStack;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraftforge.fml.common.network.ByteBufUtils;
-import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
+import bryanthedragon.morph.utils.ByteBufUtils;
+import bryanthedragon.morph.network.IMessage;
 
 public class PacketDropItem implements IMessage
 {
@@ -25,7 +25,7 @@ public class PacketDropItem implements IMessage
 
         if (tagCompound != null)
         {
-            this.stack = new ItemStack(tagCompound);
+            this.stack = ItemStack.of(tagCompound);
         }
     }
 
@@ -34,7 +34,7 @@ public class PacketDropItem implements IMessage
     {
         if (!this.stack.isEmpty())
         {
-            ByteBufUtils.writeTag(buf, this.stack.writeToNBT(new CompoundTag()));
+            ByteBufUtils.writeTag(buf, this.stack.save(new CompoundTag()));
         }
     }
 }

@@ -4,7 +4,7 @@ import bryanthedragon.morph.network.ServerMessageHandler;
 import bryanthedragon.morph.MorphCore;
 import bryanthedragon.morph.api.MorphAPI;
 import bryanthedragon.morph.network.common.creative.PacketMorph;
-import net.minecraft.entity.player.ServerPlayer;
+import net.minecraft.server.level.ServerPlayer;
 
 public class ServerHandlerMorph extends ServerMessageHandler<PacketMorph>
 {

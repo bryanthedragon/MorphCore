@@ -5,7 +5,7 @@ import bryanthedragon.morph.utils.NBTUtils;
 import bryanthedragon.morph.api.MorphManager;
 import bryanthedragon.morph.api.MorphUtils;
 import bryanthedragon.morph.api.morphs.AbstractMorph;
-import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
+import bryanthedragon.morph.network.IMessage;
 
 public class PacketMorph implements IMessage
 {

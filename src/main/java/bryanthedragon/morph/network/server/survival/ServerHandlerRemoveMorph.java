@@ -4,7 +4,7 @@ import bryanthedragon.morph.network.ServerMessageHandler;
 import bryanthedragon.morph.capabilities.morphing.Morphing;
 import bryanthedragon.morph.network.Dispatcher;
 import bryanthedragon.morph.network.common.survival.PacketRemoveMorph;
-import net.minecraft.entity.player.ServerPlayer;
+import net.minecraft.server.level.ServerPlayer;
 
 public class ServerHandlerRemoveMorph extends ServerMessageHandler<PacketRemoveMorph>
 {

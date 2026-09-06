@@ -3,7 +3,7 @@ package bryanthedragon.morph.network.server.creative;
 import bryanthedragon.morph.network.ServerMessageHandler;
 import bryanthedragon.morph.api.MorphAPI;
 import bryanthedragon.morph.network.common.creative.PacketAcquireMorph;
-import net.minecraft.entity.player.ServerPlayer;
+import net.minecraft.server.level.ServerPlayer;
 
 /**
  * Server handler acquire morph

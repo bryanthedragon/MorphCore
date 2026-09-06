@@ -4,8 +4,8 @@ import io.netty.buffer.ByteBuf;
 import bryanthedragon.morph.api.morphs.AbstractMorph;
 import bryanthedragon.morph.api.morphs.EntityMorph;
 import bryanthedragon.morph.capabilities.morphing.IMorphing;
-import net.minecraft.entity.player.Player;
-import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
+import net.minecraft.world.entity.player.Player;
+import bryanthedragon.morph.network.IMessage;
 
 public class PacketMorphState implements IMessage
 {
@@ -24,7 +24,7 @@ public class PacketMorphState implements IMessage
 
             if (morph instanceof EntityMorph)
             {
-                entityID = ((EntityMorph) morph).getEntity(player.world).getEntityId();
+                entityID = ((EntityMorph) morph).getEntity(player.level()).getId();
             }
 
             this.hasSquidAir = morphing.getHasSquidAir();

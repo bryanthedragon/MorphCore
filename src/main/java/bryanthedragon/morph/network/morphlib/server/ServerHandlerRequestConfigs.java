@@ -8,7 +8,7 @@ import bryanthedragon.morph.network.morphlib.Dispatcher;
 import bryanthedragon.morph.network.morphlib.common.PacketConfig;
 import bryanthedragon.morph.network.morphlib.common.PacketRequestConfigs;
 import bryanthedragon.morph.utils.OpHelper;
-import net.minecraft.entity.player.ServerPlayer;
+import net.minecraft.server.level.ServerPlayer;
 
 public class ServerHandlerRequestConfigs extends ServerMessageHandler<PacketRequestConfigs>
 {

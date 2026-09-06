@@ -5,8 +5,8 @@ import java.util.Map;
 
 import io.netty.buffer.ByteBuf;
 import bryanthedragon.morph.api.MorphSettings;
-import net.minecraftforge.fml.common.network.ByteBufUtils;
-import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
+import bryanthedragon.morph.utils.ByteBufUtils;
+import bryanthedragon.morph.network.IMessage;
 
 /**
  * Packet that sents settings 

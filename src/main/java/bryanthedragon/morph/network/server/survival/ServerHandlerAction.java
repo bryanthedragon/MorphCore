@@ -6,7 +6,7 @@ import bryanthedragon.morph.api.morphs.AbstractMorph;
 import bryanthedragon.morph.capabilities.morphing.IMorphing;
 import bryanthedragon.morph.capabilities.morphing.Morphing;
 import bryanthedragon.morph.network.common.survival.PacketAction;
-import net.minecraft.entity.player.ServerPlayer;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.common.MinecraftForge;
 
 public class ServerHandlerAction extends ServerMessageHandler<PacketAction>

@@ -2,7 +2,7 @@ package bryanthedragon.morph.network.morphlib.server;
 
 import bryanthedragon.morph.network.ServerMessageHandler;
 import bryanthedragon.morph.network.morphlib.common.PacketConfirm;
-import net.minecraft.entity.player.ServerPlayer;
+import net.minecraft.server.level.ServerPlayer;
 
 import java.util.Map.Entry;
 import java.util.TreeMap;

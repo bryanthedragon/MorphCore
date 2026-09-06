@@ -4,10 +4,10 @@ import bryanthedragon.morph.MorphCore.MorphLib;
 import bryanthedragon.morph.network.ServerMessageHandler;
 import bryanthedragon.morph.network.morphlib.common.PacketDropItem;
 import bryanthedragon.morph.utils.OpHelper;
-import net.minecraft.entity.player.ServerPlayer;
-import net.minecraft.init.SoundEvents;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.SoundCategory;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.item.ItemStack;
 
 public class ServerHandlerDropItem extends ServerMessageHandler<PacketDropItem>
 {
@@ -18,9 +18,9 @@ public class ServerHandlerDropItem extends ServerMessageHandler<PacketDropItem>
         {
             ItemStack stack = message.stack;
 
-            player.inventory.addItemStackToInventory(stack);
-            player.world.playSound(null, player.posX, player.posY, player.posZ, SoundEvents.ENTITY_ITEM_PICKUP, SoundCategory.PLAYERS, 0.2F, 1F);
-            player.inventoryContainer.detectAndSendChanges();
+            player.getInventory().add(stack);
+            player.level().playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.ITEM_PICKUP, SoundSource.PLAYERS, 0.2F, 1F);
+            player.inventoryMenu.broadcastChanges();
         }
     }
 }

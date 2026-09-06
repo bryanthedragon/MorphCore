@@ -1,6 +1,8 @@
 package bryanthedragon.morph.utils;
 
 import io.netty.buffer.ByteBuf;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.FriendlyByteBuf;
 
 import javax.annotation.Nullable;
 import java.io.ByteArrayInputStream;
@@ -59,6 +61,17 @@ public class ByteBufUtils
         }
 
         return result;
+    }
+
+    public static void writeTag(ByteBuf to, @Nullable CompoundTag tag)
+    {
+        new FriendlyByteBuf(to).writeNbt(tag);
+    }
+
+    @Nullable
+    public static CompoundTag readTag(ByteBuf from)
+    {
+        return new FriendlyByteBuf(from).readNbt();
     }
 
     public static byte[] readByteArray(ByteBuf from)

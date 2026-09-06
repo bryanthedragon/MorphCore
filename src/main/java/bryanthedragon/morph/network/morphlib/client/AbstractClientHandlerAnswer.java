@@ -9,8 +9,7 @@ import bryanthedragon.morph.network.morphlib.common.PacketAnswer;
 import bryanthedragon.morph.utils.Consumers;
 
 import net.minecraft.client.player.LocalPlayer;
-import net.minecraft.world.entity.player.Player;
-
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.event.TickEvent;
@@ -22,10 +21,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Consumer;
 
-
 @Mod.EventBusSubscriber
-@SuppressWarnings("rawtypes")
-public abstract class AbstractClientHandlerAnswer<T extends PacketAnswer> extends ClientMessageHandler<T>
+public abstract class AbstractClientHandlerAnswer<T extends PacketAnswer<?>> extends ClientMessageHandler<T>
 {
     protected static final Consumers<Object> CONSUMERS = new Consumers<>();
     protected static final Map<Integer, Long> TIME = new HashMap<>();
@@ -36,8 +33,7 @@ public abstract class AbstractClientHandlerAnswer<T extends PacketAnswer> extend
 
     @Override
     @OnlyIn(Dist.CLIENT)
-    @SuppressWarnings("rawtypes")
-    public void run(Player player, PacketAnswer message)
+    public void run(LocalPlayer player, T message)
     {
         CONSUMERS.consume(message.getCallbackID(), message.getValue());
         TIME.remove(message.getCallbackID());
@@ -112,7 +108,7 @@ public abstract class AbstractClientHandlerAnswer<T extends PacketAnswer> extend
      * @param answer
      * @param <T> the type of the registered Consumer input datatype.
      */
-    public static <T extends Serializable> void sendAnswerTo(Player receiver, PacketAnswer<T> answer)
+    public static <T extends Serializable> void sendAnswerTo(ServerPlayer receiver, PacketAnswer<T> answer)
     {
         Dispatcher.sendTo(answer, receiver);
     }

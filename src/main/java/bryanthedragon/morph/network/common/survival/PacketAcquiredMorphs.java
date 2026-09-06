@@ -3,7 +3,7 @@ package bryanthedragon.morph.network.common.survival;
 import io.netty.buffer.ByteBuf;
 import bryanthedragon.morph.api.MorphUtils;
 import bryanthedragon.morph.api.morphs.AbstractMorph;
-import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
+import bryanthedragon.morph.network.IMessage;
 
 import java.util.ArrayList;
 import java.util.List;

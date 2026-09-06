@@ -6,7 +6,7 @@ import bryanthedragon.morph.config.ConfigManager;
 import bryanthedragon.morph.network.ServerMessageHandler;
 import bryanthedragon.morph.network.morphlib.common.PacketConfig;
 import bryanthedragon.morph.utils.OpHelper;
-import net.minecraft.entity.player.ServerPlayer;
+import net.minecraft.server.level.ServerPlayer;
 
 public class ServerHandlerConfig extends ServerMessageHandler<PacketConfig>
 {
@@ -27,7 +27,7 @@ public class ServerHandlerConfig extends ServerMessageHandler<PacketConfig>
 
             if (present.hasSyncable())
             {
-                ConfigManager.synchronizeConfig(present.filterSyncable(), player.getServerWorld().getMinecraftServer(), null);
+                ConfigManager.synchronizeConfig(present.filterSyncable(), player.getServer(), null);
             }
         }
     }

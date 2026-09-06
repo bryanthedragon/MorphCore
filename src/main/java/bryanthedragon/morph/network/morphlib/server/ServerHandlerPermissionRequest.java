@@ -4,7 +4,7 @@ import bryanthedragon.morph.network.ServerMessageHandler;
 import bryanthedragon.morph.network.morphlib.client.ClientHandlerAnswer;
 import bryanthedragon.morph.network.morphlib.common.PacketRequestPermission;
 import bryanthedragon.morph.permissions.PermissionCategory;
-import net.minecraft.entity.player.ServerPlayer;
+import net.minecraft.server.level.ServerPlayer;
 
 public class ServerHandlerPermissionRequest extends ServerMessageHandler<PacketRequestPermission>
 {
