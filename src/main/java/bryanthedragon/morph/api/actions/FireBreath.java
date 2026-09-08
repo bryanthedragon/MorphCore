@@ -4,11 +4,10 @@ import javax.annotation.Nullable;
 
 import bryanthedragon.morph.api.abilities.IAction;
 import bryanthedragon.morph.api.morphs.main.AbstractMorph;
-
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.DragonFireball;
-import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.block.LevelEvent;
 import net.minecraft.world.phys.Vec3;
 
 /**
@@ -24,19 +23,19 @@ public class FireBreath implements IAction
             return;
         }
 
-        if (target instanceof Player && ((Player) target).getAttackStrengthScale(0.0F) < 1)
+        if (target instanceof Player player && player.getAttackStrengthScale(0.0F) < 1)
         {
             return;
         }
 
-        Vec3 vec3d = target.getLookAngle();
+        Vec3 look = target.getViewVector(1.0F);
 
         double d1 = 4.0D;
-        double d2 = vec3d.x * d1;
-        double d3 = vec3d.y * d1;
-        double d4 = vec3d.z * d1;
+        double d2 = look.x * d1;
+        double d3 = look.y * d1;
+        double d4 = look.z * d1;
 
-        ((Object) target.level()).playEvent((Player) null, 1017, new BlockPos(target), 0);
+        target.level().levelEvent(null, LevelEvent.SOUND_DRAGON_FIREBALL, target.blockPosition(), 0);
 
         DragonFireball fireball = new DragonFireball(target.level(), target, d2, d3, d4);
 
@@ -44,9 +43,9 @@ public class FireBreath implements IAction
 
         target.level().addFreshEntity(fireball);
 
-        if (target instanceof Player)
+        if (target instanceof Player player)
         {
-            ((Player) target).resetAttackStrengthTicker();
+            player.resetAttackStrengthTicker();
         }
     }
 }
