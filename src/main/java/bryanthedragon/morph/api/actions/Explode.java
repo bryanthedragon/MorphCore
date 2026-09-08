@@ -6,10 +6,10 @@ import bryanthedragon.morph.api.abilities.IAction;
 import bryanthedragon.morph.api.morphs.main.AbstractMorph;
 import bryanthedragon.morph.api.morphs.EntityMorph;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.entity.monster.EntityCreeper;
-import net.minecraft.entity.player.Player;
-import net.minecraft.util.DamageSource;
-import net.minecraftforge.fml.relauncher.ReflectionHelper;
+import net.minecraft.world.entity.monster.Creeper;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.Level;
+import net.minecraftforge.fml.util.ObfuscationReflectionHelper;
 
 /**
  * Explode action
@@ -24,7 +24,7 @@ public class Explode implements IAction
     @Override
     public void execute(LivingEntity target, @Nullable AbstractMorph morph)
     {
-        if (target.level().isRemote)
+        if (target.level().isClientSide)
         {
             return;
         }
@@ -36,19 +36,19 @@ public class Explode implements IAction
         {
             LivingEntity entity = ((EntityMorph) morph).getEntity();
 
-            if (entity instanceof EntityCreeper)
+            if (entity instanceof Creeper creeper)
             {
-                explosionPower = ReflectionHelper.getPrivateValue(EntityCreeper.class, (EntityCreeper) entity, "explosionRadius", "field_82226_g");
-                isPowered = ((EntityCreeper) entity).getPowered();
+                explosionPower = ObfuscationReflectionHelper.getPrivateValue(Creeper.class, creeper, "f_32272_");
+                isPowered = creeper.isPowered();
             }
         }
 
         float f = isPowered ? 2.0F : 1.0F;
-        target.level().createExplosion(target, target.posX, target.posY, target.posZ, explosionPower * f, true);
+        target.level().explode(target, target.getX(), target.getY(), target.getZ(), explosionPower * f, Level.ExplosionInteraction.MOB);
 
-        if (!(target instanceof Player) || (target instanceof Player && !((Player) target).isCreative()))
+        if (!(target instanceof Player player) || !player.isCreative())
         {
-            target.attackEntityFrom(DamageSource.OUT_OF_WORLD, target.getMaxHealth());
+            target.hurt(target.damageSources().fellOutOfWorld(), target.getMaxHealth());
         }
     }
 }
