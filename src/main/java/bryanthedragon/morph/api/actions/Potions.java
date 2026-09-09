@@ -11,6 +11,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.ThrownPotion;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.alchemy.Potion;
 import net.minecraft.world.item.alchemy.PotionUtils;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.Level;
@@ -26,10 +27,9 @@ import net.minecraft.world.level.Level;
  * potion.
  * 
  * Of course, some of the code of this action was taken fron 
- * {@link EntityWitch}.
- * @param <PotionType>
+ * {@link Witch}.
  */
-public class Potions<PotionType> implements IAction
+public class Potions implements IAction
 {
     @Override
     public void execute(LivingEntity target, @Nullable AbstractMorph morph)
@@ -47,32 +47,33 @@ public class Potions<PotionType> implements IAction
         }
 
         Vec3 look = target.getLookAngle();
-        PotionType effect = Potions.HARMING;
+        Potion effect = net.minecraft.world.item.alchemy.Potions.HARMING;
 
         if (target.getRandom().nextFloat() < 0.2)
         {
-            effect = Potions.SLOWNESS;
+            effect = net.minecraft.world.item.alchemy.Potions.SLOWNESS;
         }
         else if (target.getRandom().nextFloat() < 0.1)
         {
-            effect = Potions.WEAKNESS;
+            effect = net.minecraft.world.item.alchemy.Potions.WEAKNESS;
         }
         else if (target.getRandom().nextFloat() < 0.05)
         {
-            effect = Potions.POISON;
+            effect = net.minecraft.world.item.alchemy.Potions.POISON;
         }
 
-        ItemStack stack = PotionUtils.addPotionToItemStack(new ItemStack(Items.SPLASH_POTION), effect);
+        ItemStack stack = PotionUtils.setPotion(new ItemStack(Items.SPLASH_POTION), effect);
         ThrownPotion potion = new ThrownPotion(world, target);
 
-        potion.rotationPitch += 20.0F;
+        potion.setItem(stack);
+        potion.setXRot(potion.getXRot() + 20.0F);
         potion.shoot(look.x, look.y, look.z, 0.85F, 2.0F);
 
         world.addFreshEntity(potion);
 
-        if (target instanceof Player)
+        if (target instanceof Player player)
         {
-            ((Player) target).resetAttackStrengthTicker();
+            player.resetAttackStrengthTicker();
         }
     }
 }
