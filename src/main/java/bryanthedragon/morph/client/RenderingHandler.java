@@ -102,7 +102,7 @@ public class RenderingHandler
         int animation = capability.getAnimation();
 
         /* Render the morph */
-        if (capability.renderPlayer(player, event.getX(), event.getY(), event.getZ(), player.getYRot(), event.getPartialTick()))
+        if (capability.renderPlayer(event.getPoseStack(), player, 0, 0, 0, player.getYRot(), event.getPartialTick()))
         {
             event.setCanceled(true);
         }
