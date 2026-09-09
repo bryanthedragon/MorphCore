@@ -3,18 +3,21 @@ package bryanthedragon.morph.capabilities.morphing;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.mojang.blaze3d.platform.GlStateManager;
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.math.Axis;
 
 import bryanthedragon.morph.MorphCore;
 import bryanthedragon.morph.api.Morph;
 import bryanthedragon.morph.api.MorphUtils;
 import bryanthedragon.morph.api.morphs.main.AbstractMorph;
 
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Player;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.player.Player;
 
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -113,7 +116,7 @@ public class Morphing implements IMorphing
 
     @Override
     @OnlyIn(Dist.CLIENT)
-    public boolean renderPlayer(Player player, double x, double y, double z, float yaw, float partialTick)
+    public boolean renderPlayer(PoseStack poseStack, Player player, double x, double y, double z, float yaw, float partialTick)
     {
         if (player.isSpectator())
         {
@@ -138,7 +141,7 @@ public class Morphing implements IMorphing
             }
         }
 
-        GlStateManager.pushMatrix();
+        poseStack.pushPose();
 
         /* Render morph in after transition */
         if (this.animation <= 10)
@@ -151,12 +154,12 @@ public class Morphing implements IMorphing
                 offset = -anim * anim * 2F;
             }
 
-            GlStateManager.translate(x, y + offset, z);
+            poseStack.translate(x, y + offset, z);
 
             if (anim >= 0)
             {
-                GlStateManager.rotate(anim * -90.0F, 1, 0, 0);
-                GlStateManager.scale(1 - anim, 1 - anim, 1 - anim);
+                poseStack.mulPose(Axis.XP.rotationDegrees(anim * -90.0F));
+                poseStack.scale(1 - anim, 1 - anim, 1 - anim);
             }
 
             MorphUtils.render(this.morph.get(), player, 0, 0, 0, yaw, partialTick);
@@ -172,18 +175,18 @@ public class Morphing implements IMorphing
                 offset = (1 - anim);
             }
 
-            GlStateManager.translate(x, y + offset, z);
+            poseStack.translate(x, y + offset, z);
 
             if (anim >= 0)
             {
-                GlStateManager.rotate((1 - anim) * 90.0F, 1, 0, 0);
-                GlStateManager.scale(anim, anim, anim);
+                poseStack.mulPose(Axis.XP.rotationDegrees((1 - anim) * 90.0F));
+                poseStack.scale(anim, anim, anim);
             }
 
             MorphUtils.render(this.previousMorph, player, 0, 0, 0, yaw, partialTick);
         }
 
-        GlStateManager.popMatrix();
+        poseStack.popPose();
 
         return true;
     }
@@ -264,7 +267,7 @@ public class Morphing implements IMorphing
             {
                 if (this.morph.isEmpty())
                 {
-                    this.lastHealth = (float) player.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).getBaseValue();
+                    this.lastHealth = (float) player.getAttribute(Attributes.MAX_HEALTH).getBaseValue();
                 }
                 else
                 {
@@ -441,12 +444,12 @@ public class Morphing implements IMorphing
             this.animation--;
         }
 
-        if (this.animation == 16 && !player.world.isRemote && !MorphCore.disableMorphAnimation.get())
+        if (this.animation == 16 && player.level() instanceof ServerLevel level && !MorphCore.disableMorphAnimation.get())
         {
             /* Pop! */
-            ((WorldServer) player.world).spawnParticle(EnumParticleTypes.EXPLOSION_NORMAL, false, player.posX, player.posY + 0.5, player.posZ, 25, 0.5, 0.5, 0.5, 0.05);
+            level.sendParticles(ParticleTypes.POOF, player.getX(), player.getY() + 0.5, player.getZ(), 25, 0.5, 0.5, 0.5, 0.05);
 
-            player.playSound(SoundEvents.ENTITY_ITEM_PICKUP, 1.0F, 1.0F);
+            player.playSound(SoundEvents.ITEM_PICKUP, 1.0F, 1.0F);
         }
 
         if (!this.morph.isEmpty())
@@ -517,7 +520,7 @@ public class Morphing implements IMorphing
     {
         if (target.getMaxHealth() != health)
         {
-            target.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(health);
+            target.getAttribute(Attributes.MAX_HEALTH).setBaseValue(health);
         }
     }
 }
