@@ -2,6 +2,8 @@ package bryanthedragon.morph.capabilities.morphing;
 
 import bryanthedragon.morph.api.morphs.main.AbstractMorph;
 
+import com.mojang.blaze3d.vertex.PoseStack;
+
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.damagesource.DamageSource;
 
@@ -41,7 +43,7 @@ public interface IMorphing
      * Render player as a morph
      */
     @OnlyIn(Dist.CLIENT)
-    public boolean renderPlayer(Player player, double x, double y, double z, float yaw, float partialTick);
+    public boolean renderPlayer(PoseStack poseStack, Player player, double x, double y, double z, float yaw, float partialTick);
     
     /**
      * Check the last damage source received by the
