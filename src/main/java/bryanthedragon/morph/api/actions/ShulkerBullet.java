@@ -6,20 +6,15 @@ import bryanthedragon.morph.api.EntityUtils;
 import bryanthedragon.morph.api.abilities.IAction;
 import bryanthedragon.morph.api.morphs.main.AbstractMorph;
 
+import net.minecraft.core.Direction;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.core.Direction;
-import net.minecraft.core.Direction.Axis;
 import net.minecraft.world.level.Level;
 
 public class ShulkerBullet implements IAction
 {
-    public ShulkerBullet(Level world, LivingEntity target, Entity toShoot, Axis z) {
-
-    }
-
     @Override
     public void execute(LivingEntity target, @Nullable AbstractMorph morph)
     {
@@ -30,7 +25,7 @@ public class ShulkerBullet implements IAction
             return;
         }
 
-        if (target instanceof Player && ((Player) target).getAttackStrengthScale(0.0F) < 1.0F)
+        if (target instanceof Player player && player.getAttackStrengthScale(0.0F) < 1.0F)
         {
             return;
         }
@@ -41,16 +36,16 @@ public class ShulkerBullet implements IAction
         {
             target.playSound(SoundEvents.SHULKER_SHOOT, 2.0F, (target.getRandom().nextFloat() - target.getRandom().nextFloat()) * 0.2F + 1.0F);
 
-            ShulkerBullet fireball = new ShulkerBullet(world, target, toShoot, Direction.Axis.Z);
+            net.minecraft.world.entity.projectile.ShulkerBullet bullet = new net.minecraft.world.entity.projectile.ShulkerBullet(world, target, toShoot, Direction.Axis.Z);
 
-            fireball.setPos(target.getX(), target.getY(), target.getZ());
+            bullet.setPos(target.getX(), target.getY(), target.getZ());
 
-            world.addFreshEntity(fireball);
+            world.addFreshEntity(bullet);
         }
 
-        if (target instanceof Player)
+        if (target instanceof Player player)
         {
-            ((Player) target).resetAttackStrengthTicker();
+            player.resetAttackStrengthTicker();
         }
     }
 }
