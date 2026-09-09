@@ -8,7 +8,7 @@ import bryanthedragon.morph.capabilities.morphing.Morphing;
 import bryanthedragon.morph.client.gui.overlays.GuiHud;
 import bryanthedragon.morph.client.gui.overlays.GuiOverlay;
 
-import com.mojang.blaze3d.platform.GlStateManager;
+import com.mojang.blaze3d.systems.RenderSystem;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.EntityRenderer;
@@ -120,7 +120,7 @@ public class RenderingHandler
                 anim = (animation - 10 - partialTick) / 10.0F;
             }
 
-            GlStateManager.color(1, 1, 1, anim);
+            RenderSystem.setShaderColor(1, 1, 1, anim);
         }
     }
 
@@ -153,7 +153,6 @@ public class RenderingHandler
 
         if (dist < factor * factor)
         {
-            GlStateManager.alphaFunc(516, 0.1F);
             this.renderEntityName(target, host.getDisplayName().getString(), event.getX(), event.getY(), event.getZ());
         }
     }
