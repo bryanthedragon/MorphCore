@@ -1,59 +1,57 @@
 package bryanthedragon.morph.commands;
 
-import bryanthedragon.morph.MorphCore.MorphLib;
-import bryanthedragon.morph.commands.utils.L10n;
+import com.mojang.brigadier.CommandDispatcher;
+import com.mojang.brigadier.arguments.BoolArgumentType;
+import com.mojang.brigadier.context.CommandContext;
 
-import net.minecraft.core.BlockPos;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.Commands;
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.world.level.LevelSettings;
+import net.minecraft.world.level.storage.PrimaryLevelData;
 
-import javax.annotation.Nullable;
-import java.util.List;
+import net.minecraftforge.fml.util.ObfuscationReflectionHelper;
 
-public class CommandCheats extends McCommandBase
+/**
+ * Cheats command
+ *
+ * Toggles "allow cheats" of a single player world ({@code /cheats <true|false>}).
+ * Vanilla exposes no setter for {@link LevelSettings#allowCommands()}, so the
+ * level's settings record is rebuilt and swapped in via reflection.
+ */
+public class CommandCheats
 {
-    public L10n getL10n()
+    /** SRG name of {@link PrimaryLevelData}'s {@code settings} field */
+    private static final String SETTINGS_FIELD = "f_78443_";
+
+    public static void register(CommandDispatcher<CommandSourceStack> dispatcher)
     {
-        return MorphLib.l10n;
+        dispatcher.register(Commands.literal("cheats")
+            .then(Commands.argument("enabled", BoolArgumentType.bool())
+                .executes(CommandCheats::execute)));
     }
 
-    public String getName()
+    private static int execute(CommandContext<CommandSourceStack> context)
     {
-        return "cheats";
-    }
+        boolean enabled = BoolArgumentType.getBool(context, "enabled");
+        MinecraftServer server = context.getSource().getServer();
 
-    public String getUsage(ICommandSender sender)
-    {
-        return "morphlib.commands.cheats";
-    }
-
-    public String getSyntax()
-    {
-        return "{l}{6}/{r}cheats {7}<enabled:true|false>{r}";
-    }
-
-    public boolean checkPermission(MinecraftServer server, ICommandSender sender)
-    {
-        return true;
-    }
-
-    public int getRequiredArgs()
-    {
-        return 1;
-    }
-
-    public void executeCommand(MinecraftServer server, ICommandSender sender, String[] args) throws CommandException
-    {
-        sender.getEntityWorld().getWorldInfo().setAllowCommands(CommandBase.parseBoolean(args[0]));
-        server.saveAllWorlds(false);
-    }
-
-    public List<String> getTabCompletions(MinecraftServer server, ICommandSender sender, String[] args, @Nullable BlockPos targetPos)
-    {
-        if (args.length == 1)
+        if (!(server.getWorldData() instanceof PrimaryLevelData data))
         {
-            return getListOfStringsMatchingLastWord(args, McCommandBase.BOOLEANS);
+            context.getSource().sendFailure(Component.translatable("morphlib.commands.cheats"));
+
+            return 0;
         }
 
-        return super.getTabCompletions(server, sender, args, targetPos);
+        LevelSettings old = data.getLevelSettings();
+        LevelSettings settings = new LevelSettings(old.levelName(), old.gameType(), old.hardcore(), old.difficulty(), enabled, old.gameRules(), old.getDataConfiguration());
+
+        ObfuscationReflectionHelper.setPrivateValue(PrimaryLevelData.class, data, settings, SETTINGS_FIELD);
+        server.saveEverything(true, false, false);
+
+        context.getSource().sendSuccess(() -> Component.translatable("morphlib.commands.cheats"), true);
+
+        return 1;
     }
 }
