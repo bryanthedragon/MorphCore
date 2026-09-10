@@ -1,7 +1,7 @@
 package bryanthedragon.morph.network.common.survival;
 
 import io.netty.buffer.ByteBuf;
-import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
+import bryanthedragon.morph.network.IMessage;
 
 public abstract class PacketIndex implements IMessage
 {

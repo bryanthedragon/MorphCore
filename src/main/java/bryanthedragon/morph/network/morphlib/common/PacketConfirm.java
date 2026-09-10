@@ -6,7 +6,7 @@ import bryanthedragon.morph.client.gui.utils.keys.KeyParser;
 import bryanthedragon.morph.network.morphlib.client.ClientHandlerConfirm;
 import bryanthedragon.morph.network.morphlib.server.ServerHandlerConfirm;
 import net.minecraftforge.fml.common.network.ByteBufUtils;
-import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
+import bryanthedragon.morph.network.IMessage;
 
 import javax.annotation.Nullable;
 import java.util.Map;

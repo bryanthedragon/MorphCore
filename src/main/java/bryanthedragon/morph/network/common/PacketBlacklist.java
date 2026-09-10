@@ -6,7 +6,7 @@ import java.util.TreeSet;
 
 import io.netty.buffer.ByteBuf;
 import net.minecraftforge.fml.common.network.ByteBufUtils;
-import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
+import bryanthedragon.morph.network.IMessage;
 
 public class PacketBlacklist implements IMessage
 {

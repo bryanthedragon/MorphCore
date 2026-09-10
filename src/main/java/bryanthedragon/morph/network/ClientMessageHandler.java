@@ -1,6 +1,7 @@
 package bryanthedragon.morph.network;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.server.level.ServerPlayer;
 
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -16,15 +17,20 @@ import net.minecraftforge.api.distmarker.Dist;
 public abstract class ClientMessageHandler<T extends IMessage> extends AbstractMessageHandler<T>
 {
     @OnlyIn(Dist.CLIENT)
-    public abstract void run(final ServerPlayer player, final T message);
+    public abstract void run(final LocalPlayer player, final T message);
 
+    @Override
     @OnlyIn(Dist.CLIENT)
     public IMessage handleClientMessage(final T message)
     {
-        Minecraft.getInstance().execute(() -> { ClientMessageHandler.this.run(Minecraft.getInstance().player, message); } );
+        Minecraft mc = Minecraft.getInstance();
+
+        mc.execute(() -> ClientMessageHandler.this.run(mc.player, message));
+
         return null;
     }
 
+    @Override
     public final IMessage handleServerMessage(final ServerPlayer player, final T message)
     {
         return null;

@@ -2,7 +2,7 @@ package bryanthedragon.morph.network.morphlib.common;
 
 import io.netty.buffer.ByteBuf;
 import bryanthedragon.morph.utils.ByteBufUtils;
-import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
+import bryanthedragon.morph.network.IMessage;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

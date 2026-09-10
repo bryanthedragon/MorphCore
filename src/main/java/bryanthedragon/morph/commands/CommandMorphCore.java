@@ -8,6 +8,7 @@ import bryanthedragon.morph.api.MorphManager;
 import bryanthedragon.morph.api.MorphUtils;
 import bryanthedragon.morph.api.settings.MorphSettings;
 import bryanthedragon.morph.network.Dispatcher;
+import bryanthedragon.morph.network.IMessage;
 import bryanthedragon.morph.network.common.PacketBlacklist;
 import bryanthedragon.morph.network.common.PacketSettings;
 

@@ -1,7 +1,7 @@
 package bryanthedragon.morph.network;
 
 
-import org.spongepowered.asm.mixin.MixinEnvironment.Side;
+import net.minecraftforge.api.distmarker.Dist;
 
 import bryanthedragon.morph.MorphCore;
 import bryanthedragon.morph.network.AbstractDispatcher;
@@ -52,37 +52,37 @@ public class Dispatcher
         public void register()
         {
             /* Action */
-            register(PacketAction.class, ServerHandlerAction.class, Side.SERVER);
+            register(PacketAction.class, ServerHandlerAction.class, Dist.DEDICATED_SERVER);
 
             /* Morphing */
-            register(PacketMorph.class, ClientHandlerMorph.class, Side.CLIENT);
-            register(PacketMorph.class, ServerHandlerMorph.class, Side.SERVER);
-            register(PacketMorphPlayer.class, ClientHandlerMorphPlayer.class, Side.CLIENT);
+            register(PacketMorph.class, ClientHandlerMorph.class, Dist.CLIENT);
+            register(PacketMorph.class, ServerHandlerMorph.class, Dist.DEDICATED_SERVER);
+            register(PacketMorphPlayer.class, ClientHandlerMorphPlayer.class, Dist.CLIENT);
 
-            register(PacketAcquireMorph.class, ClientHandlerAcquireMorph.class, Side.CLIENT);
-            register(PacketAcquireMorph.class, ServerHandlerAcquireMorph.class, Side.SERVER);
-            register(PacketAcquiredMorphs.class, ClientHandlerAcquiredMorphs.class, Side.CLIENT);
-            register(PacketSyncMorph.class, ServerHandlerSyncMorph.class, Side.SERVER);
+            register(PacketAcquireMorph.class, ClientHandlerAcquireMorph.class, Dist.CLIENT);
+            register(PacketAcquireMorph.class, ServerHandlerAcquireMorph.class, Dist.DEDICATED_SERVER);
+            register(PacketAcquiredMorphs.class, ClientHandlerAcquiredMorphs.class, Dist.CLIENT);
+            register(PacketSyncMorph.class, ServerHandlerSyncMorph.class, Dist.DEDICATED_SERVER);
 
-            register(PacketSelectMorph.class, ServerHandlerSelectMorph.class, Side.SERVER);
-            register(PacketClearAcquired.class, ServerHandlerClearAcquired.class, Side.SERVER);
+            register(PacketSelectMorph.class, ServerHandlerSelectMorph.class, Dist.DEDICATED_SERVER);
+            register(PacketClearAcquired.class, ServerHandlerClearAcquired.class, Dist.DEDICATED_SERVER);
 
             /* Morph state */
-            register(PacketMorphState.class, ClientHandlerMorphState.class, Side.CLIENT);
+            register(PacketMorphState.class, ClientHandlerMorphState.class, Dist.CLIENT);
 
             /* Managing morphs */
-            register(PacketFavorite.class, ClientHandlerFavorite.class, Side.CLIENT);
-            register(PacketFavorite.class, ServerHandlerFavorite.class, Side.SERVER);
+            register(PacketFavorite.class, ClientHandlerFavorite.class, Dist.CLIENT);
+            register(PacketFavorite.class, ServerHandlerFavorite.class, Dist.DEDICATED_SERVER);
 
-            register(PacketKeybind.class, ClientHandlerKeybind.class, Side.CLIENT);
-            register(PacketKeybind.class, ServerHandlerKeybind.class, Side.SERVER);
+            register(PacketKeybind.class, ClientHandlerKeybind.class, Dist.CLIENT);
+            register(PacketKeybind.class, ServerHandlerKeybind.class, Dist.DEDICATED_SERVER);
 
-            register(PacketRemoveMorph.class, ClientHandlerRemoveMorph.class, Side.CLIENT);
-            register(PacketRemoveMorph.class, ServerHandlerRemoveMorph.class, Side.SERVER);
+            register(PacketRemoveMorph.class, ClientHandlerRemoveMorph.class, Dist.CLIENT);
+            register(PacketRemoveMorph.class, ServerHandlerRemoveMorph.class, Dist.DEDICATED_SERVER);
 
             /* Syncing data */
-            register(PacketBlacklist.class, ClientHandlerBlacklist.class, Side.CLIENT);
-            register(PacketSettings.class, ClientHandlerSettings.class, Side.CLIENT);
+            register(PacketBlacklist.class, ClientHandlerBlacklist.class, Dist.CLIENT);
+            register(PacketSettings.class, ClientHandlerSettings.class, Dist.CLIENT);
         }
     };
 
