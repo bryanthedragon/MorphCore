@@ -1,17 +1,17 @@
-package bryanthedragon.morph.client.gui.framework.elements;
+package org.bryanthedragon.morph.client.gui.framework.elements;
 
-import bryanthedragon.morph.client.gui.framework.GuiBase;
-import bryanthedragon.morph.client.gui.framework.elements.context.GuiContextMenu;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
-import bryanthedragon.morph.client.gui.framework.tooltips.ITooltip;
-import bryanthedragon.morph.client.gui.framework.tooltips.LabelTooltip;
-import bryanthedragon.morph.client.gui.utils.KeybindManager;
-import bryanthedragon.morph.client.gui.utils.Area;
-import bryanthedragon.morph.client.gui.utils.keys.IKey;
-import bryanthedragon.morph.client.gui.utils.resizers.IResizer;
-import bryanthedragon.morph.client.gui.utils.resizers.Flex;
-import bryanthedragon.morph.client.gui.utils.resizers.Margin;
-import bryanthedragon.morph.utils.vector.Direction;
+import org.bryanthedragon.morph.client.gui.framework.GuiBase;
+import org.bryanthedragon.morph.client.gui.framework.elements.context.GuiContextMenu;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
+import org.bryanthedragon.morph.client.gui.framework.tooltips.ITooltip;
+import org.bryanthedragon.morph.client.gui.framework.tooltips.LabelTooltip;
+import org.bryanthedragon.morph.client.gui.utils.KeybindManager;
+import org.bryanthedragon.morph.client.gui.utils.Area;
+import org.bryanthedragon.morph.client.gui.utils.keys.IKey;
+import org.bryanthedragon.morph.client.gui.utils.resizers.IResizer;
+import org.bryanthedragon.morph.client.gui.utils.resizers.Flex;
+import org.bryanthedragon.morph.client.gui.utils.resizers.Margin;
+import org.bryanthedragon.morph.utils.vector.Direction;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;

@@ -1,10 +1,10 @@
-package bryanthedragon.morph.capabilities.morphing;
+package org.bryanthedragon.morph.capabilities.morphing;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import bryanthedragon.morph.api.MorphManager;
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.api.MorphManager;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
 
 import net.minecraft.nbt.Tag;
 import net.minecraft.nbt.CompoundTag;
@@ -30,6 +30,7 @@ public class MorphingStorage
         tag.putBoolean("HasSquidAir", instance.getHasSquidAir());
         tag.putInt("SquidAir", instance.getSquidAir());
         tag.putFloat("lastHealth", instance.getLastHealth());
+        tag.putDouble("originalSpeed", instance.getOriginalSpeed());
 
         if (instance.getCurrentMorph() != null)
         {
@@ -64,6 +65,10 @@ public class MorphingStorage
             instance.setHasSquidAir(tag.getBoolean("HasSquidAir"));
             instance.setSquidAir(tag.getInt("SquidAir"));
             instance.setLastHealth(tag.getFloat("lastHealth"));
+            if (tag.contains("originalSpeed"))
+            {
+                instance.setOriginalSpeed(tag.getDouble("originalSpeed"));
+            }
 
             if (!tag.isEmpty())
             {
@@ -84,9 +89,9 @@ public class MorphingStorage
                         acquiredMorphs.add(morph);
                     }
                 }
-
-                instance.setAcquiredMorphs(acquiredMorphs);
             }
+
+            instance.setAcquiredMorphs(acquiredMorphs);
         }
     }
 }

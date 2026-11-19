@@ -1,7 +1,7 @@
-package bryanthedragon.morph.network.server.message;
+package org.bryanthedragon.morph.network.server.message;
 
-import bryanthedragon.morph.network.AbstractMessageHandler;
-import bryanthedragon.morph.network.IMessage;
+import org.bryanthedragon.morph.network.AbstractMessageHandler;
+import org.bryanthedragon.morph.network.IMessage;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;

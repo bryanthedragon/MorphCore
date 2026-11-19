@@ -1,11 +1,11 @@
-package bryanthedragon.morph.client.gui.utils.resizers.constraint;
+package org.bryanthedragon.morph.client.gui.utils.resizers.constraint;
 
-import bryanthedragon.morph.client.gui.framework.elements.GuiElement;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiViewportStack;
-import bryanthedragon.morph.client.gui.utils.Area;
-import bryanthedragon.morph.client.gui.utils.resizers.DecoratedResizer;
-import bryanthedragon.morph.client.gui.utils.resizers.IResizer;
-import bryanthedragon.morph.utils.math.MathUtils;
+import org.bryanthedragon.morph.client.gui.framework.elements.GuiElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiViewportStack;
+import org.bryanthedragon.morph.client.gui.utils.Area;
+import org.bryanthedragon.morph.client.gui.utils.resizers.DecoratedResizer;
+import org.bryanthedragon.morph.client.gui.utils.resizers.IResizer;
+import org.bryanthedragon.morph.utils.math.MathUtils;
 
 /**
  * Bounds resizer

@@ -1,4 +1,4 @@
-package bryanthedragon.morph.api.events;
+package org.bryanthedragon.morph.api.events;
 
 import java.util.Set;
 import java.util.TreeSet;

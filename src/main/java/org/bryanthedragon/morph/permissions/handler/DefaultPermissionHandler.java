@@ -1,4 +1,4 @@
-package bryanthedragon.morph.permissions.handler;
+package org.bryanthedragon.morph.permissions.handler;
 
 import java.util.Collection;
 import java.util.Collections;

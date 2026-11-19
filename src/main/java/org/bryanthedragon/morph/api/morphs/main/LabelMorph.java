@@ -1,10 +1,10 @@
-package bryanthedragon.morph.api.morphs.main;
+package org.bryanthedragon.morph.api.morphs.main;
 
-import bryanthedragon.morph.utils.math.MathUtils;
-import bryanthedragon.morph.utils.matrix.MatrixUtils;
-import bryanthedragon.morph.utils.text.TextUtils;
-import bryanthedragon.morph.utils.color.Color;
-import bryanthedragon.morph.utils.color.ColorUtils;
+import org.bryanthedragon.morph.utils.math.MathUtils;
+import org.bryanthedragon.morph.utils.matrix.MatrixUtils;
+import org.bryanthedragon.morph.utils.text.TextUtils;
+import org.bryanthedragon.morph.utils.color.ColorUtils.Color;
+import org.bryanthedragon.morph.utils.color.ColorUtils;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.BufferUploader;

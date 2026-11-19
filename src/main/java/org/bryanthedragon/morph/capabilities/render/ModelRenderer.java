@@ -1,9 +1,9 @@
-package bryanthedragon.morph.capabilities.render;
+package org.bryanthedragon.morph.capabilities.render;
 
-import bryanthedragon.morph.api.MorphManager;
-import bryanthedragon.morph.api.MorphUtils;
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
-import bryanthedragon.morph.client.EntityModelHandler;
+import org.bryanthedragon.morph.api.MorphManager;
+import org.bryanthedragon.morph.api.utils.morph.MorphUtils;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.client.EntityModelHandler;
 
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;

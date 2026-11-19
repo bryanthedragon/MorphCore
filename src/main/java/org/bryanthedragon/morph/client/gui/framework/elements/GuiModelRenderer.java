@@ -1,11 +1,11 @@
-package bryanthedragon.morph.client.gui.framework.elements;
+package org.bryanthedragon.morph.client.gui.framework.elements;
 
-import bryanthedragon.morph.MorphLib;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiDraw;
-import bryanthedragon.morph.utils.dummy.DummyUtils.DummyEntity;
-import bryanthedragon.morph.utils.math.MathUtils;
-import bryanthedragon.morph.utils.matrix.MatrixUtils;
+import org.bryanthedragon.morph.MorphLib;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiDraw;
+import org.bryanthedragon.morph.utils.dummy.DummyUtils.DummyEntity;
+import org.bryanthedragon.morph.utils.math.MathUtils;
+import org.bryanthedragon.morph.utils.matrix.MatrixUtils;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;

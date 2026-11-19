@@ -1,10 +1,11 @@
-package bryanthedragon.morph.client.gui.creative;
+package org.bryanthedragon.morph.client.gui.creative;
 
-import bryanthedragon.morph.client.gui.framework.GuiBase;
-import bryanthedragon.morph.client.gui.framework.elements.GuiElement;
-import bryanthedragon.morph.client.gui.framework.elements.buttons.GuiButtonElement;
-import bryanthedragon.morph.client.gui.utils.keys.IKey;
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.client.gui.framework.GuiBase;
+import org.bryanthedragon.morph.client.gui.framework.elements.GuiElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.buttons.GuiButtonElement;
+import org.bryanthedragon.morph.client.gui.utils.keys.IKey;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
+
 import net.minecraft.client.Minecraft;
 
 import java.util.function.Consumer;

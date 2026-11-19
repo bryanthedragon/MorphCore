@@ -1,4 +1,4 @@
-package bryanthedragon.morph.api.utils.morph;
+package org.bryanthedragon.morph.api.utils.morph;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -11,29 +11,29 @@ import com.mojang.blaze3d.vertex.Tesselator;
 
 import io.netty.buffer.ByteBuf;
 
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.FriendlyByteBuf;
+import org.bryanthedragon.morph.client.gui.framework.elements.GuiModelRenderer;
+import org.bryanthedragon.morph.utils.helpers.lighting.BetterLightsHelper;
+import org.bryanthedragon.morph.utils.helpers.optifine.OptifineHelper;
+import org.bryanthedragon.morph.api.MorphManager;
+import org.bryanthedragon.morph.api.events.RegisterBlacklistEvent;
+import org.bryanthedragon.morph.api.events.RegisterRemapEvent;
+import org.bryanthedragon.morph.api.events.RegisterSettingsEvent;
+import org.bryanthedragon.morph.api.models.IMorphProvider;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.api.morphs.utils.ISyncableMorph;
+import org.bryanthedragon.morph.api.settings.MorphSettings;
+import org.bryanthedragon.morph.bodypart.BodyPart;
+import org.bryanthedragon.morph.bodypart.BodyPartManager;
+import org.bryanthedragon.morph.bodypart.IBodyPartProvider;
+
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.FriendlyByteBuf;
 
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.common.MinecraftForge;
-
-import bryanthedragon.morph.api.MorphManager;
-import bryanthedragon.morph.api.events.RegisterBlacklistEvent;
-import bryanthedragon.morph.api.events.RegisterRemapEvent;
-import bryanthedragon.morph.api.events.RegisterSettingsEvent;
-import bryanthedragon.morph.api.models.IMorphProvider;
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
-import bryanthedragon.morph.api.morphs.utils.ISyncableMorph;
-import bryanthedragon.morph.api.settings.MorphSettings;
-import bryanthedragon.morph.bodypart.BodyPart;
-import bryanthedragon.morph.bodypart.BodyPartManager;
-import bryanthedragon.morph.bodypart.IBodyPartProvider;
-import bryanthedragon.morph.client.gui.framework.elements.GuiModelRenderer;
-import bryanthedragon.morph.utils.helpers.lighting.BetterLightsHelper;
-import bryanthedragon.morph.utils.helpers.optifine.OptifineHelper;
 
 public class MorphUtils
 {
@@ -147,9 +147,7 @@ public class MorphUtils
                 System.err.println("Unfinished builder comes from class: " + morph.getClass().getName());
             }
             catch (IllegalStateException ex)
-            {
-
-            }
+            {}
         }
 
         return false;
@@ -187,9 +185,7 @@ public class MorphUtils
                 System.err.println("Unfinished builder comes from class: " + morph.getClass().getName());
             }
             catch (IllegalStateException ex)
-            {
-                System.err.println("Failed to end builder for class: " + morph.getClass().getName());
-            }
+            {}
         }
 
         return false;
@@ -275,7 +271,8 @@ public class MorphUtils
      */
     public static void morphToBuf(ByteBuf buffer, AbstractMorph morph)
     {
-        new FriendlyByteBuf(buffer).writeNbt(morph == null ? null : morph.toNBT());
+        FriendlyByteBuf friendlyBuf = new FriendlyByteBuf(buffer);
+        friendlyBuf.writeNbt(morph == null ? null : morph.toNBT());
     }
 
     /**
@@ -289,7 +286,8 @@ public class MorphUtils
      */
     public static AbstractMorph morphFromBuf(ByteBuf buffer)
     {
-        return MorphManager.INSTANCE.morphFromNBT(new FriendlyByteBuf(buffer).readNbt());
+        net.minecraft.network.FriendlyByteBuf friendlyBuf = new net.minecraft.network.FriendlyByteBuf(buffer);
+        return MorphManager.INSTANCE.morphFromNBT(friendlyBuf.readNbt());
     }
 
     /**

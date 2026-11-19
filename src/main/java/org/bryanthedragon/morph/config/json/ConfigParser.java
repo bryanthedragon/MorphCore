@@ -1,10 +1,10 @@
-package bryanthedragon.morph.config.json;
+package org.bryanthedragon.morph.config.json;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
-import bryanthedragon.morph.config.Config;
-import bryanthedragon.morph.config.values.Value;
+import org.bryanthedragon.morph.config.Config;
+import org.bryanthedragon.morph.config.values.Value;
 
 import org.apache.commons.io.FileUtils;
 

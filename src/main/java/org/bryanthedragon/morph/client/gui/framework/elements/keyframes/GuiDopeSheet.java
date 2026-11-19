@@ -1,11 +1,11 @@
-package bryanthedragon.morph.client.gui.framework.elements.keyframes;
+package org.bryanthedragon.morph.client.gui.framework.elements.keyframes;
 
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiDraw;
-import bryanthedragon.morph.client.gui.utils.Area;
-import bryanthedragon.morph.utils.keyframes.Keyframe;
-import bryanthedragon.morph.utils.keyframes.KeyframeEasing;
-import bryanthedragon.morph.utils.keyframes.KeyframeInterpolation;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiDraw;
+import org.bryanthedragon.morph.client.gui.utils.Area;
+import org.bryanthedragon.morph.utils.keyframes.Keyframe;
+import org.bryanthedragon.morph.utils.keyframes.KeyframeEasing;
+import org.bryanthedragon.morph.utils.keyframes.KeyframeInterpolation;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.BufferBuilder;

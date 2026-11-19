@@ -1,7 +1,7 @@
-package bryanthedragon.morph.math.molang.functions;
+package org.bryanthedragon.morph.math.molang.functions;
 
-import bryanthedragon.morph.math.IValue;
-import bryanthedragon.morph.math.functions.trig.Asin;
+import org.bryanthedragon.morph.math.IValue;
+import org.bryanthedragon.morph.math.functions.trig.Asin;
 
 public class AsinDegrees extends Asin
 {

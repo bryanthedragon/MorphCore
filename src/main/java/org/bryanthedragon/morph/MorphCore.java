@@ -1,4 +1,4 @@
-package bryanthedragon.morph;
+package org.bryanthedragon.morph;
 
 import net.minecraft.resources.ResourceLocation;
 
@@ -17,20 +17,20 @@ import net.minecraftforge.network.simple.SimpleChannel;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.Logger;
 
-import bryanthedragon.morph.config.builder.ConfigBuilder;
-import bryanthedragon.morph.config.values.ValueBoolean;
-import bryanthedragon.morph.config.values.ValueInt;
-import bryanthedragon.morph.events.RegisterConfigEvent;
-import bryanthedragon.morph.entity.EntityMorph;
-import bryanthedragon.morph.MorphCoreProxy.ClientCoreProxy;
-import bryanthedragon.morph.MorphCoreProxy.CommonCoreProxy;
-import bryanthedragon.morph.api.MorphManager;
-import bryanthedragon.morph.api.MorphUtils;
-import bryanthedragon.morph.commands.CommandAcquireMorph;
-import bryanthedragon.morph.commands.CommandMorph;
-import bryanthedragon.morph.commands.CommandMorphCore;
-import bryanthedragon.morph.loader.MorphLoader;
-import bryanthedragon.morph.loader.state.MorphLoaderState;
+import org.bryanthedragon.morph.config.builder.ConfigBuilder;
+import org.bryanthedragon.morph.config.values.ValueBoolean;
+import org.bryanthedragon.morph.config.values.ValueInt;
+import org.bryanthedragon.morph.events.RegisterConfigEvent;
+import org.bryanthedragon.morph.MorphCoreProxy.ClientCoreProxy;
+import org.bryanthedragon.morph.MorphCoreProxy.CommonCoreProxy;
+import org.bryanthedragon.morph.api.MorphManager;
+import org.bryanthedragon.morph.api.morphs.main.MorphPickupEntity;
+import org.bryanthedragon.morph.api.utils.morph.MorphUtils;
+import org.bryanthedragon.morph.commands.CommandAcquireMorph;
+import org.bryanthedragon.morph.commands.CommandMorph;
+import org.bryanthedragon.morph.commands.CommandMorphCore;
+import org.bryanthedragon.morph.loader.MorphLoader;
+import org.bryanthedragon.morph.loader.state.MorphLoaderState;
 
 
 /**
@@ -78,7 +78,7 @@ public class MorphCore
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::onConstructMod);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::onCommonSetup);
         FMLJavaModLoadingContext.get().getModEventBus().register(this);
-        EntityMorph.ENTITY_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
+        MorphPickupEntity.ENTITY_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
         
         // Initialize proxy
         proxy = DistExecutor.unsafeRunForDist(() -> ClientCoreProxy::new, () -> CommonCoreProxy::new);

@@ -1,12 +1,12 @@
-package bryanthedragon.morph.commands.config;
+package org.bryanthedragon.morph.commands.config;
 
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.suggestion.Suggestions;
 import com.mojang.brigadier.suggestion.SuggestionsBuilder;
 
-import bryanthedragon.morph.MorphLib;
-import bryanthedragon.morph.config.Config;
-import bryanthedragon.morph.config.values.Value;
+import org.bryanthedragon.morph.MorphLib;
+import org.bryanthedragon.morph.config.Config;
+import org.bryanthedragon.morph.config.values.Value;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.commands.CommandSourceStack;
@@ -20,7 +20,9 @@ import java.util.concurrent.CompletableFuture;
 public final class SubCommandConfigBase
 {
     private SubCommandConfigBase()
-    {}
+    {
+        
+    }
 
     public static CompletableFuture<Suggestions> suggestValues(CommandContext<CommandSourceStack> context, SuggestionsBuilder builder)
     {

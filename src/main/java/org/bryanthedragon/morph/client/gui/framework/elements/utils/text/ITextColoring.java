@@ -1,4 +1,4 @@
-package bryanthedragon.morph.client.gui.framework.elements.utils.text;
+package org.bryanthedragon.morph.client.gui.framework.elements.utils.text;
 
 public interface ITextColoring
 {

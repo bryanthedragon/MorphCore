@@ -1,13 +1,13 @@
-package bryanthedragon.morph.client.gui.creative;
+package org.bryanthedragon.morph.client.gui.creative;
 
-import bryanthedragon.morph.client.gui.framework.GuiBase;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiDraw;
-import bryanthedragon.morph.MorphCore;
-import bryanthedragon.morph.api.MorphManager;
-import bryanthedragon.morph.api.creative.sections.MorphSection;
-import bryanthedragon.morph.api.creative.sections.UserSection;
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
-import bryanthedragon.morph.capabilities.render.EntitySelector;
+import org.bryanthedragon.morph.client.gui.framework.GuiBase;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiDraw;
+import org.bryanthedragon.morph.MorphCore;
+import org.bryanthedragon.morph.api.MorphManager;
+import org.bryanthedragon.morph.api.creative.sections.MorphSection;
+import org.bryanthedragon.morph.api.creative.sections.UserSection;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.capabilities.render.EntitySelector;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;

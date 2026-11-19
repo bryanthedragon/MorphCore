@@ -1,7 +1,7 @@
-package bryanthedragon.morph.api.events;
+package org.bryanthedragon.morph.api.events;
 
-import bryanthedragon.morph.api.abilities.IAction;
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.api.abilities.IAction;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
 
 import net.minecraft.world.entity.player.Player;
 

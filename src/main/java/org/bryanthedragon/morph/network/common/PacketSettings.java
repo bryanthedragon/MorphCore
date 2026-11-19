@@ -1,8 +1,8 @@
-package bryanthedragon.morph.network.common;
+package org.bryanthedragon.morph.network.common;
 
-import bryanthedragon.morph.api.settings.MorphSettings;
-import bryanthedragon.morph.network.IMessage;
-import bryanthedragon.morph.utils.bytebuf.ByteBufUtils;
+import org.bryanthedragon.morph.api.settings.MorphSettings;
+import org.bryanthedragon.morph.network.IMessage;
+import org.bryanthedragon.morph.utils.bytebuf.ByteBufUtils;
 
 import io.netty.buffer.ByteBuf;
 

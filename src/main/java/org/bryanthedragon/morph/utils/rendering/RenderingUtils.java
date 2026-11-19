@@ -1,8 +1,8 @@
-package bryanthedragon.morph.utils.rendering;
+package org.bryanthedragon.morph.utils.rendering;
 
-import bryanthedragon.morph.utils.reflection.ReflectionUtils;
-import bryanthedragon.morph.utils.color.Color;
-import bryanthedragon.morph.utils.matrix.MatrixUtils;
+import org.bryanthedragon.morph.utils.reflection.ReflectionUtils;
+import org.bryanthedragon.morph.utils.color.ColorUtils.Color;
+import org.bryanthedragon.morph.utils.matrix.MatrixUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.resources.ResourceLocation;

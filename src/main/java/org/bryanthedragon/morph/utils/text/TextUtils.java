@@ -1,4 +1,4 @@
-package bryanthedragon.morph.utils.text;
+package org.bryanthedragon.morph.utils.text;
 
 public class TextUtils
 {

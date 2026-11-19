@@ -1,7 +1,7 @@
-package bryanthedragon.morph.events;
+package org.bryanthedragon.morph.events;
 
-import bryanthedragon.morph.config.Config;
-import bryanthedragon.morph.config.builder.ConfigBuilder;
+import org.bryanthedragon.morph.config.Config;
+import org.bryanthedragon.morph.config.builder.ConfigBuilder;
 import net.minecraftforge.eventbus.api.Event;
 
 import java.io.File;

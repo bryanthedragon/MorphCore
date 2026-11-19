@@ -1,7 +1,7 @@
-package bryanthedragon.morph.utils.wav;
+package org.bryanthedragon.morph.utils.wav;
 
-import bryanthedragon.morph.utils.binary.BinaryChunk;
-import bryanthedragon.morph.utils.binary.BinaryReader;
+import org.bryanthedragon.morph.utils.binary.BinaryChunk;
+import org.bryanthedragon.morph.utils.binary.BinaryReader;
 
 import java.io.InputStream;
 

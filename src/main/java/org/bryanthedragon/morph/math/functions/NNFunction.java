@@ -1,7 +1,7 @@
-package bryanthedragon.morph.math.functions;
+package org.bryanthedragon.morph.math.functions;
 
-import bryanthedragon.morph.math.IValue;
-import bryanthedragon.morph.math.Operation;
+import org.bryanthedragon.morph.math.IValue;
+import org.bryanthedragon.morph.math.Operation;
 
 /**
  * Function that expects number input arguments and outputs a number

@@ -1,18 +1,19 @@
-package bryanthedragon.morph.config.values;
+package org.bryanthedragon.morph.config.values;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonPrimitive;
 
 import io.netty.buffer.ByteBuf;
 
-import bryanthedragon.morph.client.gui.framework.elements.GuiElement;
-import bryanthedragon.morph.client.gui.framework.elements.input.GuiTextElement;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiLabel;
-import bryanthedragon.morph.client.gui.utils.Elements;
-import bryanthedragon.morph.client.gui.utils.keys.IKey;
-import bryanthedragon.morph.config.gui.GuiConfigPanel;
-import bryanthedragon.morph.utils.bytebuf.ByteBufUtils;
-import bryanthedragon.morph.utils.interpolation.Interpolation;
+import org.bryanthedragon.morph.client.gui.framework.elements.GuiElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.input.GuiTextElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiLabel;
+import org.bryanthedragon.morph.client.gui.utils.Elements;
+import org.bryanthedragon.morph.client.gui.utils.keys.IKey;
+import org.bryanthedragon.morph.config.gui.GuiConfigPanel;
+import org.bryanthedragon.morph.utils.bytebuf.ByteBufUtils;
+import org.bryanthedragon.morph.utils.interpolation.Interpolation;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.nbt.StringTag;
 import net.minecraft.nbt.Tag;

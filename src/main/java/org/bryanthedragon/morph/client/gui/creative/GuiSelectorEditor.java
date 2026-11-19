@@ -1,23 +1,22 @@
-package bryanthedragon.morph.client.gui.creative;
+package org.bryanthedragon.morph.client.gui.creative;
 
-import bryanthedragon.morph.client.gui.framework.elements.GuiElement;
-import bryanthedragon.morph.client.gui.framework.elements.buttons.GuiButtonElement;
-import bryanthedragon.morph.client.gui.framework.elements.buttons.GuiToggleElement;
-import bryanthedragon.morph.client.gui.framework.elements.context.GuiSimpleContextMenu;
-import bryanthedragon.morph.client.gui.framework.elements.input.GuiTextElement;
-import bryanthedragon.morph.client.gui.framework.elements.list.GuiListElement;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiLabel;
-import bryanthedragon.morph.client.gui.utils.Elements;
-import bryanthedragon.morph.client.gui.utils.Icons;
-import bryanthedragon.morph.client.gui.utils.keys.IKey;
-import bryanthedragon.morph.utils.time.Timer;
-import bryanthedragon.morph.MorphCoreProxy.ClientCoreProxy;
-
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
-import bryanthedragon.morph.capabilities.render.EntitySelector;
-import bryanthedragon.morph.capabilities.render.ModelRenderer;
-import bryanthedragon.morph.client.EntityModelHandler;
+import org.bryanthedragon.morph.client.gui.framework.elements.GuiElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.buttons.GuiButtonElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.buttons.GuiToggleElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.context.GuiSimpleContextMenu;
+import org.bryanthedragon.morph.client.gui.framework.elements.input.GuiTextElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.list.GuiListElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiLabel;
+import org.bryanthedragon.morph.client.gui.utils.Elements;
+import org.bryanthedragon.morph.client.gui.utils.Icons;
+import org.bryanthedragon.morph.client.gui.utils.keys.IKey;
+import org.bryanthedragon.morph.utils.time.Timer;
+import org.bryanthedragon.morph.MorphCoreProxy.ClientCoreProxy;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.capabilities.render.EntitySelector;
+import org.bryanthedragon.morph.capabilities.render.ModelRenderer;
+import org.bryanthedragon.morph.client.EntityModelHandler;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.nbt.TagParser;

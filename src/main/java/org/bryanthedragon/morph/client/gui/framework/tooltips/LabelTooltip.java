@@ -1,11 +1,11 @@
-package bryanthedragon.morph.client.gui.framework.tooltips;
+package org.bryanthedragon.morph.client.gui.framework.tooltips;
 
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
-import bryanthedragon.morph.client.gui.framework.tooltips.styles.TooltipStyle;
-import bryanthedragon.morph.client.gui.utils.Area;
-import bryanthedragon.morph.client.gui.utils.keys.IKey;
-import bryanthedragon.morph.utils.vector.Direction;
-import bryanthedragon.morph.utils.math.MathUtils;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
+import org.bryanthedragon.morph.client.gui.framework.tooltips.styles.TooltipStyle;
+import org.bryanthedragon.morph.client.gui.utils.Area;
+import org.bryanthedragon.morph.client.gui.utils.keys.IKey;
+import org.bryanthedragon.morph.utils.vector.Direction;
+import org.bryanthedragon.morph.utils.math.MathUtils;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.FormattedCharSequence;

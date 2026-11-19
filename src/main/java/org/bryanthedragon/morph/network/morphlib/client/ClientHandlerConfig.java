@@ -1,11 +1,11 @@
-package bryanthedragon.morph.network.morphlib.client;
+package org.bryanthedragon.morph.network.morphlib.client;
 
-import bryanthedragon.morph.MorphLib;
-import bryanthedragon.morph.client.gui.morphlib.GuiDashboard;
-import bryanthedragon.morph.config.Config;
-import bryanthedragon.morph.config.gui.GuiConfigPanel;
-import bryanthedragon.morph.network.ClientMessageHandler;
-import bryanthedragon.morph.network.morphlib.common.PacketConfig;
+import org.bryanthedragon.morph.MorphLib;
+import org.bryanthedragon.morph.client.gui.morphlib.GuiDashboard;
+import org.bryanthedragon.morph.config.Config;
+import org.bryanthedragon.morph.config.gui.GuiConfigPanel;
+import org.bryanthedragon.morph.network.ClientMessageHandler;
+import org.bryanthedragon.morph.network.morphlib.common.PacketConfig;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;

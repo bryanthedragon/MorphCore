@@ -1,4 +1,4 @@
-package bryanthedragon.morph.utils.reflection;
+package org.bryanthedragon.morph.utils.reflection;
 
 import net.minecraft.client.renderer.texture.AbstractTexture;
 import net.minecraft.client.renderer.texture.TextureManager;
@@ -8,7 +8,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import java.util.Map;
 
-import bryanthedragon.morph.utils.helpers.optifine.OptifineHelper;
+import org.bryanthedragon.morph.utils.helpers.optifine.OptifineHelper;
 
 public class ReflectionUtils
 {

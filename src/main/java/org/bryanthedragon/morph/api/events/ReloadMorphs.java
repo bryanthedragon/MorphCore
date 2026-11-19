@@ -1,4 +1,4 @@
-package bryanthedragon.morph.api.events;
+package org.bryanthedragon.morph.api.events;
 
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;

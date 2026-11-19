@@ -1,14 +1,14 @@
-package bryanthedragon.morph.client.gui.framework.elements.utils.gui;
+package org.bryanthedragon.morph.client.gui.framework.elements.utils.gui;
 
-import bryanthedragon.morph.MorphLib;
-import bryanthedragon.morph.client.gui.framework.elements.GuiElement;
-import bryanthedragon.morph.client.gui.framework.elements.buttons.GuiIconElement;
-import bryanthedragon.morph.client.gui.framework.elements.buttons.GuiSlotElement;
-import bryanthedragon.morph.client.gui.framework.elements.input.GuiTextElement;
-import bryanthedragon.morph.client.gui.framework.elements.input.GuiTrackpadElement;
-import bryanthedragon.morph.client.gui.utils.Area;
-import bryanthedragon.morph.client.gui.utils.Icons;
-import bryanthedragon.morph.client.gui.utils.ScrollArea;
+import org.bryanthedragon.morph.MorphLib;
+import org.bryanthedragon.morph.client.gui.framework.elements.GuiElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.buttons.GuiIconElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.buttons.GuiSlotElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.input.GuiTextElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.input.GuiTrackpadElement;
+import org.bryanthedragon.morph.client.gui.utils.Area;
+import org.bryanthedragon.morph.client.gui.utils.Icons;
+import org.bryanthedragon.morph.client.gui.utils.ScrollArea;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;

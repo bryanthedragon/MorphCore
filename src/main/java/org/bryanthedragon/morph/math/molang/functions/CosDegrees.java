@@ -1,7 +1,7 @@
-package bryanthedragon.morph.math.molang.functions;
+package org.bryanthedragon.morph.math.molang.functions;
 
-import bryanthedragon.morph.math.IValue;
-import bryanthedragon.morph.math.functions.NNFunction;
+import org.bryanthedragon.morph.math.IValue;
+import org.bryanthedragon.morph.math.functions.NNFunction;
 
 public class CosDegrees extends NNFunction
 {

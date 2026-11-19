@@ -1,17 +1,17 @@
-package bryanthedragon.morph;
+package org.bryanthedragon.morph;
 
-import bryanthedragon.morph.client.InputRenderer;
-import bryanthedragon.morph.client.KeyboardHandler;
-import bryanthedragon.morph.client.RenderingHandler;
-import bryanthedragon.morph.client.gui.utils.Icons;
-import bryanthedragon.morph.client.gui.utils.KeybindConfig;
-import bryanthedragon.morph.client.gui.utils.keys.LangKey;
-import bryanthedragon.morph.config.ConfigHandler;
-import bryanthedragon.morph.config.ConfigManager;
-import bryanthedragon.morph.events.RegisterPermissionsEvent;
-import bryanthedragon.morph.network.morphlib.Dispatcher;
-import bryanthedragon.morph.utils.reflection.ReflectionUtils;
-import bryanthedragon.morph.utils.resources.MultiResourceLocation;
+import org.bryanthedragon.morph.client.InputRenderer;
+import org.bryanthedragon.morph.client.KeyboardHandler;
+import org.bryanthedragon.morph.client.RenderingHandler;
+import org.bryanthedragon.morph.client.gui.utils.Icons;
+import org.bryanthedragon.morph.client.gui.utils.KeybindConfig;
+import org.bryanthedragon.morph.client.gui.utils.keys.LangKey;
+import org.bryanthedragon.morph.config.ConfigHandler;
+import org.bryanthedragon.morph.config.ConfigManager;
+import org.bryanthedragon.morph.events.RegisterPermissionsEvent;
+import org.bryanthedragon.morph.network.morphlib.Dispatcher;
+import org.bryanthedragon.morph.utils.reflection.ReflectionUtils;
+import org.bryanthedragon.morph.utils.resources.MultiResourceLocation;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.AbstractTexture;

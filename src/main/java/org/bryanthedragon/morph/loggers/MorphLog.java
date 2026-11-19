@@ -1,4 +1,4 @@
-package bryanthedragon.morph.loggers;
+package org.bryanthedragon.morph.loggers;
 
 import org.apache.logging.log4j.core.Logger;
 

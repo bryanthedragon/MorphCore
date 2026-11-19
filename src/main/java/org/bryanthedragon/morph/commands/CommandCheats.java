@@ -1,4 +1,4 @@
-package bryanthedragon.morph.commands;
+package org.bryanthedragon.morph.commands;
 
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.BoolArgumentType;

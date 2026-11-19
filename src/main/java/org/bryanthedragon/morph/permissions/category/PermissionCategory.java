@@ -1,12 +1,12 @@
-package bryanthedragon.morph.permissions.category;
+package org.bryanthedragon.morph.permissions.category;
 
 import io.netty.buffer.ByteBuf;
-import bryanthedragon.morph.api.permissions.PermissionAPI;
-import bryanthedragon.morph.network.IByteBufSerializable;
-import bryanthedragon.morph.permissions.level.DefaultPermissionLevel;
+import org.bryanthedragon.morph.api.permissions.PermissionAPI;
+import org.bryanthedragon.morph.network.IByteBufSerializable;
+import org.bryanthedragon.morph.permissions.level.DefaultPermissionLevel;
 import net.minecraft.world.entity.player.Player;
 
-import bryanthedragon.morph.utils.bytebuf.ByteBufUtils;
+import org.bryanthedragon.morph.utils.bytebuf.ByteBufUtils;
 import net.minecraftforge.server.permission.handler.DefaultPermissionHandler;
 
 import java.util.ArrayList;

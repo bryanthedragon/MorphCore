@@ -1,14 +1,14 @@
-package bryanthedragon.morph.client.gui.framework.elements.utils.gui;
+package org.bryanthedragon.morph.client.gui.framework.elements.utils.gui;
 
-import bryanthedragon.morph.client.gui.framework.GuiBase;
-import bryanthedragon.morph.client.gui.framework.tooltips.GuiTooltip;
-import bryanthedragon.morph.client.gui.framework.elements.GuiElement;
-import bryanthedragon.morph.client.gui.framework.elements.IFocusedGuiElement;
-import bryanthedragon.morph.client.gui.framework.elements.IGuiElement;
-import bryanthedragon.morph.client.gui.framework.elements.context.GuiContextMenu;
-import bryanthedragon.morph.client.gui.framework.elements.input.GuiKeybinds;
-import bryanthedragon.morph.client.gui.framework.elements.utils.IViewportStack;
-import bryanthedragon.morph.client.gui.utils.Area;
+import org.bryanthedragon.morph.client.gui.framework.GuiBase;
+import org.bryanthedragon.morph.client.gui.framework.tooltips.GuiTooltip;
+import org.bryanthedragon.morph.client.gui.framework.elements.GuiElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.IFocusedGuiElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.IGuiElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.context.GuiContextMenu;
+import org.bryanthedragon.morph.client.gui.framework.elements.input.GuiKeybinds;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.IViewportStack;
+import org.bryanthedragon.morph.client.gui.utils.Area;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;

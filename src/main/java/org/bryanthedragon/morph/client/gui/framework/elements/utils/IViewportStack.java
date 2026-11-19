@@ -1,6 +1,6 @@
-package bryanthedragon.morph.client.gui.framework.elements.utils;
+package org.bryanthedragon.morph.client.gui.framework.elements.utils;
 
-import bryanthedragon.morph.client.gui.utils.Area;
+import org.bryanthedragon.morph.client.gui.utils.Area;
 
 /**
  * General interface for viewport stack

@@ -1,6 +1,6 @@
-package bryanthedragon.morph.utils.vector;
+package org.bryanthedragon.morph.utils.vector;
 
-import bryanthedragon.morph.utils.interpolation.Interpolations;
+import org.bryanthedragon.morph.utils.interpolation.Interpolations;
 
 public enum Direction
 {

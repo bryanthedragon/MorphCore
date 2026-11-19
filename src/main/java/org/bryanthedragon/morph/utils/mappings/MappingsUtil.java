@@ -1,4 +1,4 @@
-package bryanthedragon.morph.utils.mappings;
+package org.bryanthedragon.morph.utils.mappings;
 
 import java.io.File;
 import java.io.IOException;

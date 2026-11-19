@@ -1,13 +1,14 @@
-package bryanthedragon.morph.client.gui.morphlib;
+package org.bryanthedragon.morph.client.gui.morphlib;
 
-import bryanthedragon.morph.MorphLib;
-import bryanthedragon.morph.client.gui.framework.GuiBase;
-import bryanthedragon.morph.client.gui.framework.elements.buttons.GuiIconElement;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiDraw;
-import bryanthedragon.morph.client.gui.utils.Keybind;
-import bryanthedragon.morph.events.RegisterDashboardPanels;
-import bryanthedragon.morph.permissions.utils.PermissionUtils;
-import bryanthedragon.morph.utils.helpers.op.OpHelper;
+import org.bryanthedragon.morph.MorphLib;
+import org.bryanthedragon.morph.client.gui.framework.GuiBase;
+import org.bryanthedragon.morph.client.gui.framework.elements.buttons.GuiIconElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiDraw;
+import org.bryanthedragon.morph.client.gui.utils.Keybind;
+import org.bryanthedragon.morph.events.RegisterDashboardPanels;
+import org.bryanthedragon.morph.utils.permissions.PermissionUtils;
+import org.bryanthedragon.morph.utils.helpers.op.OpHelper;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 

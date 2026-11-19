@@ -1,19 +1,19 @@
-package bryanthedragon.morph.client.gui.framework.elements.input;
+package org.bryanthedragon.morph.client.gui.framework.elements.input;
 
-import bryanthedragon.morph.MorphLib;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiDraw;
-import bryanthedragon.morph.client.gui.utils.Area;
-import bryanthedragon.morph.client.gui.utils.Icons;
-import bryanthedragon.morph.client.gui.utils.keys.IKey;
-import bryanthedragon.morph.config.values.ValueDouble;
-import bryanthedragon.morph.config.values.ValueFloat;
-import bryanthedragon.morph.config.values.ValueInt;
-import bryanthedragon.morph.config.values.ValueLong;
-import bryanthedragon.morph.math.MathBuilder;
-import bryanthedragon.morph.utils.math.MathUtils;
-import bryanthedragon.morph.utils.time.Timer;
-import bryanthedragon.morph.utils.color.ColorUtils;
+import org.bryanthedragon.morph.MorphLib;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiDraw;
+import org.bryanthedragon.morph.client.gui.utils.Area;
+import org.bryanthedragon.morph.client.gui.utils.Icons;
+import org.bryanthedragon.morph.client.gui.utils.keys.IKey;
+import org.bryanthedragon.morph.config.values.ValueDouble;
+import org.bryanthedragon.morph.config.values.ValueFloat;
+import org.bryanthedragon.morph.config.values.ValueInt;
+import org.bryanthedragon.morph.config.values.ValueLong;
+import org.bryanthedragon.morph.math.MathBuilder;
+import org.bryanthedragon.morph.utils.math.MathUtils;
+import org.bryanthedragon.morph.utils.time.Timer;
+import org.bryanthedragon.morph.utils.color.ColorUtils;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;

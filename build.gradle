@@ -62,7 +62,7 @@ processResources
     
     project.version += "-" + mc_version
     
-    filesMatching('mcmod.info') {
+    filesMatching(['META-INF/mods.toml']) {
         expand 'version':project.version, 'mcversion':mc_version
     }
 }

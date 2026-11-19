@@ -1,4 +1,4 @@
-package bryanthedragon.morph.utils.key;
+package org.bryanthedragon.morph.utils.key;
 
 import net.minecraft.client.Minecraft;
 

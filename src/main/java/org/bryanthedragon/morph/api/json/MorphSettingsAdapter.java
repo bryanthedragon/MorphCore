@@ -1,4 +1,4 @@
-package bryanthedragon.morph.api.json;
+package org.bryanthedragon.morph.api.json;
 
 import java.lang.reflect.Type;
 
@@ -8,9 +8,9 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 
-import bryanthedragon.morph.api.MorphManager;
-import bryanthedragon.morph.api.abilities.IAbility;
-import bryanthedragon.morph.api.settings.MorphSettings;
+import org.bryanthedragon.morph.api.MorphManager;
+import org.bryanthedragon.morph.api.abilities.IAbility;
+import org.bryanthedragon.morph.api.settings.MorphSettings;
 
 /**
  * Morph settings adapter

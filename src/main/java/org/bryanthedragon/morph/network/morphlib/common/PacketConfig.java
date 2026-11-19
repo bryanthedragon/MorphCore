@@ -1,10 +1,10 @@
-package bryanthedragon.morph.network.morphlib.common;
+package org.bryanthedragon.morph.network.morphlib.common;
 
 import io.netty.buffer.ByteBuf;
 
-import bryanthedragon.morph.config.Config;
-import bryanthedragon.morph.network.IMessage;
-import bryanthedragon.morph.utils.bytebuf.ByteBufUtils;
+import org.bryanthedragon.morph.config.Config;
+import org.bryanthedragon.morph.network.IMessage;
+import org.bryanthedragon.morph.utils.bytebuf.ByteBufUtils;
 
 public class PacketConfig implements IMessage
 {

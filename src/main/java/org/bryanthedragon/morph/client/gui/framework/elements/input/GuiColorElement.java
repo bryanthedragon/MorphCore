@@ -1,13 +1,13 @@
-package bryanthedragon.morph.client.gui.framework.elements.input;
+package org.bryanthedragon.morph.client.gui.framework.elements.input;
 
-import bryanthedragon.morph.MorphLib;
-import bryanthedragon.morph.client.gui.framework.elements.GuiElement;
-import bryanthedragon.morph.client.gui.framework.elements.input.color.GuiColorPicker;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiDraw;
-import bryanthedragon.morph.client.gui.utils.keys.IKey;
-import bryanthedragon.morph.config.values.ValueInt;
-import bryanthedragon.morph.utils.vector.Direction;
+import org.bryanthedragon.morph.MorphLib;
+import org.bryanthedragon.morph.client.gui.framework.elements.GuiElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.input.color.GuiColorPicker;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiDraw;
+import org.bryanthedragon.morph.client.gui.utils.keys.IKey;
+import org.bryanthedragon.morph.config.values.ValueInt;
+import org.bryanthedragon.morph.utils.vector.Direction;
 
 import net.minecraft.client.Minecraft;
 

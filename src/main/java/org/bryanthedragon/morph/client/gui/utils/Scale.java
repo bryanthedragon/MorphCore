@@ -1,7 +1,7 @@
-package bryanthedragon.morph.client.gui.utils;
+package org.bryanthedragon.morph.client.gui.utils;
 
-import bryanthedragon.morph.utils.math.MathUtils;
-import bryanthedragon.morph.utils.interpolation.Interpolations;
+import org.bryanthedragon.morph.utils.math.MathUtils;
+import org.bryanthedragon.morph.utils.interpolation.Interpolations;
 
 /**
  * This class represents a scale of an axis 

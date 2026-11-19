@@ -1,7 +1,7 @@
-package bryanthedragon.morph.client.render;
+package org.bryanthedragon.morph.client.render;
 
-import bryanthedragon.morph.api.MorphUtils;
-import bryanthedragon.morph.entity.EntityMorph;
+import org.bryanthedragon.morph.api.morphs.main.MorphPickupEntity;
+import org.bryanthedragon.morph.api.utils.morph.MorphUtils;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 
@@ -14,7 +14,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
 @OnlyIn(Dist.CLIENT)
-public class RenderMorph extends EntityRenderer<EntityMorph>
+public class RenderMorph extends EntityRenderer<MorphPickupEntity>
 {
     public RenderMorph(EntityRendererProvider.Context context)
     {
@@ -23,13 +23,13 @@ public class RenderMorph extends EntityRenderer<EntityMorph>
     }
 
     @Override
-    public ResourceLocation getTextureLocation(EntityMorph entity)
+    public ResourceLocation getTextureLocation(MorphPickupEntity entity)
     {
         return null;
     }
 
     @Override
-    public void render(EntityMorph entity, float entityYaw, float partialTicks, PoseStack poseStack,
+    public void render(MorphPickupEntity entity, float entityYaw, float partialTicks, PoseStack poseStack,
         MultiBufferSource buffer, int packedLight)
     {
         if (entity.morph == null)

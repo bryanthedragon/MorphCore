@@ -1,4 +1,4 @@
-package bryanthedragon.morph.utils.interpolation;
+package org.bryanthedragon.morph.utils.interpolation;
 
 import net.minecraft.client.resources.language.I18n;
 

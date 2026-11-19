@@ -1,19 +1,19 @@
-package bryanthedragon.morph.client.gui.creative;
+package org.bryanthedragon.morph.client.gui.creative;
 
-import bryanthedragon.morph.client.gui.framework.GuiBase;
-import bryanthedragon.morph.client.gui.framework.elements.buttons.GuiButtonElement;
-import bryanthedragon.morph.client.gui.framework.elements.buttons.GuiIconElement;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiDraw;
-import bryanthedragon.morph.client.gui.framework.tooltips.LabelTooltip;
-import bryanthedragon.morph.client.gui.utils.Icons;
-import bryanthedragon.morph.client.gui.utils.keys.IKey;
-import bryanthedragon.morph.MorphCore;
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
-import bryanthedragon.morph.capabilities.morphing.Morphing;
-import bryanthedragon.morph.network.Dispatcher;
-import bryanthedragon.morph.network.common.creative.PacketAcquireMorph;
-import bryanthedragon.morph.network.common.creative.PacketMorph;
-import bryanthedragon.morph.utils.icons.IconUtils.MMIcons;
+import org.bryanthedragon.morph.client.gui.framework.GuiBase;
+import org.bryanthedragon.morph.client.gui.framework.elements.buttons.GuiButtonElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.buttons.GuiIconElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiDraw;
+import org.bryanthedragon.morph.client.gui.framework.tooltips.LabelTooltip;
+import org.bryanthedragon.morph.client.gui.utils.Icons;
+import org.bryanthedragon.morph.client.gui.utils.keys.IKey;
+import org.bryanthedragon.morph.MorphCore;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.capabilities.morphing.Morphing;
+import org.bryanthedragon.morph.network.Dispatcher;
+import org.bryanthedragon.morph.network.common.creative.PacketAcquireMorph;
+import org.bryanthedragon.morph.network.common.creative.PacketMorph;
+import org.bryanthedragon.morph.utils.icons.IconUtils.MMIcons;
 
 import org.lwjgl.glfw.GLFW;
 

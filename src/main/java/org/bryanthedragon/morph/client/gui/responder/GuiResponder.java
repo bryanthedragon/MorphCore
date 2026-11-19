@@ -1,4 +1,4 @@
-package bryanthedragon.morph.client.gui.responder;
+package org.bryanthedragon.morph.client.gui.responder;
 
 public interface GuiResponder {
     

@@ -1,4 +1,4 @@
-package bryanthedragon.morph.loader.state;
+package org.bryanthedragon.morph.loader.state;
 
 public enum MorphLoaderState
 {

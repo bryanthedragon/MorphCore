@@ -1,6 +1,6 @@
-package bryanthedragon.morph.api.morphs.utils;
+package org.bryanthedragon.morph.api.morphs.utils;
 
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
 
 public interface IMorphGenerator
 {

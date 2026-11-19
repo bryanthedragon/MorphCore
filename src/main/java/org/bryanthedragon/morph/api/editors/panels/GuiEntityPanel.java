@@ -1,16 +1,17 @@
-package bryanthedragon.morph.api.editors.panels;
+package org.bryanthedragon.morph.api.editors.panels;
 
-import bryanthedragon.morph.client.gui.framework.elements.GuiElement;
-import bryanthedragon.morph.client.gui.framework.elements.buttons.GuiButtonElement;
-import bryanthedragon.morph.client.gui.framework.elements.input.GuiTexturePicker;
-import bryanthedragon.morph.client.gui.framework.elements.input.GuiTrackpadElement;
-import bryanthedragon.morph.client.gui.utils.Elements;
-import bryanthedragon.morph.client.gui.utils.keys.IKey;
-import bryanthedragon.morph.utils.vector.Direction;
-import bryanthedragon.morph.utils.resources.RLUtils;
-import bryanthedragon.morph.api.morphs.main.EntityMorph;
-import bryanthedragon.morph.client.gui.editor.GuiMorphPanel;
-import bryanthedragon.morph.api.editors.GuiEntityMorph;
+import org.bryanthedragon.morph.client.gui.framework.elements.GuiElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.buttons.GuiButtonElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.input.GuiTexturePicker;
+import org.bryanthedragon.morph.client.gui.framework.elements.input.GuiTrackpadElement;
+import org.bryanthedragon.morph.client.gui.utils.Elements;
+import org.bryanthedragon.morph.client.gui.utils.keys.IKey;
+import org.bryanthedragon.morph.utils.vector.Direction;
+import org.bryanthedragon.morph.utils.resources.RLUtils;
+import org.bryanthedragon.morph.api.morphs.main.EntityMorph;
+import org.bryanthedragon.morph.client.gui.editor.GuiMorphPanel;
+import org.bryanthedragon.morph.api.editors.GuiEntityMorph;
+
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;

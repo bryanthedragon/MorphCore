@@ -1,4 +1,4 @@
-package bryanthedragon.morph.utils.copy;
+package org.bryanthedragon.morph.utils.copy;
 
 /**
  * The Java Cloneable interface is only a marker interface to enforce

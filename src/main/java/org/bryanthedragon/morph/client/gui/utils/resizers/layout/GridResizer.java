@@ -1,10 +1,10 @@
-package bryanthedragon.morph.client.gui.utils.resizers.layout;
+package org.bryanthedragon.morph.client.gui.utils.resizers.layout;
 
-import bryanthedragon.morph.client.gui.framework.elements.GuiElement;
-import bryanthedragon.morph.client.gui.utils.Area;
-import bryanthedragon.morph.client.gui.utils.resizers.AutomaticResizer;
-import bryanthedragon.morph.client.gui.utils.resizers.ChildResizer;
-import bryanthedragon.morph.client.gui.utils.resizers.IResizer;
+import org.bryanthedragon.morph.client.gui.framework.elements.GuiElement;
+import org.bryanthedragon.morph.client.gui.utils.Area;
+import org.bryanthedragon.morph.client.gui.utils.resizers.AutomaticResizer;
+import org.bryanthedragon.morph.client.gui.utils.resizers.ChildResizer;
+import org.bryanthedragon.morph.client.gui.utils.resizers.IResizer;
 
 public class GridResizer extends AutomaticResizer
 {

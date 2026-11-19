@@ -1,13 +1,13 @@
-package bryanthedragon.morph.client.gui.framework.elements.buttons;
+package org.bryanthedragon.morph.client.gui.framework.elements.buttons;
 
-import bryanthedragon.morph.MorphLib;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiDraw;
-import bryanthedragon.morph.client.gui.framework.elements.utils.text.ITextColoring;
-import bryanthedragon.morph.client.gui.utils.Icons;
-import bryanthedragon.morph.client.gui.utils.keys.IKey;
-import bryanthedragon.morph.config.values.ValueBoolean;
-import bryanthedragon.morph.utils.color.ColorUtils;
+import org.bryanthedragon.morph.MorphLib;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiDraw;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.text.ITextColoring;
+import org.bryanthedragon.morph.client.gui.utils.Icons;
+import org.bryanthedragon.morph.client.gui.utils.keys.IKey;
+import org.bryanthedragon.morph.config.values.ValueBoolean;
+import org.bryanthedragon.morph.utils.color.ColorUtils;
 
 import net.minecraft.client.Minecraft;
 

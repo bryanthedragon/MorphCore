@@ -1,16 +1,16 @@
-package bryanthedragon.morph.client;
+package org.bryanthedragon.morph.client;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.reflect.TypeToken;
 
-import bryanthedragon.morph.utils.json.JsonUtils;
-import bryanthedragon.morph.MorphCore;
-import bryanthedragon.morph.capabilities.render.EntitySelector;
-import bryanthedragon.morph.capabilities.render.EntitySelectorAdapter;
-import bryanthedragon.morph.capabilities.render.IModelRenderer;
-import bryanthedragon.morph.capabilities.render.ModelRenderer;
+import org.bryanthedragon.morph.utils.json.JsonUtils;
+import org.bryanthedragon.morph.MorphCore;
+import org.bryanthedragon.morph.capabilities.render.EntitySelector;
+import org.bryanthedragon.morph.capabilities.render.EntitySelectorAdapter;
+import org.bryanthedragon.morph.capabilities.render.IModelRenderer;
+import org.bryanthedragon.morph.capabilities.render.ModelRenderer;
 
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.world.entity.Entity;

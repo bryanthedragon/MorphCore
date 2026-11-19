@@ -1,20 +1,20 @@
-package bryanthedragon.morph.client.gui.morphlib;
+package org.bryanthedragon.morph.client.gui.morphlib;
 
-import bryanthedragon.morph.client.gui.framework.elements.buttons.GuiButtonElement;
-import bryanthedragon.morph.client.gui.framework.elements.buttons.GuiSlotElement;
-import bryanthedragon.morph.client.gui.framework.elements.context.GuiSimpleContextMenu;
-import bryanthedragon.morph.client.gui.framework.elements.input.GuiTextElement;
-import bryanthedragon.morph.client.gui.framework.elements.keyframes.GuiDopeSheet;
-import bryanthedragon.morph.client.gui.framework.elements.keyframes.GuiGraphView;
-import bryanthedragon.morph.client.gui.framework.elements.keyframes.GuiKeyframesEditor;
-import bryanthedragon.morph.client.gui.framework.elements.keyframes.GuiSheet;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
-import bryanthedragon.morph.client.gui.utils.Icons;
-import bryanthedragon.morph.client.gui.utils.keys.IKey;
-import bryanthedragon.morph.utils.color.Color;
-import bryanthedragon.morph.utils.keyframes.Keyframe;
-import bryanthedragon.morph.utils.keyframes.KeyframeChannel;
-import bryanthedragon.morph.utils.keyframes.KeyframeInterpolation;
+import org.bryanthedragon.morph.client.gui.framework.elements.buttons.GuiButtonElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.buttons.GuiSlotElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.context.GuiSimpleContextMenu;
+import org.bryanthedragon.morph.client.gui.framework.elements.input.GuiTextElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.keyframes.GuiDopeSheet;
+import org.bryanthedragon.morph.client.gui.framework.elements.keyframes.GuiGraphView;
+import org.bryanthedragon.morph.client.gui.framework.elements.keyframes.GuiKeyframesEditor;
+import org.bryanthedragon.morph.client.gui.framework.elements.keyframes.GuiSheet;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
+import org.bryanthedragon.morph.client.gui.utils.Icons;
+import org.bryanthedragon.morph.client.gui.utils.keys.IKey;
+import org.bryanthedragon.morph.utils.color.ColorUtils.Color;
+import org.bryanthedragon.morph.utils.keyframes.Keyframe;
+import org.bryanthedragon.morph.utils.keyframes.KeyframeChannel;
+import org.bryanthedragon.morph.utils.keyframes.KeyframeInterpolation;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.ItemStack;

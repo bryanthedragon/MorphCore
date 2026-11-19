@@ -1,9 +1,9 @@
-package bryanthedragon.morph.client.gui.framework.elements.utils.gui;
+package org.bryanthedragon.morph.client.gui.framework.elements.utils.gui;
 
 import java.util.function.Consumer;
 
-import bryanthedragon.morph.client.gui.framework.elements.IGuiElement;
-import bryanthedragon.morph.client.gui.utils.Area;
+import org.bryanthedragon.morph.client.gui.framework.elements.IGuiElement;
+import org.bryanthedragon.morph.client.gui.utils.Area;
 
 public class GuiDrawable implements IGuiElement
 {

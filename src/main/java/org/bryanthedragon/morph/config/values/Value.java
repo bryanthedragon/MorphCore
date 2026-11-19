@@ -1,4 +1,4 @@
-package bryanthedragon.morph.config.values;
+package org.bryanthedragon.morph.config.values;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonNull;
@@ -6,10 +6,10 @@ import com.google.gson.JsonObject;
 
 import io.netty.buffer.ByteBuf;
 
-import bryanthedragon.morph.config.Config;
-import bryanthedragon.morph.config.ConfigManager;
-import bryanthedragon.morph.network.IByteBufSerializable;
-import bryanthedragon.morph.utils.copy.ICopy;
+import org.bryanthedragon.morph.config.Config;
+import org.bryanthedragon.morph.config.ConfigManager;
+import org.bryanthedragon.morph.network.IByteBufSerializable;
+import org.bryanthedragon.morph.utils.copy.ICopy;
 
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;

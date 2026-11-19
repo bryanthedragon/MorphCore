@@ -1,4 +1,4 @@
-package bryanthedragon.morph.math;
+package org.bryanthedragon.morph.math;
 
 public abstract class Wrapper implements IValue
 {

@@ -1,4 +1,4 @@
-package bryanthedragon.morph.utils.interpolation;
+package org.bryanthedragon.morph.utils.interpolation;
 
 import net.minecraft.util.Mth;
 

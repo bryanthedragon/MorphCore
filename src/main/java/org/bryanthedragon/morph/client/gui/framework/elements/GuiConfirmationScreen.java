@@ -1,8 +1,8 @@
-package bryanthedragon.morph.client.gui.framework.elements;
+package org.bryanthedragon.morph.client.gui.framework.elements;
 
-import bryanthedragon.morph.client.gui.framework.GuiBase;
-import bryanthedragon.morph.client.gui.framework.elements.modals.GuiConfirmModal;
-import bryanthedragon.morph.client.gui.utils.keys.IKey;
+import org.bryanthedragon.morph.client.gui.framework.GuiBase;
+import org.bryanthedragon.morph.client.gui.framework.elements.modals.GuiConfirmModal;
+import org.bryanthedragon.morph.client.gui.utils.keys.IKey;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;

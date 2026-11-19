@@ -1,4 +1,4 @@
-package bryanthedragon.morph.utils.nbt;
+package org.bryanthedragon.morph.utils.nbt;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.ByteBufInputStream;

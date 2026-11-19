@@ -1,7 +1,7 @@
-package bryanthedragon.morph.math.molang.functions;
+package org.bryanthedragon.morph.math.molang.functions;
 
-import bryanthedragon.morph.math.IValue;
-import bryanthedragon.morph.math.functions.trig.Atan2;
+import org.bryanthedragon.morph.math.IValue;
+import org.bryanthedragon.morph.math.functions.trig.Atan2;
 
 public class Atan2Degrees extends Atan2
 {

@@ -1,4 +1,4 @@
-package bryanthedragon.morph.client.gui.framework.elements.list;
+package org.bryanthedragon.morph.client.gui.framework.elements.list;
 
 import net.minecraft.client.Minecraft;
 
@@ -7,7 +7,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.function.Consumer;
 
-import bryanthedragon.morph.utils.interpolation.Interpolation;
+import org.bryanthedragon.morph.utils.interpolation.Interpolation;
 
 /**
  * Interpolations list

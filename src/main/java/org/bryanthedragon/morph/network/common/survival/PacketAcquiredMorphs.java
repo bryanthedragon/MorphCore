@@ -1,10 +1,10 @@
-package bryanthedragon.morph.network.common.survival;
+package org.bryanthedragon.morph.network.common.survival;
 
 import io.netty.buffer.ByteBuf;
 
-import bryanthedragon.morph.api.MorphUtils;
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
-import bryanthedragon.morph.network.IMessage;
+import org.bryanthedragon.morph.api.utils.morph.MorphUtils;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.network.IMessage;
 
 import java.util.ArrayList;
 import java.util.List;

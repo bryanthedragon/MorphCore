@@ -1,13 +1,14 @@
-package bryanthedragon.morph.api.editors.panels;
+package org.bryanthedragon.morph.api.editors.panels;
 
-import bryanthedragon.morph.client.gui.framework.elements.input.GuiTextElement;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
-import bryanthedragon.morph.api.morphs.main.PlayerMorph;
-import bryanthedragon.morph.client.gui.editor.GuiMorphPanel;
-import bryanthedragon.morph.api.editors.GuiPlayerMorph;
+import org.bryanthedragon.morph.client.gui.framework.elements.input.GuiTextElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
+import org.bryanthedragon.morph.api.morphs.main.PlayerMorph;
+import org.bryanthedragon.morph.client.gui.editor.GuiMorphPanel;
+import org.bryanthedragon.morph.api.editors.GuiPlayerMorph;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.language.I18n;
+
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 

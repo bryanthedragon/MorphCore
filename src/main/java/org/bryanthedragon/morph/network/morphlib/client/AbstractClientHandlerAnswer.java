@@ -1,12 +1,12 @@
-package bryanthedragon.morph.network.morphlib.client;
+package org.bryanthedragon.morph.network.morphlib.client;
 
-import bryanthedragon.morph.MorphLib;
-import bryanthedragon.morph.network.AbstractDispatcher;
-import bryanthedragon.morph.network.ClientMessageHandler;
-import bryanthedragon.morph.network.morphlib.Dispatcher;
-import bryanthedragon.morph.network.morphlib.common.IAnswerRequest;
-import bryanthedragon.morph.network.morphlib.common.PacketAnswer;
-import bryanthedragon.morph.utils.consumer.Consumers;
+import org.bryanthedragon.morph.MorphLib;
+import org.bryanthedragon.morph.network.AbstractDispatcher;
+import org.bryanthedragon.morph.network.ClientMessageHandler;
+import org.bryanthedragon.morph.network.morphlib.Dispatcher;
+import org.bryanthedragon.morph.network.morphlib.common.IAnswerRequest;
+import org.bryanthedragon.morph.network.morphlib.common.PacketAnswer;
+import org.bryanthedragon.morph.utils.consumer.Consumers;
 
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.server.level.ServerPlayer;

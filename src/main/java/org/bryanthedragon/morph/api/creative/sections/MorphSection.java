@@ -1,8 +1,8 @@
-package bryanthedragon.morph.api.creative.sections;
+package org.bryanthedragon.morph.api.creative.sections;
 
-import bryanthedragon.morph.api.creative.categories.MorphCategory;
-import bryanthedragon.morph.client.gui.creative.GuiCreativeMorphsList;
-import bryanthedragon.morph.client.gui.creative.GuiMorphSection;
+import org.bryanthedragon.morph.api.creative.categories.MorphCategory;
+import org.bryanthedragon.morph.client.gui.creative.GuiCreativeMorphsList;
+import org.bryanthedragon.morph.client.gui.creative.GuiMorphSection;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.language.I18n;

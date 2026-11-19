@@ -1,4 +1,4 @@
-package bryanthedragon.morph.api.morphs.main;
+package org.bryanthedragon.morph.api.morphs.main;
 
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.entity.EquipmentSlot;

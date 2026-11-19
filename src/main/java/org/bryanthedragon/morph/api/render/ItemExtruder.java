@@ -1,4 +1,4 @@
-package bryanthedragon.morph.api.render;
+package org.bryanthedragon.morph.api.render;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
@@ -7,7 +7,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 import javax.imageio.ImageIO;
 
-import bryanthedragon.morph.utils.color.Color;
+import org.bryanthedragon.morph.utils.color.ColorUtils.Color;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;

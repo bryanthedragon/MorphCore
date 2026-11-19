@@ -1,4 +1,4 @@
-package bryanthedragon.morph.capabilities.morphing;
+package org.bryanthedragon.morph.capabilities.morphing;
 
 import net.minecraft.nbt.Tag;
 import net.minecraft.core.Direction;

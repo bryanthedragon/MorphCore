@@ -1,15 +1,15 @@
-package bryanthedragon.morph.core.registry;
+package org.bryanthedragon.morph.core.registry;
 
-import bryanthedragon.morph.MorphCore;
-import bryanthedragon.morph.api.EntityUtils;
-import bryanthedragon.morph.api.MorphManager;
-import bryanthedragon.morph.api.creative.categories.MorphCategory;
-import bryanthedragon.morph.api.creative.sections.MorphSection;
-import bryanthedragon.morph.api.morphs.main.BlockMorph;
-import bryanthedragon.morph.api.morphs.main.EntityMorph;
-import bryanthedragon.morph.api.morphs.main.ItemMorph;
-import bryanthedragon.morph.api.morphs.main.LabelMorph;
-import bryanthedragon.morph.api.morphs.main.PlayerMorph;
+import org.bryanthedragon.morph.MorphCore;
+import org.bryanthedragon.morph.api.utils.entity.EntityUtils;
+import org.bryanthedragon.morph.api.MorphManager;
+import org.bryanthedragon.morph.api.creative.categories.MorphCategory;
+import org.bryanthedragon.morph.api.creative.sections.MorphSection;
+import org.bryanthedragon.morph.api.morphs.main.BlockMorph;
+import org.bryanthedragon.morph.api.morphs.main.EntityMorph;
+import org.bryanthedragon.morph.api.morphs.main.ItemMorph;
+import org.bryanthedragon.morph.api.morphs.main.LabelMorph;
+import org.bryanthedragon.morph.api.morphs.main.PlayerMorph;
 
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;

@@ -1,4 +1,4 @@
-package bryanthedragon.morph.capabilities.render;
+package org.bryanthedragon.morph.capabilities.render;
 
 import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;

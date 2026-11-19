@@ -1,7 +1,7 @@
-package bryanthedragon.morph.api;
+package org.bryanthedragon.morph.api;
 
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
-import bryanthedragon.morph.api.utils.morph.MorphUtils;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.api.utils.morph.MorphUtils;
 
 import net.minecraft.nbt.CompoundTag;
 

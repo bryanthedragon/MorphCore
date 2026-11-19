@@ -1,9 +1,9 @@
-package bryanthedragon.morph.api.actions.overworld.hostile.silverfish;
+package org.bryanthedragon.morph.api.actions.overworld.hostile.silverfish;
 
-import bryanthedragon.morph.api.MorphAPI;
-import bryanthedragon.morph.api.abilities.IAction;
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
-import bryanthedragon.morph.api.morphs.main.BlockMorph;
+import org.bryanthedragon.morph.api.MorphAPI;
+import org.bryanthedragon.morph.api.abilities.IAction;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.api.morphs.main.BlockMorph;
 
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;

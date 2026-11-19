@@ -1,6 +1,6 @@
-package bryanthedragon.morph.client.gui.framework.elements.keyframes;
+package org.bryanthedragon.morph.client.gui.framework.elements.keyframes;
 
-import bryanthedragon.morph.utils.keyframes.Keyframe;
+import org.bryanthedragon.morph.utils.keyframes.Keyframe;
 
 public enum Selection
 {

@@ -1,4 +1,4 @@
-package bryanthedragon.morph.client.gui.utils.resizers;
+package org.bryanthedragon.morph.client.gui.utils.resizers;
 
 public class Margin
 {

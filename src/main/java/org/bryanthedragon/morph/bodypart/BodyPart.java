@@ -1,4 +1,4 @@
-package bryanthedragon.morph.bodypart;
+package org.bryanthedragon.morph.bodypart;
 
 import javax.vecmath.Vector3d;
 import javax.vecmath.Vector3f;
@@ -8,23 +8,23 @@ import org.joml.Matrix4f;
 import org.joml.Vector4f;
 import org.lwjgl.opengl.GL11;
 
-import bryanthedragon.morph.client.gui.framework.GuiBase;
-import bryanthedragon.morph.client.gui.framework.elements.input.GuiTransformations;
-import bryanthedragon.morph.utils.transformation.ITransformationObject;
-import bryanthedragon.morph.utils.rendering.RenderingUtils;
-import bryanthedragon.morph.utils.interpolation.Interpolation;
-import bryanthedragon.morph.client.Draw;
-import bryanthedragon.morph.client.gui.framework.elements.GuiModelRenderer;
-import bryanthedragon.morph.utils.dummy.DummyUtils.DummyEntity;
-import bryanthedragon.morph.utils.matrix.MatrixUtils;
-import bryanthedragon.morph.utils.nbt.NBTUtils;
-import bryanthedragon.morph.MorphCore;
-import bryanthedragon.morph.api.Morph;
-import bryanthedragon.morph.api.MorphUtils;
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
-import bryanthedragon.morph.api.morphs.utils.Animation;
-import bryanthedragon.morph.api.morphs.utils.IAnimationProvider;
-import bryanthedragon.morph.api.morphs.utils.IMorphGenerator;
+import org.bryanthedragon.morph.client.gui.framework.GuiBase;
+import org.bryanthedragon.morph.client.gui.framework.elements.input.GuiTransformations;
+import org.bryanthedragon.morph.utils.transformation.ITransformationObject;
+import org.bryanthedragon.morph.utils.rendering.RenderingUtils;
+import org.bryanthedragon.morph.utils.interpolation.Interpolation;
+import org.bryanthedragon.morph.client.Draw;
+import org.bryanthedragon.morph.client.gui.framework.elements.GuiModelRenderer;
+import org.bryanthedragon.morph.utils.dummy.DummyUtils.DummyEntity;
+import org.bryanthedragon.morph.utils.matrix.MatrixUtils;
+import org.bryanthedragon.morph.utils.nbt.NBTUtils;
+import org.bryanthedragon.morph.MorphCore;
+import org.bryanthedragon.morph.api.Morph;
+import org.bryanthedragon.morph.api.utils.morph.MorphUtils;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.api.morphs.utils.Animation;
+import org.bryanthedragon.morph.api.morphs.utils.IAnimationProvider;
+import org.bryanthedragon.morph.api.morphs.utils.IMorphGenerator;
 
 
 

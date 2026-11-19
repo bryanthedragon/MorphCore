@@ -1,11 +1,11 @@
-package bryanthedragon.morph.client.gui.utils.resizers;
+package org.bryanthedragon.morph.client.gui.utils.resizers;
 
-import bryanthedragon.morph.client.gui.framework.elements.GuiElement;
-import bryanthedragon.morph.client.gui.utils.Area;
-import bryanthedragon.morph.client.gui.utils.resizers.constraint.BoundsResizer;
-import bryanthedragon.morph.client.gui.utils.resizers.layout.ColumnResizer;
-import bryanthedragon.morph.client.gui.utils.resizers.layout.GridResizer;
-import bryanthedragon.morph.client.gui.utils.resizers.layout.RowResizer;
+import org.bryanthedragon.morph.client.gui.framework.elements.GuiElement;
+import org.bryanthedragon.morph.client.gui.utils.Area;
+import org.bryanthedragon.morph.client.gui.utils.resizers.constraint.BoundsResizer;
+import org.bryanthedragon.morph.client.gui.utils.resizers.layout.ColumnResizer;
+import org.bryanthedragon.morph.client.gui.utils.resizers.layout.GridResizer;
+import org.bryanthedragon.morph.client.gui.utils.resizers.layout.RowResizer;
 
 import java.util.function.Supplier;
 

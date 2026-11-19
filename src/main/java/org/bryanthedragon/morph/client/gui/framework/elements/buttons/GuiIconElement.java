@@ -1,8 +1,8 @@
-package bryanthedragon.morph.client.gui.framework.elements.buttons;
+package org.bryanthedragon.morph.client.gui.framework.elements.buttons;
 
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
-import bryanthedragon.morph.client.gui.utils.Icon;
-import bryanthedragon.morph.utils.color.ColorUtils;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
+import org.bryanthedragon.morph.client.gui.utils.Icon;
+import org.bryanthedragon.morph.utils.color.ColorUtils;
 
 import net.minecraft.client.Minecraft;
 

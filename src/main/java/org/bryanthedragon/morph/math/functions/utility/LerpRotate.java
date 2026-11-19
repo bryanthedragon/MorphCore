@@ -1,8 +1,8 @@
-package bryanthedragon.morph.math.functions.utility;
+package org.bryanthedragon.morph.math.functions.utility;
 
-import bryanthedragon.morph.math.IValue;
-import bryanthedragon.morph.math.functions.NNFunction;
-import bryanthedragon.morph.utils.interpolation.Interpolations;
+import org.bryanthedragon.morph.math.IValue;
+import org.bryanthedragon.morph.math.functions.NNFunction;
+import org.bryanthedragon.morph.utils.interpolation.Interpolations;
 
 public class LerpRotate extends NNFunction
 {

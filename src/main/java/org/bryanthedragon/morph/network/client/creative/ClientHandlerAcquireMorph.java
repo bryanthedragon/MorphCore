@@ -1,10 +1,10 @@
-package bryanthedragon.morph.network.client.creative;
+package org.bryanthedragon.morph.network.client.creative;
 
-import bryanthedragon.morph.network.ClientMessageHandler;
-import bryanthedragon.morph.MorphCoreProxy.ClientCoreProxy;
-import bryanthedragon.morph.capabilities.morphing.IMorphing;
-import bryanthedragon.morph.capabilities.morphing.Morphing;
-import bryanthedragon.morph.network.common.creative.PacketAcquireMorph;
+import org.bryanthedragon.morph.network.ClientMessageHandler;
+import org.bryanthedragon.morph.MorphCoreProxy.ClientCoreProxy;
+import org.bryanthedragon.morph.capabilities.morphing.IMorphing;
+import org.bryanthedragon.morph.capabilities.morphing.Morphing;
+import org.bryanthedragon.morph.network.common.creative.PacketAcquireMorph;
 
 import net.minecraft.client.player.LocalPlayer;
 

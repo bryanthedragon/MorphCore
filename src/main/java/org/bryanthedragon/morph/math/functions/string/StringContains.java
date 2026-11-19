@@ -1,7 +1,7 @@
-package bryanthedragon.morph.math.functions.string;
+package org.bryanthedragon.morph.math.functions.string;
 
-import bryanthedragon.morph.math.IValue;
-import bryanthedragon.morph.math.functions.SNFunction;
+import org.bryanthedragon.morph.math.IValue;
+import org.bryanthedragon.morph.math.functions.SNFunction;
 
 public class StringContains extends SNFunction
 {

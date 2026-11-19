@@ -1,6 +1,6 @@
-package bryanthedragon.morph.api.creative;
+package org.bryanthedragon.morph.api.creative;
 
-import bryanthedragon.morph.api.creative.sections.MorphSection;
+import org.bryanthedragon.morph.api.creative.sections.MorphSection;
 
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;

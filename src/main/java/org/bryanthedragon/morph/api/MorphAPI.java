@@ -1,16 +1,18 @@
-package bryanthedragon.morph.api;
+package org.bryanthedragon.morph.api;
 
-import bryanthedragon.morph.MorphCore;
-import bryanthedragon.morph.api.events.AcquireMorphEvent;
-import bryanthedragon.morph.api.events.MorphEvent;
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
-import bryanthedragon.morph.capabilities.morphing.IMorphing;
-import bryanthedragon.morph.capabilities.morphing.Morphing;
-import bryanthedragon.morph.network.Dispatcher;
-import bryanthedragon.morph.network.common.creative.PacketAcquireMorph;
-import bryanthedragon.morph.network.common.creative.PacketMorph;
-import bryanthedragon.morph.network.common.survival.PacketMorphPlayer;
-import bryanthedragon.morph.network.common.survival.PacketMorphState;
+import org.bryanthedragon.morph.MorphCore;
+import org.bryanthedragon.morph.api.events.AcquireMorphEvent;
+import org.bryanthedragon.morph.api.events.MorphEvent;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.api.utils.entity.EntityUtils;
+import org.bryanthedragon.morph.capabilities.morphing.IMorphing;
+import org.bryanthedragon.morph.capabilities.morphing.Morphing;
+import org.bryanthedragon.morph.network.Dispatcher;
+import org.bryanthedragon.morph.network.common.creative.PacketAcquireMorph;
+import org.bryanthedragon.morph.network.common.creative.PacketMorph;
+import org.bryanthedragon.morph.network.common.survival.PacketMorphPlayer;
+import org.bryanthedragon.morph.network.common.survival.PacketMorphState;
+
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
@@ -75,14 +77,14 @@ public class MorphAPI
 
         if (!player.level().isClientSide() && morphed)
         {
-            Dispatcher.sendTo(new PacketMorph(morph), (ServerPlayer) player);
-            Dispatcher.sendToTracked(player, new PacketMorphPlayer(player.getId(), morph));
+            Dispatcher.sendTo(new PacketMorph(event.morph), (ServerPlayer) player);
+            Dispatcher.sendToTracked(player, new PacketMorphPlayer(player.getId(), event.morph));
             Dispatcher.sendTo(new PacketMorphState(player, morphing), (ServerPlayer) player);
         }
 
         if (morphed)
         {
-            MinecraftForge.EVENT_BUS.post(new MorphEvent.Post(player, event.morph, force));
+            MinecraftForge.EVENT_BUS.post(new MorphEvent.Post(player, event.morph, event.force));
         }
 
         return morphed;

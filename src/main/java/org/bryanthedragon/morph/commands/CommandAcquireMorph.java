@@ -1,12 +1,12 @@
-package bryanthedragon.morph.commands;
+package org.bryanthedragon.morph.commands;
 
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 
-import bryanthedragon.morph.api.MorphAPI;
-import bryanthedragon.morph.api.MorphManager;
+import org.bryanthedragon.morph.api.MorphAPI;
+import org.bryanthedragon.morph.api.MorphManager;
 
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;

@@ -1,10 +1,10 @@
-package bryanthedragon.morph.api.attacks;
+package org.bryanthedragon.morph.api.attacks;
 
-import bryanthedragon.morph.api.abilities.IAttackAbility;
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
-import bryanthedragon.morph.api.morphs.main.EntityMorph;
-import bryanthedragon.morph.capabilities.morphing.IMorphing;
-import bryanthedragon.morph.capabilities.morphing.Morphing;
+import org.bryanthedragon.morph.api.abilities.IAttackAbility;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.api.morphs.main.EntityMorph;
+import org.bryanthedragon.morph.capabilities.morphing.IMorphing;
+import org.bryanthedragon.morph.capabilities.morphing.Morphing;
 
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;

@@ -1,11 +1,11 @@
-package bryanthedragon.morph.math.molang.expressions;
+package org.bryanthedragon.morph.math.molang.expressions;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonPrimitive;
 
-import bryanthedragon.morph.math.Constant;
-import bryanthedragon.morph.math.Operation;
-import bryanthedragon.morph.math.molang.MolangParser;
+import org.bryanthedragon.morph.math.Constant;
+import org.bryanthedragon.morph.math.Operation;
+import org.bryanthedragon.morph.math.molang.MolangParser;
 
 public abstract class MolangExpression
 {

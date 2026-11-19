@@ -1,12 +1,12 @@
-package bryanthedragon.morph.client;
+package org.bryanthedragon.morph.client;
 
 import java.nio.charset.Charset;
 
-import bryanthedragon.morph.api.MorphManager;
+import org.bryanthedragon.morph.api.MorphManager;
 
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
-import bryanthedragon.morph.api.settings.MorphSettings;
-import bryanthedragon.morph.capabilities.morphing.Morphing;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.api.settings.MorphSettings;
+import org.bryanthedragon.morph.capabilities.morphing.Morphing;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.entity.player.Player;

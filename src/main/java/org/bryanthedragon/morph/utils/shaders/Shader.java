@@ -1,4 +1,4 @@
-package bryanthedragon.morph.utils.shaders;
+package org.bryanthedragon.morph.utils.shaders;
 
 import org.apache.commons.io.IOUtils;
 import org.lwjgl.opengl.GL20;

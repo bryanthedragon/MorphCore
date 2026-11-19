@@ -1,10 +1,10 @@
-package bryanthedragon.morph.client.gui.framework.elements.modals;
+package org.bryanthedragon.morph.client.gui.framework.elements.modals;
 
-import bryanthedragon.morph.client.gui.framework.elements.GuiDelegateElement;
-import bryanthedragon.morph.client.gui.framework.elements.GuiElement;
-import bryanthedragon.morph.client.gui.framework.elements.IGuiElement;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
-import bryanthedragon.morph.client.gui.utils.keys.IKey;
+import org.bryanthedragon.morph.client.gui.framework.elements.GuiDelegateElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.GuiElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.IGuiElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
+import org.bryanthedragon.morph.client.gui.utils.keys.IKey;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 

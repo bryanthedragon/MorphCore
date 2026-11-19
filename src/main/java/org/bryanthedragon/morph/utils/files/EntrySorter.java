@@ -1,8 +1,8 @@
-package bryanthedragon.morph.utils.files;
+package org.bryanthedragon.morph.utils.files;
 
-import bryanthedragon.morph.utils.files.entries.AbstractEntry;
-import bryanthedragon.morph.utils.files.entries.FileEntry;
-import bryanthedragon.morph.utils.files.entries.FolderEntry;
+import org.bryanthedragon.morph.utils.files.entries.AbstractEntry;
+import org.bryanthedragon.morph.utils.files.entries.FileEntry;
+import org.bryanthedragon.morph.utils.files.entries.FolderEntry;
 
 import java.util.Comparator;
 

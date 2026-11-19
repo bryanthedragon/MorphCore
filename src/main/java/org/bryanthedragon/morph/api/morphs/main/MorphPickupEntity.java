@@ -1,14 +1,15 @@
-package bryanthedragon.morph.entity;
+package org.bryanthedragon.morph.api.morphs.main;
 
-import bryanthedragon.morph.MorphCore;
-import bryanthedragon.morph.api.MorphAPI;
-import bryanthedragon.morph.api.MorphManager;
-import bryanthedragon.morph.api.MorphUtils;
-import bryanthedragon.morph.api.models.IMorphProvider;
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.MorphCore;
+import org.bryanthedragon.morph.api.MorphAPI;
+import org.bryanthedragon.morph.api.MorphManager;
+import org.bryanthedragon.morph.api.utils.morph.MorphUtils;
+import org.bryanthedragon.morph.api.models.IMorphProvider;
 
+import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
+import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.sounds.SoundEvents;
@@ -39,10 +40,10 @@ import java.util.UUID;
  * This entity is similar to {@link EntityXPOrb} or {@link EntityItem}, in terms 
  * of picking up.
  */
-public class EntityMorph extends LivingEntity implements IEntityAdditionalSpawnData, IMorphProvider
+public class MorphPickupEntity extends LivingEntity implements IEntityAdditionalSpawnData, IMorphProvider
 {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, MorphCore.MOD_ID);
-    public static final RegistryObject<EntityType<EntityMorph>> TYPE = ENTITY_TYPES.register("morph", () -> EntityType.Builder.<EntityMorph>of(EntityMorph::new, MobCategory.MISC).sized(0.6F, 1.8F).clientTrackingRange(10).updateInterval(1).build("morphcore:morph"));
+    public static final RegistryObject<EntityType<MorphPickupEntity>> TYPE = ENTITY_TYPES.register("morph", () -> EntityType.Builder.<MorphPickupEntity>of(MorphPickupEntity::new, MobCategory.MISC).sized(0.6F, 1.8F).clientTrackingRange(10).updateInterval(1).build("morphcore:morph"));
 
     private String username;
     private UUID owner;
@@ -57,7 +58,7 @@ public class EntityMorph extends LivingEntity implements IEntityAdditionalSpawnD
     /**
      * Initiate the morph and make this entity invulnerable
      */
-    public EntityMorph(EntityType<EntityMorph> type, Level worldIn)
+    public MorphPickupEntity(EntityType<MorphPickupEntity> type, Level worldIn)
     {
         super(type, worldIn);
 
@@ -68,7 +69,7 @@ public class EntityMorph extends LivingEntity implements IEntityAdditionalSpawnD
     /**
      * Initiate the morph with morph and owner's UUID 
      */
-    public EntityMorph(EntityType<EntityMorph> type, Level worldIn, UUID owner, AbstractMorph morph)
+    public MorphPickupEntity(EntityType<MorphPickupEntity> type, Level worldIn, UUID owner, AbstractMorph morph)
     {
         this(type, worldIn);
 
@@ -99,18 +100,31 @@ public class EntityMorph extends LivingEntity implements IEntityAdditionalSpawnD
         return super.getDisplayName();
     }
 
+    private float morphWidth = 0.6F;
+    private float morphHeight = 1.8F;
+
     /**
      * Set size based on the morph's characteristics
      */
-    @SuppressWarnings("unused")
     private void setSize(AbstractMorph morph)
     {
         if (morph != null)
         {
-            float width = Math.max(0, Math.min(1.5F, morph.getWidth(this)));
-            float height = Math.max(0, Math.min(2.0F, morph.getHeight(this)));
+            this.morphWidth = Math.max(0.1F, Math.min(1.5F, morph.getWidth(this)));
+            this.morphHeight = Math.max(0.1F, Math.min(2.0F, morph.getHeight(this)));
             this.refreshDimensions();
         }
+    }
+
+    @Override
+    public EntityDimensions getDimensions(Pose pose)
+    {
+        if (this.morph != null)
+        {
+            return EntityDimensions.scalable(this.morphWidth, this.morphHeight);
+        }
+
+        return super.getDimensions(pose);
     }
 
 

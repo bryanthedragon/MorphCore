@@ -1,21 +1,22 @@
-package bryanthedragon.morph.config.values;
+package org.bryanthedragon.morph.config.values;
 
 import com.google.gson.JsonElement;
 
 import io.netty.buffer.ByteBuf;
 
-import bryanthedragon.morph.client.gui.framework.elements.GuiElement;
-import bryanthedragon.morph.client.gui.framework.elements.buttons.GuiCirculateElement;
-import bryanthedragon.morph.client.gui.framework.elements.input.GuiColorElement;
-import bryanthedragon.morph.client.gui.framework.elements.input.GuiKeybindElement;
-import bryanthedragon.morph.client.gui.framework.elements.input.GuiTrackpadElement;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiLabel;
-import bryanthedragon.morph.client.gui.utils.Elements;
-import bryanthedragon.morph.client.gui.utils.keys.IKey;
-import bryanthedragon.morph.client.gui.utils.keys.KeyParser;
-import bryanthedragon.morph.config.gui.GuiConfigPanel;
-import bryanthedragon.morph.utils.color.ColorUtils;
-import bryanthedragon.morph.utils.interpolation.Interpolation;
+import org.bryanthedragon.morph.client.gui.framework.elements.GuiElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.buttons.GuiCirculateElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.input.GuiColorElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.input.GuiKeybindElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.input.GuiTrackpadElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiLabel;
+import org.bryanthedragon.morph.client.gui.utils.Elements;
+import org.bryanthedragon.morph.client.gui.utils.keys.IKey;
+import org.bryanthedragon.morph.client.gui.utils.keys.KeyParser;
+import org.bryanthedragon.morph.config.gui.GuiConfigPanel;
+import org.bryanthedragon.morph.utils.color.ColorUtils;
+import org.bryanthedragon.morph.utils.interpolation.Interpolation;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.nbt.Tag;
 import net.minecraft.nbt.IntTag;

@@ -1,4 +1,4 @@
-package bryanthedragon.morph.utils.helpers.optifine;
+package org.bryanthedragon.morph.utils.helpers.optifine;
 
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.block.entity.BlockEntity;

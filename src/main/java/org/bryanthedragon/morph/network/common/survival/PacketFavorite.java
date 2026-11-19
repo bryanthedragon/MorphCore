@@ -1,4 +1,4 @@
-package bryanthedragon.morph.network.common.survival;
+package org.bryanthedragon.morph.network.common.survival;
 
 /**
  * Packet favorite a morph

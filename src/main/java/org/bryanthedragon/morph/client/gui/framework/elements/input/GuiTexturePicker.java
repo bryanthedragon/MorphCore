@@ -1,27 +1,28 @@
-package bryanthedragon.morph.client.gui.framework.elements.input;
+package org.bryanthedragon.morph.client.gui.framework.elements.input;
 
-import bryanthedragon.morph.MorphLib;
-import bryanthedragon.morph.client.gui.framework.elements.GuiElement;
-import bryanthedragon.morph.client.gui.framework.elements.buttons.GuiButtonElement;
-import bryanthedragon.morph.client.gui.framework.elements.buttons.GuiIconElement;
-import bryanthedragon.morph.client.gui.framework.elements.context.GuiSimpleContextMenu;
-import bryanthedragon.morph.client.gui.framework.elements.input.multiskin.GuiMultiSkinEditor;
-import bryanthedragon.morph.client.gui.framework.elements.list.GuiFolderEntryListElement;
-import bryanthedragon.morph.client.gui.framework.elements.list.GuiListElement;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiDraw;
-import bryanthedragon.morph.client.gui.utils.Icons;
-import bryanthedragon.morph.client.gui.utils.keys.IKey;
-import bryanthedragon.morph.utils.time.Timer;
-import bryanthedragon.morph.utils.color.ColorUtils;
-import bryanthedragon.morph.utils.files.FileTree;
-import bryanthedragon.morph.utils.files.GlobalTree;
-import bryanthedragon.morph.utils.files.entries.AbstractEntry;
-import bryanthedragon.morph.utils.files.entries.FileEntry;
-import bryanthedragon.morph.utils.files.entries.FolderEntry;
-import bryanthedragon.morph.utils.resources.FilteredResourceLocation;
-import bryanthedragon.morph.utils.resources.MultiResourceLocation;
-import bryanthedragon.morph.utils.resources.RLUtils;
+import org.bryanthedragon.morph.MorphLib;
+import org.bryanthedragon.morph.client.gui.framework.elements.GuiElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.buttons.GuiButtonElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.buttons.GuiIconElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.context.GuiSimpleContextMenu;
+import org.bryanthedragon.morph.client.gui.framework.elements.input.multiskin.GuiMultiSkinEditor;
+import org.bryanthedragon.morph.client.gui.framework.elements.list.GuiFolderEntryListElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.list.GuiListElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiDraw;
+import org.bryanthedragon.morph.client.gui.utils.GuiUtils;
+import org.bryanthedragon.morph.client.gui.utils.Icons;
+import org.bryanthedragon.morph.client.gui.utils.keys.IKey;
+import org.bryanthedragon.morph.utils.time.Timer;
+import org.bryanthedragon.morph.utils.color.ColorUtils;
+import org.bryanthedragon.morph.utils.files.FileTree;
+import org.bryanthedragon.morph.utils.files.GlobalTree;
+import org.bryanthedragon.morph.utils.files.entries.AbstractEntry;
+import org.bryanthedragon.morph.utils.files.entries.FileEntry;
+import org.bryanthedragon.morph.utils.files.entries.FolderEntry;
+import org.bryanthedragon.morph.utils.resources.FilteredResourceLocation;
+import org.bryanthedragon.morph.utils.resources.MultiResourceLocation;
+import org.bryanthedragon.morph.utils.resources.RLUtils;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
@@ -219,7 +220,7 @@ public class GuiTexturePicker extends GuiElement
     {
         if (this.picker.parent != null && this.picker.parent.file != null)
         {
-            bryanthedragon.morph.client.gui.utils.GuiUtils.openFolder(this.picker.parent.file.getAbsolutePath());
+           GuiUtils.openFolder(this.picker.parent.file.getAbsolutePath());
         }
     }
 

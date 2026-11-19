@@ -1,4 +1,4 @@
-package bryanthedragon.morph.utils.entity;
+package org.bryanthedragon.morph.utils.player;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientPacketListener;
@@ -9,7 +9,7 @@ import net.minecraft.world.level.GameType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class EntityUtils
+public class PlayerUtils
 {
     @OnlyIn(Dist.CLIENT)
     public static GameType getGameMode()
@@ -20,7 +20,7 @@ public class EntityUtils
     @OnlyIn(Dist.CLIENT)
     public static GameType getGameMode(Player player)
     {
-        PlayerInfo networkPlayerInfo = EntityUtils.getNetworkInfo(player);
+        PlayerInfo networkPlayerInfo = PlayerUtils.getNetworkInfo(player);
 
         return networkPlayerInfo == null ? GameType.SURVIVAL : networkPlayerInfo.getGameMode();
     }
@@ -28,7 +28,7 @@ public class EntityUtils
     @OnlyIn(Dist.CLIENT)
     public static boolean isAdventureMode(Player player)
     {
-        PlayerInfo info = getNetworkInfo(player);
+        PlayerInfo info = PlayerUtils.getNetworkInfo(player);
 
         return info != null && info.getGameMode() == GameType.ADVENTURE;
     }

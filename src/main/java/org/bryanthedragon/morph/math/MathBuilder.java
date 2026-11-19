@@ -1,35 +1,35 @@
-package bryanthedragon.morph.math;
+package org.bryanthedragon.morph.math;
 
-import bryanthedragon.morph.math.functions.Function;
-import bryanthedragon.morph.math.functions.classic.Abs;
-import bryanthedragon.morph.math.functions.classic.Exp;
-import bryanthedragon.morph.math.functions.classic.Ln;
-import bryanthedragon.morph.math.functions.classic.Mod;
-import bryanthedragon.morph.math.functions.classic.Pow;
-import bryanthedragon.morph.math.functions.classic.Sqrt;
-import bryanthedragon.morph.math.functions.limit.Clamp;
-import bryanthedragon.morph.math.functions.limit.Max;
-import bryanthedragon.morph.math.functions.limit.Min;
-import bryanthedragon.morph.math.functions.rounding.Ceil;
-import bryanthedragon.morph.math.functions.rounding.Floor;
-import bryanthedragon.morph.math.functions.rounding.Round;
-import bryanthedragon.morph.math.functions.rounding.Trunc;
-import bryanthedragon.morph.math.functions.string.StringContains;
-import bryanthedragon.morph.math.functions.string.StringEndsWith;
-import bryanthedragon.morph.math.functions.string.StringStartsWith;
-import bryanthedragon.morph.math.functions.trig.Acos;
-import bryanthedragon.morph.math.functions.trig.Asin;
-import bryanthedragon.morph.math.functions.trig.Atan;
-import bryanthedragon.morph.math.functions.trig.Atan2;
-import bryanthedragon.morph.math.functions.trig.Cos;
-import bryanthedragon.morph.math.functions.trig.Sin;
-import bryanthedragon.morph.math.functions.utility.DieRoll;
-import bryanthedragon.morph.math.functions.utility.DieRollInteger;
-import bryanthedragon.morph.math.functions.utility.HermiteBlend;
-import bryanthedragon.morph.math.functions.utility.Lerp;
-import bryanthedragon.morph.math.functions.utility.LerpRotate;
-import bryanthedragon.morph.math.functions.utility.Random;
-import bryanthedragon.morph.math.functions.utility.RandomInteger;
+import org.bryanthedragon.morph.math.functions.Function;
+import org.bryanthedragon.morph.math.functions.classic.Abs;
+import org.bryanthedragon.morph.math.functions.classic.Exp;
+import org.bryanthedragon.morph.math.functions.classic.Ln;
+import org.bryanthedragon.morph.math.functions.classic.Mod;
+import org.bryanthedragon.morph.math.functions.classic.Pow;
+import org.bryanthedragon.morph.math.functions.classic.Sqrt;
+import org.bryanthedragon.morph.math.functions.limit.Clamp;
+import org.bryanthedragon.morph.math.functions.limit.Max;
+import org.bryanthedragon.morph.math.functions.limit.Min;
+import org.bryanthedragon.morph.math.functions.rounding.Ceil;
+import org.bryanthedragon.morph.math.functions.rounding.Floor;
+import org.bryanthedragon.morph.math.functions.rounding.Round;
+import org.bryanthedragon.morph.math.functions.rounding.Trunc;
+import org.bryanthedragon.morph.math.functions.string.StringContains;
+import org.bryanthedragon.morph.math.functions.string.StringEndsWith;
+import org.bryanthedragon.morph.math.functions.string.StringStartsWith;
+import org.bryanthedragon.morph.math.functions.trig.Acos;
+import org.bryanthedragon.morph.math.functions.trig.Asin;
+import org.bryanthedragon.morph.math.functions.trig.Atan;
+import org.bryanthedragon.morph.math.functions.trig.Atan2;
+import org.bryanthedragon.morph.math.functions.trig.Cos;
+import org.bryanthedragon.morph.math.functions.trig.Sin;
+import org.bryanthedragon.morph.math.functions.utility.DieRoll;
+import org.bryanthedragon.morph.math.functions.utility.DieRollInteger;
+import org.bryanthedragon.morph.math.functions.utility.HermiteBlend;
+import org.bryanthedragon.morph.math.functions.utility.Lerp;
+import org.bryanthedragon.morph.math.functions.utility.LerpRotate;
+import org.bryanthedragon.morph.math.functions.utility.Random;
+import org.bryanthedragon.morph.math.functions.utility.RandomInteger;
 
 import java.lang.reflect.Constructor;
 import java.util.ArrayList;
@@ -347,6 +347,11 @@ public class MathBuilder
 
         int size = symbols.size();
 
+        if (size == 0)
+        {
+            throw new Exception("Cannot parse an empty expression!");
+        }
+
         /* Constant, variable or group (parenthesis) */
         if (size == 1)
         {
@@ -367,6 +372,12 @@ public class MathBuilder
 
         /* Any other math expression */
         int lastOp = this.seekLastOperator(symbols);
+
+        if (lastOp == -1)
+        {
+            throw new Exception("Couldn't find an operator in the expression: " + symbols);
+        }
+
         int op = lastOp;
 
         while (op != -1)

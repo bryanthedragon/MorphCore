@@ -1,24 +1,24 @@
-package bryanthedragon.morph.config;
+package org.bryanthedragon.morph.config;
 
 import com.google.common.collect.BiMap;
 import com.google.common.collect.HashBiMap;
 
 import io.netty.buffer.ByteBuf;
 
-import bryanthedragon.morph.MorphCore;
-import bryanthedragon.morph.client.gui.utils.ValueColors;
-import bryanthedragon.morph.config.json.ConfigParser;
-import bryanthedragon.morph.config.values.Value;
-import bryanthedragon.morph.config.values.ValueBoolean;
-import bryanthedragon.morph.config.values.ValueDouble;
-import bryanthedragon.morph.config.values.ValueFloat;
-import bryanthedragon.morph.config.values.ValueInt;
-import bryanthedragon.morph.config.values.ValueRL;
-import bryanthedragon.morph.config.values.ValueString;
-import bryanthedragon.morph.events.RegisterConfigEvent;
-import bryanthedragon.morph.network.morphlib.Dispatcher;
-import bryanthedragon.morph.network.morphlib.common.PacketConfig;
-import bryanthedragon.morph.utils.bytebuf.ByteBufUtils;
+import org.bryanthedragon.morph.MorphCore;
+import org.bryanthedragon.morph.client.gui.utils.ValueColors;
+import org.bryanthedragon.morph.config.json.ConfigParser;
+import org.bryanthedragon.morph.config.values.Value;
+import org.bryanthedragon.morph.config.values.ValueBoolean;
+import org.bryanthedragon.morph.config.values.ValueDouble;
+import org.bryanthedragon.morph.config.values.ValueFloat;
+import org.bryanthedragon.morph.config.values.ValueInt;
+import org.bryanthedragon.morph.config.values.ValueRL;
+import org.bryanthedragon.morph.config.values.ValueString;
+import org.bryanthedragon.morph.events.RegisterConfigEvent;
+import org.bryanthedragon.morph.network.morphlib.Dispatcher;
+import org.bryanthedragon.morph.network.morphlib.common.PacketConfig;
+import org.bryanthedragon.morph.utils.bytebuf.ByteBufUtils;
 
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.server.level.ServerPlayer;

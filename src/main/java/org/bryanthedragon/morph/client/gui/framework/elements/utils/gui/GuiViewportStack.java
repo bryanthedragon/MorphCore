@@ -1,9 +1,9 @@
-package bryanthedragon.morph.client.gui.framework.elements.utils.gui;
+package org.bryanthedragon.morph.client.gui.framework.elements.utils.gui;
 
-import bryanthedragon.morph.client.gui.framework.elements.GuiElement;
-import bryanthedragon.morph.client.gui.framework.elements.IViewport;
-import bryanthedragon.morph.client.gui.framework.elements.utils.IViewportStack;
-import bryanthedragon.morph.client.gui.utils.Area;
+import org.bryanthedragon.morph.client.gui.framework.elements.GuiElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.IViewport;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.IViewportStack;
+import org.bryanthedragon.morph.client.gui.utils.Area;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,11 +1,11 @@
-package bryanthedragon.morph.client.gui.framework.elements.utils.gui;
+package org.bryanthedragon.morph.client.gui.framework.elements.utils.gui;
 
-import bryanthedragon.morph.client.gui.framework.elements.GuiElement;
-import bryanthedragon.morph.client.gui.framework.elements.utils.icon.IconContainer;
-import bryanthedragon.morph.client.gui.framework.elements.utils.text.ITextColoring;
-import bryanthedragon.morph.client.gui.utils.Icon;
-import bryanthedragon.morph.client.gui.utils.keys.IKey;
-import bryanthedragon.morph.utils.color.ColorUtils;
+import org.bryanthedragon.morph.client.gui.framework.elements.GuiElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.icon.IconContainer;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.text.ITextColoring;
+import org.bryanthedragon.morph.client.gui.utils.Icon;
+import org.bryanthedragon.morph.client.gui.utils.keys.IKey;
+import org.bryanthedragon.morph.utils.color.ColorUtils;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 

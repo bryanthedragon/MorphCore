@@ -1,4 +1,4 @@
-package bryanthedragon.morph.api.abilities;
+package org.bryanthedragon.morph.api.abilities;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.Mth;

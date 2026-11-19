@@ -1,4 +1,4 @@
-package bryanthedragon.morph.capabilities.morphing;
+package org.bryanthedragon.morph.capabilities.morphing;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,10 +6,10 @@ import java.util.List;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
 
-import bryanthedragon.morph.MorphCore;
-import bryanthedragon.morph.api.Morph;
-import bryanthedragon.morph.api.MorphUtils;
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.MorphCore;
+import org.bryanthedragon.morph.api.Morph;
+import org.bryanthedragon.morph.api.utils.morph.MorphUtils;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
 
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
@@ -77,6 +77,11 @@ public class Morphing implements IMorphing
      * Last health that player had before morphing, should fix issue that people complain about
      */
     private float lastHealth;
+
+    /**
+     * Player's movement speed before morphing, restored on demorph
+     */
+    private double originalSpeed = -1;
 
     public static IMorphing get(Player player)
     {
@@ -268,10 +273,12 @@ public class Morphing implements IMorphing
                 if (this.morph.isEmpty())
                 {
                     this.lastHealth = (float) player.getAttribute(Attributes.MAX_HEALTH).getBaseValue();
+                    this.originalSpeed = player.getAttribute(Attributes.MOVEMENT_SPEED).getBaseValue();
                 }
                 else
                 {
                     this.morph.get().demorph(player);
+                    this.restorePlayerAttributes(player);
                 }
             }
 
@@ -303,9 +310,26 @@ public class Morphing implements IMorphing
         {
             /* 20 is default player's health */
             this.setHealth(player, this.lastHealth <= 0.0F ? 20.0F : this.lastHealth);
+            this.restorePlayerAttributes(player);
         }
 
+        this.originalSpeed = -1;
+
         this.setMorph(null);
+    }
+
+    /**
+     * Restore the player's default bounding box and movement speed
+     * after leaving a morph
+     */
+    protected void restorePlayerAttributes(Player player)
+    {
+        if (this.originalSpeed >= 0)
+        {
+            player.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(this.originalSpeed);
+        }
+
+        player.refreshDimensions();
     }
 
     /**
@@ -376,7 +400,10 @@ public class Morphing implements IMorphing
     @Override
     public void copy(IMorphing morphing, Player player)
     {
-        this.acquiredMorphs.addAll(morphing.getAcquiredMorphs());
+        if (morphing != this)
+        {
+            this.setAcquiredMorphs(morphing.getAcquiredMorphs());
+        }
 
         if (morphing.getCurrentMorph() != null)
         {
@@ -434,6 +461,18 @@ public class Morphing implements IMorphing
     public void setLastHealth(float lastHealth)
     {
         this.lastHealth = lastHealth;
+    }
+
+    @Override
+    public double getOriginalSpeed()
+    {
+        return this.originalSpeed;
+    }
+
+    @Override
+    public void setOriginalSpeed(double originalSpeed)
+    {
+        this.originalSpeed = originalSpeed;
     }
 
     @Override

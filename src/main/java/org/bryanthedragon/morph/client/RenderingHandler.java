@@ -1,12 +1,12 @@
-package bryanthedragon.morph.client;
+package org.bryanthedragon.morph.client;
 
-import bryanthedragon.morph.MorphCoreProxy.ClientCoreProxy;
-import bryanthedragon.morph.api.MorphManager;
-import bryanthedragon.morph.api.morphs.main.EntityMorph;
-import bryanthedragon.morph.capabilities.morphing.IMorphing;
-import bryanthedragon.morph.capabilities.morphing.Morphing;
-import bryanthedragon.morph.client.gui.overlays.GuiHud;
-import bryanthedragon.morph.client.gui.overlays.GuiOverlay;
+import org.bryanthedragon.morph.MorphCoreProxy.ClientCoreProxy;
+import org.bryanthedragon.morph.api.MorphManager;
+import org.bryanthedragon.morph.api.morphs.main.EntityMorph;
+import org.bryanthedragon.morph.capabilities.morphing.IMorphing;
+import org.bryanthedragon.morph.capabilities.morphing.Morphing;
+import org.bryanthedragon.morph.client.gui.overlays.GuiHud;
+import org.bryanthedragon.morph.client.gui.overlays.GuiOverlay;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 

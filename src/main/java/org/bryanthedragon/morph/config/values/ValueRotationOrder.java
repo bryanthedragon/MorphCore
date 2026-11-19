@@ -1,7 +1,7 @@
-package bryanthedragon.morph.config.values;
+package org.bryanthedragon.morph.config.values;
 
-import bryanthedragon.morph.utils.matrix.MatrixUtils.RotationOrder;
-import bryanthedragon.morph.utils.interpolation.Interpolation;
+import org.bryanthedragon.morph.utils.matrix.MatrixUtils.RotationOrder;
+import org.bryanthedragon.morph.utils.interpolation.Interpolation;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonPrimitive;

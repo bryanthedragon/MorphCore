@@ -1,6 +1,6 @@
-package bryanthedragon.morph.commands;
+package org.bryanthedragon.morph.commands;
 
-import bryanthedragon.morph.commands.config.SubCommandConfig;
+import org.bryanthedragon.morph.commands.config.SubCommandConfig;
 
 import com.mojang.brigadier.CommandDispatcher;
 

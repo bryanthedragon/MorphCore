@@ -1,8 +1,9 @@
-package bryanthedragon.morph.client.gui.morphlib;
+package org.bryanthedragon.morph.client.gui.morphlib;
 
-import bryanthedragon.morph.client.gui.framework.elements.GuiElement;
-import bryanthedragon.morph.permissions.category.PermissionCategory;
-import bryanthedragon.morph.utils.helpers.op.OpHelper;
+import org.bryanthedragon.morph.client.gui.framework.elements.GuiElement;
+import org.bryanthedragon.morph.permissions.category.PermissionCategory;
+import org.bryanthedragon.morph.utils.helpers.op.OpHelper;
+
 import net.minecraft.client.Minecraft;
 
 public class GuiDashboardPanel <T extends GuiAbstractDashboard> extends GuiElement

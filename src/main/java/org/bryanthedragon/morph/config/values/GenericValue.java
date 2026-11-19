@@ -1,6 +1,6 @@
-package bryanthedragon.morph.config.values;
+package org.bryanthedragon.morph.config.values;
 
-import bryanthedragon.morph.utils.copy.ICopy;
+import org.bryanthedragon.morph.utils.copy.ICopy;
 
 /**
  * A Value container, providing an interface for dealing with
@@ -18,7 +18,7 @@ import bryanthedragon.morph.utils.copy.ICopy;
  * If it cannot override {@link Object#equals(Object)}, the methods {@link #hasChanged()} and {@link #equals(Object)} need to be overridden!
  *
  * <br><br>
- * The GenericValue subclasses can be used together with the {@link bryanthedragon.morph.utils.ValueSerializer}
+ * The GenericValue subclasses can be used together with the {@link org.bryanthedragon.morph.utils.ValueSerializer}
  * to automate all of the toNBT, fromNBT, toBytes, fromBytes, fromJson and toJson serialization processes.
  * GenericValue subclasses can also be used for an undo / redo system, as it is already in place in Aperture mod.
  *

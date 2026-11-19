@@ -1,9 +1,9 @@
-package bryanthedragon.morph.api.actions.ender.enderman;
+package org.bryanthedragon.morph.api.actions.ender.enderman;
 
 import javax.annotation.Nullable;
 
-import bryanthedragon.morph.api.abilities.IAction;
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.api.abilities.IAction;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
 
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.phys.Vec3;

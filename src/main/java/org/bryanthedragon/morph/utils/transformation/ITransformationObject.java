@@ -1,6 +1,6 @@
-package bryanthedragon.morph.utils.transformation;
+package org.bryanthedragon.morph.utils.transformation;
 
-import bryanthedragon.morph.client.gui.framework.elements.input.GuiTransformations;
+import org.bryanthedragon.morph.client.gui.framework.elements.input.GuiTransformations;
 
 public interface ITransformationObject
 {

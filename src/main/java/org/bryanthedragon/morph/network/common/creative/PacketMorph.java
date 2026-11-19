@@ -1,12 +1,12 @@
-package bryanthedragon.morph.network.common.creative;
+package org.bryanthedragon.morph.network.common.creative;
 
 import io.netty.buffer.ByteBuf;
 
-import bryanthedragon.morph.utils.nbt.NBTUtils;
-import bryanthedragon.morph.api.MorphManager;
-import bryanthedragon.morph.api.MorphUtils;
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
-import bryanthedragon.morph.network.IMessage;
+import org.bryanthedragon.morph.utils.nbt.NBTUtils;
+import org.bryanthedragon.morph.api.MorphManager;
+import org.bryanthedragon.morph.api.utils.morph.MorphUtils;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.network.IMessage;
 
 public class PacketMorph implements IMessage
 {

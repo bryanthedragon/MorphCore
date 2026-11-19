@@ -1,9 +1,9 @@
-package bryanthedragon.morph.client.gui.framework.elements.input;
+package org.bryanthedragon.morph.client.gui.framework.elements.input;
 
-import bryanthedragon.morph.client.gui.framework.elements.GuiElement;
-import bryanthedragon.morph.client.gui.framework.elements.IFocusedGuiElement;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
-import bryanthedragon.morph.utils.color.Color;
+import org.bryanthedragon.morph.client.gui.framework.elements.GuiElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.IFocusedGuiElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
+import org.bryanthedragon.morph.utils.color.ColorUtils.Color;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.components.EditBox;

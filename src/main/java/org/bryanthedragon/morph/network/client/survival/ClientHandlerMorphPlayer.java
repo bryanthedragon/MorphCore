@@ -1,9 +1,9 @@
-package bryanthedragon.morph.network.client.survival;
+package org.bryanthedragon.morph.network.client.survival;
 
-import bryanthedragon.morph.network.ClientMessageHandler;
-import bryanthedragon.morph.capabilities.morphing.IMorphing;
-import bryanthedragon.morph.capabilities.morphing.MorphingProvider;
-import bryanthedragon.morph.network.common.survival.PacketMorphPlayer;
+import org.bryanthedragon.morph.network.ClientMessageHandler;
+import org.bryanthedragon.morph.capabilities.morphing.IMorphing;
+import org.bryanthedragon.morph.capabilities.morphing.MorphingProvider;
+import org.bryanthedragon.morph.network.common.survival.PacketMorphPlayer;
 
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.world.entity.player.Player;

@@ -1,10 +1,10 @@
-package bryanthedragon.morph.client.gui.utils;
+package org.bryanthedragon.morph.client.gui.utils;
 
-import bryanthedragon.morph.MorphLibProxy.ClientLibProxy;
-import bryanthedragon.morph.client.gui.utils.keys.IKey;
-import bryanthedragon.morph.client.gui.utils.keys.KeyParser;
-import bryanthedragon.morph.config.values.ValueInt;
-import bryanthedragon.morph.utils.key.Keys;
+import org.bryanthedragon.morph.MorphLibProxy.ClientLibProxy;
+import org.bryanthedragon.morph.client.gui.utils.keys.IKey;
+import org.bryanthedragon.morph.client.gui.utils.keys.KeyParser;
+import org.bryanthedragon.morph.config.values.ValueInt;
+import org.bryanthedragon.morph.utils.key.Keys;
 
 import java.util.function.Supplier;
 

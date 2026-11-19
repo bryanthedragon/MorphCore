@@ -1,8 +1,8 @@
-package bryanthedragon.morph.client.gui.framework.tooltips;
+package org.bryanthedragon.morph.client.gui.framework.tooltips;
 
-import bryanthedragon.morph.client.gui.framework.elements.GuiElement;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
-import bryanthedragon.morph.client.gui.utils.Area;
+import org.bryanthedragon.morph.client.gui.framework.elements.GuiElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
+import org.bryanthedragon.morph.client.gui.utils.Area;
 
 public class GuiTooltip
 {

@@ -1,4 +1,4 @@
-package bryanthedragon.morph.utils.invoke;
+package org.bryanthedragon.morph.utils.invoke;
 
 import java.lang.reflect.Method;
 

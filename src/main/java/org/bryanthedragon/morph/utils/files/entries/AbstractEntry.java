@@ -1,4 +1,4 @@
-package bryanthedragon.morph.utils.files.entries;
+package org.bryanthedragon.morph.utils.files.entries;
 
 import java.io.File;
 import java.util.Objects;

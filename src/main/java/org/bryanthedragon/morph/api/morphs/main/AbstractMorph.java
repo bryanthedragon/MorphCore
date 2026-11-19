@@ -1,14 +1,14 @@
-package bryanthedragon.morph.api.morphs.main;
+package org.bryanthedragon.morph.api.morphs.main;
 
 import java.util.Objects;
 
 import org.joml.Vector3f;
 
-import bryanthedragon.morph.MorphCore;
-import bryanthedragon.morph.api.MorphManager;
-import bryanthedragon.morph.api.settings.MorphSettings;
-import bryanthedragon.morph.api.abilities.IAbility;
-import bryanthedragon.morph.api.morphs.utils.Hitbox;
+import org.bryanthedragon.morph.MorphCore;
+import org.bryanthedragon.morph.api.MorphManager;
+import org.bryanthedragon.morph.api.settings.MorphSettings;
+import org.bryanthedragon.morph.api.abilities.IAbility;
+import org.bryanthedragon.morph.api.morphs.utils.Hitbox;
 
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.ai.attributes.Attributes;

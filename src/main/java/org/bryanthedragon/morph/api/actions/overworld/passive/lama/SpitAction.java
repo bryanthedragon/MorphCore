@@ -1,8 +1,8 @@
-package bryanthedragon.morph.api.actions.overworld.passive.lama;
+package org.bryanthedragon.morph.api.actions.overworld.passive.lama;
 
-import bryanthedragon.morph.api.abilities.IAction;
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
-import bryanthedragon.morph.api.morphs.main.EntityMorph;
+import org.bryanthedragon.morph.api.abilities.IAction;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.api.morphs.main.EntityMorph;
 
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.animal.horse.Llama;

@@ -1,6 +1,6 @@
-package bryanthedragon.morph.events;
+package org.bryanthedragon.morph.events;
 
-import bryanthedragon.morph.client.gui.morphlib.GuiAbstractDashboard;
+import org.bryanthedragon.morph.client.gui.morphlib.GuiAbstractDashboard;
 
 import net.minecraftforge.eventbus.api.Event;
 

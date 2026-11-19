@@ -1,11 +1,11 @@
-package bryanthedragon.morph.client.gui.overlays;
+package org.bryanthedragon.morph.client.gui.overlays;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import bryanthedragon.morph.api.MorphUtils;
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.api.utils.morph.MorphUtils;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;

@@ -1,4 +1,4 @@
-package bryanthedragon.morph.utils.helpers.op;
+package org.bryanthedragon.morph.utils.helpers.op;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;

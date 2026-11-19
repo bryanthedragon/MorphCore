@@ -1,7 +1,7 @@
-package bryanthedragon.morph.network.morphlib.server;
+package org.bryanthedragon.morph.network.morphlib.server;
 
-import bryanthedragon.morph.network.server.message.ServerMessageHandler;
-import bryanthedragon.morph.network.morphlib.common.PacketConfirm;
+import org.bryanthedragon.morph.network.server.message.ServerMessageHandler;
+import org.bryanthedragon.morph.network.morphlib.common.PacketConfirm;
 
 import net.minecraft.server.level.ServerPlayer;
 

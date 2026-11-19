@@ -1,4 +1,4 @@
-package bryanthedragon.morph.client.gui.utils.keys;
+package org.bryanthedragon.morph.client.gui.utils.keys;
 
 public class StringKey implements IKey
 {

@@ -1,9 +1,9 @@
-package bryanthedragon.morph.network.morphlib.client;
+package org.bryanthedragon.morph.network.morphlib.client;
 
-import bryanthedragon.morph.client.gui.framework.elements.GuiConfirmationScreen;
-import bryanthedragon.morph.network.ClientMessageHandler;
-import bryanthedragon.morph.network.morphlib.Dispatcher;
-import bryanthedragon.morph.network.morphlib.common.PacketConfirm;
+import org.bryanthedragon.morph.client.gui.framework.elements.GuiConfirmationScreen;
+import org.bryanthedragon.morph.network.ClientMessageHandler;
+import org.bryanthedragon.morph.network.morphlib.Dispatcher;
+import org.bryanthedragon.morph.network.morphlib.common.PacketConfirm;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;

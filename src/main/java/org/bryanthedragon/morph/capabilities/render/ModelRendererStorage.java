@@ -1,7 +1,7 @@
-package bryanthedragon.morph.capabilities.render;
+package org.bryanthedragon.morph.capabilities.render;
 
-import bryanthedragon.morph.capabilities.CapabilityStorage;
-import bryanthedragon.morph.capabilities.CapabilityStorage.IStorage;
+import org.bryanthedragon.morph.capabilities.CapabilityStorage;
+import org.bryanthedragon.morph.capabilities.CapabilityStorage.IStorage;
 
 import net.minecraft.nbt.Tag;
 import net.minecraft.nbt.CompoundTag;

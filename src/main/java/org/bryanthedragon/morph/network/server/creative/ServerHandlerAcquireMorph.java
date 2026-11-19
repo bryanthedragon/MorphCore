@@ -1,8 +1,8 @@
-package bryanthedragon.morph.network.server.creative;
+package org.bryanthedragon.morph.network.server.creative;
 
-import bryanthedragon.morph.api.MorphAPI;
-import bryanthedragon.morph.network.common.creative.PacketAcquireMorph;
-import bryanthedragon.morph.network.server.message.ServerMessageHandler;
+import org.bryanthedragon.morph.api.MorphAPI;
+import org.bryanthedragon.morph.network.common.creative.PacketAcquireMorph;
+import org.bryanthedragon.morph.network.server.message.ServerMessageHandler;
 import net.minecraft.server.level.ServerPlayer;
 
 /**

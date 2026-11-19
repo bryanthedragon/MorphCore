@@ -1,4 +1,4 @@
-package bryanthedragon.morph.client.gui.overlays;
+package org.bryanthedragon.morph.client.gui.overlays;
 
 import net.minecraft.util.Mth;
 

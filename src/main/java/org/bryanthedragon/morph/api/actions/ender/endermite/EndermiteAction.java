@@ -1,11 +1,11 @@
-package bryanthedragon.morph.api.actions.ender.endermite;
+package org.bryanthedragon.morph.api.actions.ender.endermite;
 
 import java.util.Random;
 
 import javax.annotation.Nullable;
 
-import bryanthedragon.morph.api.abilities.IAction;
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.api.abilities.IAction;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
 
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;

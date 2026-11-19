@@ -1,6 +1,6 @@
-package bryanthedragon.morph.math.functions.utility;
+package org.bryanthedragon.morph.math.functions.utility;
 
-import bryanthedragon.morph.math.IValue;
+import org.bryanthedragon.morph.math.IValue;
 
 public class DieRollInteger extends DieRoll
 {

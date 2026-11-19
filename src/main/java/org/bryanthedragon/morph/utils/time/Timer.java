@@ -1,4 +1,4 @@
-package bryanthedragon.morph.utils.time;
+package org.bryanthedragon.morph.utils.time;
 
 public class Timer
 {

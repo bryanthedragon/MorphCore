@@ -1,6 +1,6 @@
-package bryanthedragon.morph.client.gui.framework.elements.utils.icon;
+package org.bryanthedragon.morph.client.gui.framework.elements.utils.icon;
 
-import bryanthedragon.morph.client.gui.utils.Icon;
+import org.bryanthedragon.morph.client.gui.utils.Icon;
 
 public class IconContainer
 {

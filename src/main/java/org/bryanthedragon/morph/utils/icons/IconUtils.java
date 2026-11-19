@@ -1,6 +1,6 @@
-package bryanthedragon.morph.utils.icons;
+package org.bryanthedragon.morph.utils.icons;
 
-import bryanthedragon.morph.client.gui.utils.Icon;
+import org.bryanthedragon.morph.client.gui.utils.Icon;
 
 import net.minecraft.resources.ResourceLocation;
 

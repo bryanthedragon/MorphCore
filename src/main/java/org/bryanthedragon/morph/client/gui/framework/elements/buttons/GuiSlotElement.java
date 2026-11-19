@@ -1,17 +1,17 @@
-package bryanthedragon.morph.client.gui.framework.elements.buttons;
+package org.bryanthedragon.morph.client.gui.framework.elements.buttons;
 
-import bryanthedragon.morph.MorphLib;
-import bryanthedragon.morph.client.gui.framework.GuiBase;
-import bryanthedragon.morph.client.gui.framework.elements.context.GuiContextMenu;
-import bryanthedragon.morph.client.gui.framework.elements.context.GuiSimpleContextMenu;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiDraw;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiInventoryElement;
-import bryanthedragon.morph.client.gui.utils.Area;
-import bryanthedragon.morph.client.gui.utils.Icons;
-import bryanthedragon.morph.client.gui.utils.keys.IKey;
-import bryanthedragon.morph.network.morphlib.Dispatcher;
-import bryanthedragon.morph.network.morphlib.common.PacketDropItem;
+import org.bryanthedragon.morph.MorphLib;
+import org.bryanthedragon.morph.client.gui.framework.GuiBase;
+import org.bryanthedragon.morph.client.gui.framework.elements.context.GuiContextMenu;
+import org.bryanthedragon.morph.client.gui.framework.elements.context.GuiSimpleContextMenu;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiDraw;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiInventoryElement;
+import org.bryanthedragon.morph.client.gui.utils.Area;
+import org.bryanthedragon.morph.client.gui.utils.Icons;
+import org.bryanthedragon.morph.client.gui.utils.keys.IKey;
+import org.bryanthedragon.morph.network.morphlib.Dispatcher;
+import org.bryanthedragon.morph.network.morphlib.common.PacketDropItem;
 
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 

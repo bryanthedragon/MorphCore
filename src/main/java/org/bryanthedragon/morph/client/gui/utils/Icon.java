@@ -1,6 +1,6 @@
-package bryanthedragon.morph.client.gui.utils;
+package org.bryanthedragon.morph.client.gui.utils;
 
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiDraw;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiDraw;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 

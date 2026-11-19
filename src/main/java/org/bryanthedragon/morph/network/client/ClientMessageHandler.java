@@ -1,7 +1,7 @@
-package bryanthedragon.morph.network.client;
+package org.bryanthedragon.morph.network.client;
 
-import bryanthedragon.morph.network.AbstractMessageHandler;
-import bryanthedragon.morph.network.IMessage;
+import org.bryanthedragon.morph.network.AbstractMessageHandler;
+import org.bryanthedragon.morph.network.IMessage;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;

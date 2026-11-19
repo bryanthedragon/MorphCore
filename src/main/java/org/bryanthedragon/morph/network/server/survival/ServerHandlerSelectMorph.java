@@ -1,14 +1,14 @@
-package bryanthedragon.morph.network.server.survival;
+package org.bryanthedragon.morph.network.server.survival;
 
 import java.util.List;
 
-import bryanthedragon.morph.api.MorphAPI;
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
-import bryanthedragon.morph.api.utils.morph.MorphUtils;
-import bryanthedragon.morph.capabilities.morphing.IMorphing;
-import bryanthedragon.morph.capabilities.morphing.Morphing;
-import bryanthedragon.morph.network.common.survival.PacketSelectMorph;
-import bryanthedragon.morph.network.server.message.ServerMessageHandler;
+import org.bryanthedragon.morph.api.MorphAPI;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.api.utils.morph.MorphUtils;
+import org.bryanthedragon.morph.capabilities.morphing.IMorphing;
+import org.bryanthedragon.morph.capabilities.morphing.Morphing;
+import org.bryanthedragon.morph.network.common.survival.PacketSelectMorph;
+import org.bryanthedragon.morph.network.server.message.ServerMessageHandler;
 
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.level.GameType;

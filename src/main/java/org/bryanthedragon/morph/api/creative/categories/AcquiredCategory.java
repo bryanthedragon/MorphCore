@@ -1,13 +1,13 @@
-package bryanthedragon.morph.api.creative.categories;
+package org.bryanthedragon.morph.api.creative.categories;
 
-import bryanthedragon.morph.api.creative.sections.MorphSection;
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
-import bryanthedragon.morph.network.Dispatcher;
-import bryanthedragon.morph.network.common.creative.PacketAcquireMorph;
-import bryanthedragon.morph.network.common.creative.PacketClearAcquired;
-import bryanthedragon.morph.network.common.creative.PacketSyncMorph;
-import bryanthedragon.morph.network.common.survival.PacketRemoveMorph;
-import bryanthedragon.morph.network.common.survival.PacketSelectMorph;
+import org.bryanthedragon.morph.api.creative.sections.MorphSection;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.network.Dispatcher;
+import org.bryanthedragon.morph.network.common.creative.PacketAcquireMorph;
+import org.bryanthedragon.morph.network.common.creative.PacketClearAcquired;
+import org.bryanthedragon.morph.network.common.creative.PacketSyncMorph;
+import org.bryanthedragon.morph.network.common.survival.PacketRemoveMorph;
+import org.bryanthedragon.morph.network.common.survival.PacketSelectMorph;
 
 import net.minecraft.world.entity.player.Player;
 

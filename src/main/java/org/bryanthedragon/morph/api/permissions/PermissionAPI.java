@@ -1,17 +1,17 @@
-package bryanthedragon.morph.api.permissions;
+package org.bryanthedragon.morph.api.permissions;
 
 import com.google.common.base.Preconditions;
 
 import com.mojang.authlib.GameProfile;
 
-import bryanthedragon.morph.context.IContext;
-import bryanthedragon.morph.context.player.PlayerContext;
-import bryanthedragon.morph.loader.MorphLoader;
-import bryanthedragon.morph.loader.state.MorphLoaderState;
-import bryanthedragon.morph.loggers.MorphLog;
-import bryanthedragon.morph.permissions.IPermissionHandler;
-import bryanthedragon.morph.permissions.handler.DefaultPermissionHandler;
-import bryanthedragon.morph.permissions.level.DefaultPermissionLevel;
+import org.bryanthedragon.morph.context.IContext;
+import org.bryanthedragon.morph.context.player.PlayerContext;
+import org.bryanthedragon.morph.loader.MorphLoader;
+import org.bryanthedragon.morph.loader.state.MorphLoaderState;
+import org.bryanthedragon.morph.loggers.MorphLog;
+import org.bryanthedragon.morph.permissions.IPermissionHandler;
+import org.bryanthedragon.morph.permissions.handler.DefaultPermissionHandler;
+import org.bryanthedragon.morph.permissions.level.DefaultPermissionLevel;
 
 import net.minecraft.world.entity.player.Player;
 

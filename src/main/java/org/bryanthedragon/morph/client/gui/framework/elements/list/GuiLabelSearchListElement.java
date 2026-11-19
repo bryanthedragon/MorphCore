@@ -1,6 +1,6 @@
-package bryanthedragon.morph.client.gui.framework.elements.list;
+package org.bryanthedragon.morph.client.gui.framework.elements.list;
 
-import bryanthedragon.morph.client.gui.utils.Label;
+import org.bryanthedragon.morph.client.gui.utils.Label;
 
 import net.minecraft.client.Minecraft;
 

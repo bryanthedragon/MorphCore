@@ -1,7 +1,7 @@
-package bryanthedragon.morph.utils.resources;
+package org.bryanthedragon.morph.utils.resources;
 
-import bryanthedragon.morph.events.MultiskinProcessedEvent;
-import bryanthedragon.morph.utils.color.Color;
+import org.bryanthedragon.morph.events.MultiskinProcessedEvent;
+import org.bryanthedragon.morph.utils.color.ColorUtils.Color;
 import net.minecraft.client.Minecraft;
 import net.minecraft.server.packs.resources.Resource;
 import net.minecraft.server.packs.resources.ResourceManager;

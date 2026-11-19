@@ -1,4 +1,4 @@
-package bryanthedragon.morph.network;
+package org.bryanthedragon.morph.network;
 
 import io.netty.buffer.ByteBuf;
 

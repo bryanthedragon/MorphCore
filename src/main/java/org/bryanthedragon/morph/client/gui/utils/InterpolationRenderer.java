@@ -1,12 +1,12 @@
-package bryanthedragon.morph.client.gui.utils;
+package org.bryanthedragon.morph.client.gui.utils;
 
 
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
-import bryanthedragon.morph.client.gui.framework.tooltips.styles.TooltipStyle;
-import bryanthedragon.morph.utils.interpolation.IInterpolation;
-import bryanthedragon.morph.utils.math.MathUtils;
-import bryanthedragon.morph.utils.color.Color;
-import bryanthedragon.morph.utils.color.ColorUtils;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
+import org.bryanthedragon.morph.client.gui.framework.tooltips.styles.TooltipStyle;
+import org.bryanthedragon.morph.utils.interpolation.IInterpolation;
+import org.bryanthedragon.morph.utils.math.MathUtils;
+import org.bryanthedragon.morph.utils.color.ColorUtils.Color;
+import org.bryanthedragon.morph.utils.color.ColorUtils;
 
 import com.google.common.collect.ImmutableList;
 

@@ -1,4 +1,4 @@
-package bryanthedragon.morph.utils.helpers.lighting;
+package org.bryanthedragon.morph.utils.helpers.lighting;
 
 import java.lang.reflect.Field;
 

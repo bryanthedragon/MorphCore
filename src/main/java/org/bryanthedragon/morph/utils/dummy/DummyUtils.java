@@ -1,4 +1,4 @@
-package bryanthedragon.morph.utils.dummy;
+package org.bryanthedragon.morph.utils.dummy;
 
 import java.util.Arrays;
 

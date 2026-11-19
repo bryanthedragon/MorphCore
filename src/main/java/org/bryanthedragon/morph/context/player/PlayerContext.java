@@ -1,8 +1,10 @@
-package bryanthedragon.morph.context.player;
+package org.bryanthedragon.morph.context.player;
+
+import org.bryanthedragon.morph.context.Context;
 
 import com.google.common.base.Preconditions;
 
-import bryanthedragon.morph.context.Context;
+
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 

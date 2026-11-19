@@ -1,6 +1,7 @@
-package bryanthedragon.morph.utils.interpolation;
+package org.bryanthedragon.morph.utils.interpolation;
 
-import bryanthedragon.morph.utils.math.MathUtils;
+import org.bryanthedragon.morph.utils.math.MathUtils;
+
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 

@@ -1,9 +1,9 @@
-package bryanthedragon.morph.network.morphlib.common;
+package org.bryanthedragon.morph.network.morphlib.common;
 
 import io.netty.buffer.ByteBuf;
 
-import bryanthedragon.morph.MorphLib;
-import bryanthedragon.morph.permissions.category.PermissionCategory;
+import org.bryanthedragon.morph.MorphLib;
+import org.bryanthedragon.morph.permissions.category.PermissionCategory;
 
 import javax.annotation.Nullable;
 import java.util.NoSuchElementException;
@@ -15,7 +15,9 @@ public class PacketRequestPermission implements IAnswerRequest<Boolean>
     private int callbackID = -1;
 
     public PacketRequestPermission()
-    { }
+    { 
+        
+    }
 
     public PacketRequestPermission(int callbackID, PermissionCategory permission)
     {

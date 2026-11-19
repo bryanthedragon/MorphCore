@@ -1,17 +1,17 @@
-package bryanthedragon.morph.client.gui.utils;
+package org.bryanthedragon.morph.client.gui.utils;
 
 import java.io.File;
 import java.util.Map;
 
 import org.lwjgl.glfw.GLFW;
 
-import bryanthedragon.morph.MorphLib;
-import bryanthedragon.morph.client.gui.utils.keys.IKey;
-import bryanthedragon.morph.config.Config;
-import bryanthedragon.morph.config.json.ConfigParser;
-import bryanthedragon.morph.config.values.Value;
-import bryanthedragon.morph.config.values.ValueInt;
-import bryanthedragon.morph.utils.key.Keys;
+import org.bryanthedragon.morph.MorphLib;
+import org.bryanthedragon.morph.client.gui.utils.keys.IKey;
+import org.bryanthedragon.morph.config.Config;
+import org.bryanthedragon.morph.config.json.ConfigParser;
+import org.bryanthedragon.morph.config.values.Value;
+import org.bryanthedragon.morph.config.values.ValueInt;
+import org.bryanthedragon.morph.utils.key.Keys;
 
 import net.minecraftforge.fml.ModList;
 

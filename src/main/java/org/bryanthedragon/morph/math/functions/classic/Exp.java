@@ -1,7 +1,7 @@
-package bryanthedragon.morph.math.functions.classic;
+package org.bryanthedragon.morph.math.functions.classic;
 
-import bryanthedragon.morph.math.IValue;
-import bryanthedragon.morph.math.functions.NNFunction;
+import org.bryanthedragon.morph.math.IValue;
+import org.bryanthedragon.morph.math.functions.NNFunction;
 
 public class Exp extends NNFunction
 {

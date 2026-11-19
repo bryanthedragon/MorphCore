@@ -1,4 +1,4 @@
-package bryanthedragon.morph.utils.keyframes;
+package org.bryanthedragon.morph.utils.keyframes;
 
 public enum KeyframeEasing
 {

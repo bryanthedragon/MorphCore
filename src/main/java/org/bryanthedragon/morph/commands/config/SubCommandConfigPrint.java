@@ -1,6 +1,6 @@
-package bryanthedragon.morph.commands.config;
+package org.bryanthedragon.morph.commands.config;
 
-import bryanthedragon.morph.config.values.Value;
+import org.bryanthedragon.morph.config.values.Value;
 
 import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.context.CommandContext;

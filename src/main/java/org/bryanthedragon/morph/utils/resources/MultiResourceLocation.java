@@ -1,4 +1,4 @@
-package bryanthedragon.morph.utils.resources;
+package org.bryanthedragon.morph.utils.resources;
 
 import com.google.common.base.Objects;
 import com.google.gson.JsonArray;

@@ -1,6 +1,6 @@
-package bryanthedragon.morph.utils.files.entries;
+package org.bryanthedragon.morph.utils.files.entries;
 
-import bryanthedragon.morph.utils.resources.RLUtils;
+import org.bryanthedragon.morph.utils.resources.RLUtils;
 
 import java.io.File;
 import java.util.Iterator;

@@ -1,11 +1,11 @@
-package bryanthedragon.morph.client.gui.framework.elements.input;
+package org.bryanthedragon.morph.client.gui.framework.elements.input;
 
-import bryanthedragon.morph.MorphLib;
-import bryanthedragon.morph.client.gui.framework.elements.GuiScrollElement;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiDraw;
-import bryanthedragon.morph.client.gui.utils.Keybind;
-import bryanthedragon.morph.client.gui.utils.keys.IKey;
+import org.bryanthedragon.morph.MorphLib;
+import org.bryanthedragon.morph.client.gui.framework.elements.GuiScrollElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiDraw;
+import org.bryanthedragon.morph.client.gui.utils.Keybind;
+import org.bryanthedragon.morph.client.gui.utils.keys.IKey;
 
 import net.minecraft.client.Minecraft;
 

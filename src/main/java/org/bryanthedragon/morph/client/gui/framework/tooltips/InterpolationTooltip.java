@@ -1,9 +1,9 @@
-package bryanthedragon.morph.client.gui.framework.tooltips;
+package org.bryanthedragon.morph.client.gui.framework.tooltips;
 
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
-import bryanthedragon.morph.client.gui.utils.Area;
-import bryanthedragon.morph.client.gui.utils.InterpolationRenderer;
-import bryanthedragon.morph.utils.interpolation.IInterpolation;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
+import org.bryanthedragon.morph.client.gui.utils.Area;
+import org.bryanthedragon.morph.client.gui.utils.InterpolationRenderer;
+import org.bryanthedragon.morph.utils.interpolation.IInterpolation;
 
 import java.util.function.Supplier;
 

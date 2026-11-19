@@ -1,7 +1,7 @@
-package bryanthedragon.morph.api.morphs.utils;
+package org.bryanthedragon.morph.api.morphs.utils;
 
-import bryanthedragon.morph.utils.math.MathUtils;
-import bryanthedragon.morph.utils.interpolation.Interpolation;
+import org.bryanthedragon.morph.utils.math.MathUtils;
+import org.bryanthedragon.morph.utils.interpolation.Interpolation;
 import net.minecraft.nbt.CompoundTag;
 
 public class Animation

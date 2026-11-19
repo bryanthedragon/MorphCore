@@ -1,4 +1,4 @@
-package bryanthedragon.morph.client;
+package org.bryanthedragon.morph.client;
 
 import org.lwjgl.opengl.GL11;
 

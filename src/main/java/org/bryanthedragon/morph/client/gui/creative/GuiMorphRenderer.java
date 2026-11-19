@@ -1,9 +1,9 @@
-package bryanthedragon.morph.client.gui.creative;
+package org.bryanthedragon.morph.client.gui.creative;
 
-import bryanthedragon.morph.client.gui.framework.elements.GuiModelRenderer;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
-import bryanthedragon.morph.api.MorphUtils;
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.client.gui.framework.elements.GuiModelRenderer;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
+import org.bryanthedragon.morph.api.utils.morph.MorphUtils;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
 
 import net.minecraft.client.Minecraft;
 

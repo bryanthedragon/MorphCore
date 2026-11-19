@@ -1,16 +1,17 @@
-package bryanthedragon.morph.client;
+package org.bryanthedragon.morph.client;
 
 import com.mojang.blaze3d.platform.InputConstants;
-import bryanthedragon.morph.MorphCore;
-import bryanthedragon.morph.MorphCoreProxy.ClientCoreProxy;
-import bryanthedragon.morph.api.MorphManager;
-import bryanthedragon.morph.capabilities.morphing.IMorphing;
-import bryanthedragon.morph.capabilities.morphing.Morphing;
-import bryanthedragon.morph.client.gui.creative.GuiCreativeScreen;
-import bryanthedragon.morph.client.gui.creative.GuiSelectorsScreen;
-import bryanthedragon.morph.network.Dispatcher;
-import bryanthedragon.morph.network.common.survival.PacketAction;
-import bryanthedragon.morph.network.common.survival.PacketSelectMorph;
+
+import org.bryanthedragon.morph.MorphCore;
+import org.bryanthedragon.morph.MorphCoreProxy.ClientCoreProxy;
+import org.bryanthedragon.morph.api.MorphManager;
+import org.bryanthedragon.morph.capabilities.morphing.IMorphing;
+import org.bryanthedragon.morph.capabilities.morphing.Morphing;
+import org.bryanthedragon.morph.client.gui.creative.GuiCreativeScreen;
+import org.bryanthedragon.morph.client.gui.creative.GuiSelectorsScreen;
+import org.bryanthedragon.morph.network.Dispatcher;
+import org.bryanthedragon.morph.network.common.survival.PacketAction;
+import org.bryanthedragon.morph.network.common.survival.PacketSelectMorph;
 
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;

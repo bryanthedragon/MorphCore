@@ -1,4 +1,4 @@
-package bryanthedragon.morph.config.values;
+package org.bryanthedragon.morph.config.values;
 
 import com.google.gson.JsonElement;
 
@@ -6,8 +6,8 @@ import io.netty.buffer.ByteBuf;
 
 import net.minecraft.nbt.Tag;
 
-import bryanthedragon.morph.utils.copy.ICopy;
-import bryanthedragon.morph.utils.interpolation.Interpolation;
+import org.bryanthedragon.morph.utils.copy.ICopy;
+import org.bryanthedragon.morph.utils.interpolation.Interpolation;
 
 import javax.annotation.Nullable;
 
@@ -27,7 +27,7 @@ import javax.annotation.Nullable;
  * If it cannot override {@link Object#equals(Object)}, the method {@link #equals(Object)} need to be overridden!
  *
  * <br><br>
- * The GenericBaseValue subclasses can be used together with the {@link bryanthedragon.morph.utils.ValueSerializer}
+ * The GenericBaseValue subclasses can be used together with the {@link org.bryanthedragon.morph.utils.ValueSerializer}
  * to automate all of the toNBT, fromNBT, toBytes, fromBytes, fromJson and toJson serialization processes.
  * GenericBaseValue subclasses can also be used for an undo / redo system, as it is already in place in Aperture mod.
  *

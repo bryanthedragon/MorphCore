@@ -1,16 +1,16 @@
-package bryanthedragon.morph.client.gui.framework.elements.keyframes;
+package org.bryanthedragon.morph.client.gui.framework.elements.keyframes;
 
 import com.google.common.collect.ImmutableList;
 
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
-import bryanthedragon.morph.client.gui.utils.Area;
-import bryanthedragon.morph.client.gui.utils.Scale;
-import bryanthedragon.morph.client.gui.utils.ScrollDirection;
-import bryanthedragon.morph.client.gui.utils.keys.IKey;
-import bryanthedragon.morph.utils.keyframes.Keyframe;
-import bryanthedragon.morph.utils.keyframes.KeyframeChannel;
-import bryanthedragon.morph.utils.keyframes.KeyframeEasing;
-import bryanthedragon.morph.utils.keyframes.KeyframeInterpolation;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
+import org.bryanthedragon.morph.client.gui.utils.Area;
+import org.bryanthedragon.morph.client.gui.utils.Scale;
+import org.bryanthedragon.morph.client.gui.utils.ScrollDirection;
+import org.bryanthedragon.morph.client.gui.utils.keys.IKey;
+import org.bryanthedragon.morph.utils.keyframes.Keyframe;
+import org.bryanthedragon.morph.utils.keyframes.KeyframeChannel;
+import org.bryanthedragon.morph.utils.keyframes.KeyframeEasing;
+import org.bryanthedragon.morph.utils.keyframes.KeyframeInterpolation;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;

@@ -1,13 +1,13 @@
-package bryanthedragon.morph.utils.keyframes;
+package org.bryanthedragon.morph.utils.keyframes;
 
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.Expose;
 
 import io.netty.buffer.ByteBuf;
 
-import bryanthedragon.morph.network.IByteBufSerializable;
-import bryanthedragon.morph.network.INBTSerializable;
-import bryanthedragon.morph.utils.copy.ICopy;
+import org.bryanthedragon.morph.network.IByteBufSerializable;
+import org.bryanthedragon.morph.network.INBTSerializable;
+import org.bryanthedragon.morph.utils.copy.ICopy;
 
 import net.minecraft.nbt.CompoundTag;
 

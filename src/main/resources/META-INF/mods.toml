@@ -1,0 +1,28 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+
+[[mods]]
+modId="morphcore"
+version="${version}"
+displayName="MorphCore"
+description="Allows players to morph into different mobs and more!"
+authors="bryanthedragon"
+credits=""
+displayURL="https://www.curseforge.com/minecraft/mc-mods/morphcore/"
+issueTrackerURL="https://github.com/bryanthedragon/MorphCore/issues"
+logoFile="assets/org/bryanthedragon/morphcore/textures/gui/icons.png"
+
+[[dependencies.morphcore]]
+    modId="forge"
+    mandatory=true
+    versionRange="[47,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.morphcore]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1,1.21)"
+    ordering="NONE"
+    side="BOTH"

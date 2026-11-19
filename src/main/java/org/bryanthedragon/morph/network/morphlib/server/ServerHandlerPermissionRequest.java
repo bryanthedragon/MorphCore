@@ -1,9 +1,9 @@
-package bryanthedragon.morph.network.morphlib.server;
+package org.bryanthedragon.morph.network.morphlib.server;
 
-import bryanthedragon.morph.network.server.message.ServerMessageHandler;
-import bryanthedragon.morph.network.morphlib.client.ClientHandlerAnswer;
-import bryanthedragon.morph.network.morphlib.common.PacketRequestPermission;
-import bryanthedragon.morph.permissions.category.PermissionCategory;
+import org.bryanthedragon.morph.network.server.message.ServerMessageHandler;
+import org.bryanthedragon.morph.network.morphlib.client.ClientHandlerAnswer;
+import org.bryanthedragon.morph.network.morphlib.common.PacketRequestPermission;
+import org.bryanthedragon.morph.permissions.category.PermissionCategory;
 
 import net.minecraft.server.level.ServerPlayer;
 

@@ -1,12 +1,14 @@
-package bryanthedragon.morph.api.editors.panels;
+package org.bryanthedragon.morph.api.editors.panels;
 
-import bryanthedragon.morph.client.gui.framework.elements.buttons.GuiSlotElement;
-import bryanthedragon.morph.client.gui.framework.elements.buttons.GuiToggleElement;
-import bryanthedragon.morph.client.gui.utils.keys.IKey;
-import bryanthedragon.morph.api.morphs.main.ItemStackMorph;
-import bryanthedragon.morph.client.gui.editor.GuiAbstractMorph;
-import bryanthedragon.morph.client.gui.editor.GuiMorphPanel;
+import org.bryanthedragon.morph.client.gui.framework.elements.buttons.GuiSlotElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.buttons.GuiToggleElement;
+import org.bryanthedragon.morph.client.gui.utils.keys.IKey;
+import org.bryanthedragon.morph.api.morphs.main.ItemStackMorph;
+import org.bryanthedragon.morph.client.gui.editor.GuiAbstractMorph;
+import org.bryanthedragon.morph.client.gui.editor.GuiMorphPanel;
+
 import net.minecraft.client.Minecraft;
+
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 

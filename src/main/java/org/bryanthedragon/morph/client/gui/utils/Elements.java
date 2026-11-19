@@ -1,8 +1,8 @@
-package bryanthedragon.morph.client.gui.utils;
+package org.bryanthedragon.morph.client.gui.utils;
 
-import bryanthedragon.morph.client.gui.framework.elements.GuiElement;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiLabel;
-import bryanthedragon.morph.client.gui.utils.keys.IKey;
+import org.bryanthedragon.morph.client.gui.framework.elements.GuiElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiLabel;
+import org.bryanthedragon.morph.client.gui.utils.keys.IKey;
 
 import net.minecraft.client.Minecraft;
 

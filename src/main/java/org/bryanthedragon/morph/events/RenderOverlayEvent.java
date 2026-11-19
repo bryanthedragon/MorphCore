@@ -1,4 +1,4 @@
-package bryanthedragon.morph.events;
+package org.bryanthedragon.morph.events;
 
 import net.minecraft.client.Minecraft;
 

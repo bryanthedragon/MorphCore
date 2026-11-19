@@ -1,9 +1,9 @@
-package bryanthedragon.morph.permissions;
+package org.bryanthedragon.morph.permissions;
 
 import com.mojang.authlib.GameProfile;
 
-import bryanthedragon.morph.context.IContext;
-import bryanthedragon.morph.permissions.level.DefaultPermissionLevel;
+import org.bryanthedragon.morph.context.IContext;
+import org.bryanthedragon.morph.permissions.level.DefaultPermissionLevel;
 
 import javax.annotation.Nullable;
 import java.util.Collection;

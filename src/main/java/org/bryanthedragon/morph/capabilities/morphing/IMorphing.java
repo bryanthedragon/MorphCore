@@ -1,6 +1,6 @@
-package bryanthedragon.morph.capabilities.morphing;
+package org.bryanthedragon.morph.capabilities.morphing;
 
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
 
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.damagesource.DamageSource;
@@ -164,6 +164,17 @@ public interface IMorphing
      * Set last health
      */
     public void setLastHealth(float lastHealth);
+
+    /**
+     * Get the player's movement speed from before morphing, or a
+     * negative value if it wasn't recorded
+     */
+    public double getOriginalSpeed();
+
+    /**
+     * Set the player's movement speed from before morphing
+     */
+    public void setOriginalSpeed(double originalSpeed);
 
     /**
      * Update the player 

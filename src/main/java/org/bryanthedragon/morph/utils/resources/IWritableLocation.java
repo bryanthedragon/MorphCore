@@ -1,8 +1,8 @@
-package bryanthedragon.morph.utils.resources;
+package org.bryanthedragon.morph.utils.resources;
 
 import com.google.gson.JsonElement;
 
-import bryanthedragon.morph.utils.copy.ICopy;
+import org.bryanthedragon.morph.utils.copy.ICopy;
 
 import net.minecraft.nbt.Tag;
 

@@ -1,15 +1,16 @@
-package bryanthedragon.morph.api.editors.panels;
+package org.bryanthedragon.morph.api.editors.panels;
 
-import bryanthedragon.morph.client.gui.framework.elements.GuiScrollElement;
-import bryanthedragon.morph.client.gui.framework.elements.buttons.GuiToggleElement;
-import bryanthedragon.morph.client.gui.framework.elements.input.GuiColorElement;
-import bryanthedragon.morph.client.gui.framework.elements.input.GuiTextElement;
-import bryanthedragon.morph.client.gui.framework.elements.input.GuiTrackpadElement;
-import bryanthedragon.morph.client.gui.utils.Elements;
-import bryanthedragon.morph.client.gui.utils.keys.IKey;
-import bryanthedragon.morph.api.morphs.main.LabelMorph;
-import bryanthedragon.morph.client.gui.editor.GuiMorphPanel;
-import bryanthedragon.morph.api.editors.GuiLabelMorph;
+import org.bryanthedragon.morph.client.gui.framework.elements.GuiScrollElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.buttons.GuiToggleElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.input.GuiColorElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.input.GuiTextElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.input.GuiTrackpadElement;
+import org.bryanthedragon.morph.client.gui.utils.Elements;
+import org.bryanthedragon.morph.client.gui.utils.keys.IKey;
+import org.bryanthedragon.morph.api.morphs.main.LabelMorph;
+import org.bryanthedragon.morph.client.gui.editor.GuiMorphPanel;
+import org.bryanthedragon.morph.api.editors.GuiLabelMorph;
+
 import net.minecraft.client.Minecraft;
 
 public class GuiLabelPanel extends GuiMorphPanel<LabelMorph, GuiLabelMorph>

@@ -1,8 +1,8 @@
-package bryanthedragon.morph.api.creative.categories;
+package org.bryanthedragon.morph.api.creative.categories;
 
-import bryanthedragon.morph.api.creative.sections.MorphSection;
-import bryanthedragon.morph.api.creative.sections.UserSection;
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.api.creative.sections.MorphSection;
+import org.bryanthedragon.morph.api.creative.sections.UserSection;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
 
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;

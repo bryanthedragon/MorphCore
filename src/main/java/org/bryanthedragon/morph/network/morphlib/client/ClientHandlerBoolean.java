@@ -1,6 +1,6 @@
-package bryanthedragon.morph.network.morphlib.client;
+package org.bryanthedragon.morph.network.morphlib.client;
 
-import bryanthedragon.morph.network.morphlib.common.PacketBoolean;
+import org.bryanthedragon.morph.network.morphlib.common.PacketBoolean;
 
 /**
  * A special handler just for PacketBoolean to allow for efficient transport of just 5 bytes in total.

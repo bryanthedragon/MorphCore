@@ -1,15 +1,15 @@
-package bryanthedragon.morph.api.morphs.main;
+package org.bryanthedragon.morph.api.morphs.main;
 
 import java.util.Objects;
 import java.util.UUID;
 
-import bryanthedragon.morph.MorphCore;
-import bryanthedragon.morph.api.settings.MorphSettings;
-import bryanthedragon.morph.api.utils.entity.EntityUtils;
-import bryanthedragon.morph.bodypart.BodyPartManager;
-import bryanthedragon.morph.bodypart.IBodyPartProvider;
-import bryanthedragon.morph.entity.SoundHandler;
-import bryanthedragon.morph.utils.resources.RLUtils;
+import org.bryanthedragon.morph.MorphCore;
+import org.bryanthedragon.morph.api.settings.MorphSettings;
+import org.bryanthedragon.morph.api.utils.entity.EntityUtils;
+import org.bryanthedragon.morph.bodypart.BodyPartManager;
+import org.bryanthedragon.morph.bodypart.IBodyPartProvider;
+import org.bryanthedragon.morph.entity.SoundHandler;
+import org.bryanthedragon.morph.utils.resources.RLUtils;
 
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
@@ -67,6 +67,7 @@ public class EntityMorph extends AbstractMorph implements IBodyPartProvider
     @OnlyIn(Dist.CLIENT)
     public void renderOnScreen(Player player, int x, int y, float scale, float alpha)
     {
+        
     }
 
     @Override
@@ -316,9 +317,7 @@ public class EntityMorph extends AbstractMorph implements IBodyPartProvider
         {
             return super.equals(obj);
         }
-        return super.equals(obj) && EntityUtils.compareData(morph.entityData, this.entityData)
-            && Objects.equals(morph.parts, this.parts) && morph.scale == this.scale
-            && Objects.equals(morph.userTexture, this.userTexture);
+        return super.equals(obj) && EntityUtils.compareData(morph.entityData, this.entityData) && Objects.equals(morph.parts, this.parts) && morph.scale == this.scale && Objects.equals(morph.userTexture, this.userTexture);
     }
 
     @Override

@@ -1,8 +1,8 @@
-package bryanthedragon.morph.network.common.creative;
+package org.bryanthedragon.morph.network.common.creative;
 
 import io.netty.buffer.ByteBuf;
 
-import bryanthedragon.morph.network.IMessage;
+import org.bryanthedragon.morph.network.IMessage;
 
 public class PacketClearAcquired implements IMessage
 {

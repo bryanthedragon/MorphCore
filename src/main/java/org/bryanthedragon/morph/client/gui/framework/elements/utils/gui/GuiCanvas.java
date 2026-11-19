@@ -1,8 +1,8 @@
-package bryanthedragon.morph.client.gui.framework.elements.utils.gui;
+package org.bryanthedragon.morph.client.gui.framework.elements.utils.gui;
 
-import bryanthedragon.morph.client.gui.framework.elements.GuiElement;
-import bryanthedragon.morph.client.gui.utils.Scale;
-import bryanthedragon.morph.client.gui.utils.ScrollDirection;
+import org.bryanthedragon.morph.client.gui.framework.elements.GuiElement;
+import org.bryanthedragon.morph.client.gui.utils.Scale;
+import org.bryanthedragon.morph.client.gui.utils.ScrollDirection;
 
 import net.minecraft.client.Minecraft;
 

@@ -1,20 +1,20 @@
-package bryanthedragon.morph.capabilities;
+package org.bryanthedragon.morph.capabilities;
 
-import bryanthedragon.morph.MorphCore;
-import bryanthedragon.morph.api.MorphManager;
-import bryanthedragon.morph.capabilities.morphing.IMorphing;
-import bryanthedragon.morph.capabilities.morphing.Morphing;
-import bryanthedragon.morph.capabilities.morphing.MorphingProvider;
-import bryanthedragon.morph.capabilities.render.IModelRenderer;
-import bryanthedragon.morph.capabilities.render.ModelProvider;
-import bryanthedragon.morph.capabilities.render.ModelRenderer;
-import bryanthedragon.morph.network.Dispatcher;
-import bryanthedragon.morph.network.common.survival.PacketAcquiredMorphs;
-import bryanthedragon.morph.network.common.PacketBlacklist;
-import bryanthedragon.morph.network.common.creative.PacketMorph;
-import bryanthedragon.morph.network.common.survival.PacketMorphPlayer;
-import bryanthedragon.morph.network.common.survival.PacketMorphState;
-import bryanthedragon.morph.network.common.PacketSettings;
+import org.bryanthedragon.morph.MorphCore;
+import org.bryanthedragon.morph.api.MorphManager;
+import org.bryanthedragon.morph.capabilities.morphing.IMorphing;
+import org.bryanthedragon.morph.capabilities.morphing.Morphing;
+import org.bryanthedragon.morph.capabilities.morphing.MorphingProvider;
+import org.bryanthedragon.morph.capabilities.render.IModelRenderer;
+import org.bryanthedragon.morph.capabilities.render.ModelProvider;
+import org.bryanthedragon.morph.capabilities.render.ModelRenderer;
+import org.bryanthedragon.morph.network.Dispatcher;
+import org.bryanthedragon.morph.network.common.survival.PacketAcquiredMorphs;
+import org.bryanthedragon.morph.network.common.PacketBlacklist;
+import org.bryanthedragon.morph.network.common.creative.PacketMorph;
+import org.bryanthedragon.morph.network.common.survival.PacketMorphPlayer;
+import org.bryanthedragon.morph.network.common.survival.PacketMorphState;
+import org.bryanthedragon.morph.network.common.PacketSettings;
 
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.server.level.ServerPlayer;

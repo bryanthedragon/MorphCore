@@ -1,9 +1,9 @@
-package bryanthedragon.morph.api.morphs.utils;
+package org.bryanthedragon.morph.api.morphs.utils;
 
-import bryanthedragon.morph.api.models.IMorphProvider;
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
-import bryanthedragon.morph.bodypart.BodyPart;
-import bryanthedragon.morph.bodypart.IBodyPartProvider;
+import org.bryanthedragon.morph.api.models.IMorphProvider;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.bodypart.BodyPart;
+import org.bryanthedragon.morph.bodypart.IBodyPartProvider;
 
 public interface ISyncableMorph
 {

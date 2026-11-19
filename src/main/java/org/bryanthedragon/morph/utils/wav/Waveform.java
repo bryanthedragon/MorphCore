@@ -1,8 +1,8 @@
-package bryanthedragon.morph.utils.wav;
+package org.bryanthedragon.morph.utils.wav;
 
 import com.mojang.blaze3d.platform.NativeImage;
 import com.mojang.blaze3d.systems.RenderSystem;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiDraw;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiDraw;
 
 import net.minecraft.client.renderer.texture.DynamicTexture;
 import net.minecraftforge.api.distmarker.Dist;

@@ -1,7 +1,7 @@
-package bryanthedragon.morph.math.molang.expressions;
+package org.bryanthedragon.morph.math.molang.expressions;
 
-import bryanthedragon.morph.math.Variable;
-import bryanthedragon.morph.math.molang.MolangParser;
+import org.bryanthedragon.morph.math.Variable;
+import org.bryanthedragon.morph.math.molang.MolangParser;
 
 import java.util.ArrayList;
 import java.util.HashMap;

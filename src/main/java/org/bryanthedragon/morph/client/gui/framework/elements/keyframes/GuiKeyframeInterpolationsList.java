@@ -1,7 +1,7 @@
-package bryanthedragon.morph.client.gui.framework.elements.keyframes;
+package org.bryanthedragon.morph.client.gui.framework.elements.keyframes;
 
-import bryanthedragon.morph.client.gui.framework.elements.list.GuiListElement;
-import bryanthedragon.morph.utils.keyframes.KeyframeInterpolation;
+import org.bryanthedragon.morph.client.gui.framework.elements.list.GuiListElement;
+import org.bryanthedragon.morph.utils.keyframes.KeyframeInterpolation;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.language.I18n;

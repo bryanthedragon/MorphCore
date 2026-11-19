@@ -1,4 +1,4 @@
-package bryanthedragon.morph.math.molang;
+package org.bryanthedragon.morph.math.molang;
 
 public class MolangException extends Exception
 {

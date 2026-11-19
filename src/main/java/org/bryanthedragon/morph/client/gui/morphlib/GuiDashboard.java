@@ -1,9 +1,10 @@
-package bryanthedragon.morph.client.gui.morphlib;
+package org.bryanthedragon.morph.client.gui.morphlib;
 
-import bryanthedragon.morph.MorphLib;
-import bryanthedragon.morph.client.gui.utils.Icons;
-import bryanthedragon.morph.client.gui.utils.keys.IKey;
-import bryanthedragon.morph.config.gui.GuiConfigPanel;
+import org.bryanthedragon.morph.MorphLib;
+import org.bryanthedragon.morph.client.gui.utils.Icons;
+import org.bryanthedragon.morph.client.gui.utils.keys.IKey;
+import org.bryanthedragon.morph.config.gui.GuiConfigPanel;
+
 import net.minecraft.client.Minecraft;
 
 public class GuiDashboard extends GuiAbstractDashboard

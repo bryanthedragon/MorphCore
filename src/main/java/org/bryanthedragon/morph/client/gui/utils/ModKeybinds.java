@@ -1,4 +1,4 @@
-package bryanthedragon.morph.client.gui.utils;
+package org.bryanthedragon.morph.client.gui.utils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,15 +6,15 @@ import java.util.Map.Entry;
 
 import com.google.gson.JsonElement;
 
-import bryanthedragon.morph.client.gui.framework.elements.GuiElement;
-import bryanthedragon.morph.client.gui.framework.elements.input.GuiKeybindElement;
-import bryanthedragon.morph.client.gui.utils.keys.IKey;
-import bryanthedragon.morph.client.gui.utils.keys.KeyParser;
-import bryanthedragon.morph.config.Config;
-import bryanthedragon.morph.config.gui.GuiConfigPanel;
-import bryanthedragon.morph.config.values.IConfigGuiProvider;
-import bryanthedragon.morph.config.values.Value;
-import bryanthedragon.morph.config.values.ValueInt;
+import org.bryanthedragon.morph.client.gui.framework.elements.GuiElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.input.GuiKeybindElement;
+import org.bryanthedragon.morph.client.gui.utils.keys.IKey;
+import org.bryanthedragon.morph.client.gui.utils.keys.KeyParser;
+import org.bryanthedragon.morph.config.Config;
+import org.bryanthedragon.morph.config.gui.GuiConfigPanel;
+import org.bryanthedragon.morph.config.values.IConfigGuiProvider;
+import org.bryanthedragon.morph.config.values.Value;
+import org.bryanthedragon.morph.config.values.ValueInt;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.language.I18n;

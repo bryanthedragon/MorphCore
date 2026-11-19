@@ -1,4 +1,4 @@
-package bryanthedragon.morph.capabilities.render;
+package org.bryanthedragon.morph.capabilities.render;
 
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;

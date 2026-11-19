@@ -1,7 +1,7 @@
-package bryanthedragon.morph.client.gui.utils.resizers;
+package org.bryanthedragon.morph.client.gui.utils.resizers;
 
-import bryanthedragon.morph.client.gui.framework.elements.GuiElement;
-import bryanthedragon.morph.client.gui.utils.Area;
+import org.bryanthedragon.morph.client.gui.framework.elements.GuiElement;
+import org.bryanthedragon.morph.client.gui.utils.Area;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 

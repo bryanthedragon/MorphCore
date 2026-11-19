@@ -1,6 +1,6 @@
-package bryanthedragon.morph.utils.wav;
+package org.bryanthedragon.morph.utils.wav;
 
-import bryanthedragon.morph.utils.math.MathUtils;
+import org.bryanthedragon.morph.utils.math.MathUtils;
 
 import org.lwjgl.openal.AL10;
 import org.lwjgl.openal.AL11;

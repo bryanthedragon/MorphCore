@@ -1,4 +1,4 @@
-package bryanthedragon.morph.utils.consumer;
+package org.bryanthedragon.morph.utils.consumer;
 
 import java.util.Map;
 import java.util.TreeMap;

@@ -1,4 +1,4 @@
-package bryanthedragon.morph.config.values;
+package org.bryanthedragon.morph.config.values;
 
 public interface IServerValue
 {

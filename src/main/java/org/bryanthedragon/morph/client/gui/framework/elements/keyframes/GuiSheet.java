@@ -1,10 +1,10 @@
-package bryanthedragon.morph.client.gui.framework.elements.keyframes;
+package org.bryanthedragon.morph.client.gui.framework.elements.keyframes;
 
-import bryanthedragon.morph.client.gui.utils.keys.IKey;
-import bryanthedragon.morph.utils.keyframes.Keyframe;
-import bryanthedragon.morph.utils.keyframes.KeyframeChannel;
-import bryanthedragon.morph.utils.keyframes.KeyframeEasing;
-import bryanthedragon.morph.utils.keyframes.KeyframeInterpolation;
+import org.bryanthedragon.morph.client.gui.utils.keys.IKey;
+import org.bryanthedragon.morph.utils.keyframes.Keyframe;
+import org.bryanthedragon.morph.utils.keyframes.KeyframeChannel;
+import org.bryanthedragon.morph.utils.keyframes.KeyframeEasing;
+import org.bryanthedragon.morph.utils.keyframes.KeyframeInterpolation;
 
 import java.util.ArrayList;
 import java.util.Collections;

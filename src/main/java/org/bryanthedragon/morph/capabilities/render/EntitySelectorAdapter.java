@@ -1,4 +1,4 @@
-package bryanthedragon.morph.capabilities.render;
+package org.bryanthedragon.morph.capabilities.render;
 
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
@@ -7,6 +7,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
+
 import net.minecraft.nbt.TagParser;
 
 import java.lang.reflect.Type;

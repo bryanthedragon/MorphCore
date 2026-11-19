@@ -1,9 +1,9 @@
-package bryanthedragon.morph.utils.keyframes;
+package org.bryanthedragon.morph.utils.keyframes;
 
-import bryanthedragon.morph.utils.math.MathUtils;
-import bryanthedragon.morph.utils.interpolation.IInterpolation;
-import bryanthedragon.morph.utils.interpolation.Interpolation;
-import bryanthedragon.morph.utils.interpolation.Interpolations;
+import org.bryanthedragon.morph.utils.math.MathUtils;
+import org.bryanthedragon.morph.utils.interpolation.IInterpolation;
+import org.bryanthedragon.morph.utils.interpolation.Interpolation;
+import org.bryanthedragon.morph.utils.interpolation.Interpolations;
 
 public enum KeyframeInterpolation
 {

@@ -114,7 +114,7 @@ morphcore.gui.editor.keys.cycle=Cycle between morph panels
 morphcore.gui.creative.keys.onionskin=Toggle onion skins
 morphcore.gui.editor.shadow.all=Render all
 morphcore.gui.editor.shadow.noshadow=No shadow
-morphcore.gui.editor.shadow.onlyshadow=Only shaodws
+morphcore.gui.editor.shadow.onlyshadow=Only shadows
 morphcore.gui.editor.betterlights_shadow=Shadow
 
 morphcore.gui.editor.hitbox.enabled=Custom hitbox

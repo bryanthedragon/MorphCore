@@ -1,6 +1,6 @@
-package bryanthedragon.morph.utils.resources;
+package org.bryanthedragon.morph.utils.resources;
 
-import bryanthedragon.morph.utils.color.Color;
+import org.bryanthedragon.morph.utils.color.ColorUtils.Color;
 
 public enum PixelAccessor
 {

@@ -1,9 +1,9 @@
-package bryanthedragon.morph.network.server.creative;
+package org.bryanthedragon.morph.network.server.creative;
 
-import bryanthedragon.morph.capabilities.morphing.IMorphing;
-import bryanthedragon.morph.capabilities.morphing.Morphing;
-import bryanthedragon.morph.network.common.creative.PacketClearAcquired;
-import bryanthedragon.morph.network.server.message.ServerMessageHandler;
+import org.bryanthedragon.morph.capabilities.morphing.IMorphing;
+import org.bryanthedragon.morph.capabilities.morphing.Morphing;
+import org.bryanthedragon.morph.network.common.creative.PacketClearAcquired;
+import org.bryanthedragon.morph.network.server.message.ServerMessageHandler;
 
 import net.minecraft.server.level.ServerPlayer;
 

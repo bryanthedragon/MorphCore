@@ -1,4 +1,4 @@
-package bryanthedragon.morph.client.render;
+package org.bryanthedragon.morph.client.render;
 
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.player.PlayerRenderer;

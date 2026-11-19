@@ -1,11 +1,11 @@
-package bryanthedragon.morph.context;
+package org.bryanthedragon.morph.context;
 
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 
 import javax.annotation.Nullable;
 
-import bryanthedragon.morph.context.player.PlayerContext;
+import org.bryanthedragon.morph.context.player.PlayerContext;
 
 /**
  * Use {@link BlockPosContext} or {@link PlayerContext} when possible

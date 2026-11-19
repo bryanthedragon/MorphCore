@@ -1,10 +1,10 @@
-package bryanthedragon.morph.api.actions.ender;
+package org.bryanthedragon.morph.api.actions.ender.shulker;
 
 import javax.annotation.Nullable;
 
-import bryanthedragon.morph.api.EntityUtils;
-import bryanthedragon.morph.api.abilities.IAction;
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.api.utils.entity.EntityUtils;
+import org.bryanthedragon.morph.api.abilities.IAction;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
 
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;

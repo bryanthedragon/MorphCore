@@ -1,4 +1,4 @@
-package bryanthedragon.morph.utils.wav;
+package org.bryanthedragon.morph.utils.wav;
 
 import org.lwjgl.openal.AL10;
 

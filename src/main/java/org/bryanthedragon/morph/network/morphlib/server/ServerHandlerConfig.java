@@ -1,11 +1,12 @@
-package bryanthedragon.morph.network.morphlib.server;
+package org.bryanthedragon.morph.network.morphlib.server;
 
-import bryanthedragon.morph.MorphLib;
-import bryanthedragon.morph.config.Config;
-import bryanthedragon.morph.config.ConfigManager;
-import bryanthedragon.morph.network.server.message.ServerMessageHandler;
-import bryanthedragon.morph.utils.helpers.op.OpHelper;
-import bryanthedragon.morph.network.morphlib.common.PacketConfig;
+import org.bryanthedragon.morph.MorphLib;
+import org.bryanthedragon.morph.config.Config;
+import org.bryanthedragon.morph.config.ConfigManager;
+import org.bryanthedragon.morph.network.server.message.ServerMessageHandler;
+import org.bryanthedragon.morph.utils.helpers.op.OpHelper;
+import org.bryanthedragon.morph.network.morphlib.common.PacketConfig;
+
 import net.minecraft.server.level.ServerPlayer;
 
 public class ServerHandlerConfig extends ServerMessageHandler<PacketConfig>

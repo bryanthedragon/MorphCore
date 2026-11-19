@@ -1,9 +1,9 @@
-package bryanthedragon.morph.events;
+package org.bryanthedragon.morph.events;
 
-import bryanthedragon.morph.MorphLib;
-import bryanthedragon.morph.api.permissions.PermissionAPI;
-import bryanthedragon.morph.permissions.category.PermissionCategory;
-import bryanthedragon.morph.permissions.level.DefaultPermissionLevel;
+import org.bryanthedragon.morph.MorphLib;
+import org.bryanthedragon.morph.api.permissions.PermissionAPI;
+import org.bryanthedragon.morph.permissions.category.PermissionCategory;
+import org.bryanthedragon.morph.permissions.level.DefaultPermissionLevel;
 
 import net.minecraftforge.eventbus.api.Event;
 
@@ -66,7 +66,7 @@ public class RegisterPermissionsEvent extends Event
 
     /**
      * Register the permissions in the API, see {@link PermissionAPI#registerNode(String, DefaultPermissionLevel, String)}
-     * and register them into the permission factory {@link bryanthedragon.morph.MorphLib#permissionFactory}.
+     * and register them into the permission factory {@link org.bryanthedragon.morph.MorphLib#permissionFactory}.
      */
     public void loadPermissions()
     {

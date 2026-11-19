@@ -1,4 +1,4 @@
-package bryanthedragon.morph.network;
+package org.bryanthedragon.morph.network;
 
 import java.util.HashMap;
 import java.util.Map;

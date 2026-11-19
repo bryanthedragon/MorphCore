@@ -1,4 +1,4 @@
-package bryanthedragon.morph.utils.undo;
+package org.bryanthedragon.morph.utils.undo;
 
 public interface IUndoListener<T>
 {

@@ -1,16 +1,16 @@
-package bryanthedragon.morph.client.gui.survival;
+package org.bryanthedragon.morph.client.gui.survival;
 
-import bryanthedragon.morph.MorphCore;
-import bryanthedragon.morph.api.MorphManager;
-import bryanthedragon.morph.api.creative.MorphList;
-import bryanthedragon.morph.api.creative.categories.AcquiredCategory;
-import bryanthedragon.morph.api.creative.sections.MorphSection;
-import bryanthedragon.morph.api.creative.sections.UserSection;
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
-import bryanthedragon.morph.capabilities.morphing.IMorphing;
-import bryanthedragon.morph.capabilities.morphing.Morphing;
-import bryanthedragon.morph.client.gui.GuiMorphs;
-import bryanthedragon.morph.client.gui.creative.GuiMorphSection;
+import org.bryanthedragon.morph.MorphCore;
+import org.bryanthedragon.morph.api.MorphManager;
+import org.bryanthedragon.morph.api.creative.MorphList;
+import org.bryanthedragon.morph.api.creative.categories.AcquiredCategory;
+import org.bryanthedragon.morph.api.creative.sections.MorphSection;
+import org.bryanthedragon.morph.api.creative.sections.UserSection;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.capabilities.morphing.IMorphing;
+import org.bryanthedragon.morph.capabilities.morphing.Morphing;
+import org.bryanthedragon.morph.client.gui.GuiMorphs;
+import org.bryanthedragon.morph.client.gui.creative.GuiMorphSection;
 
 import net.minecraft.client.Minecraft;
 

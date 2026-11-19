@@ -1,10 +1,10 @@
-package bryanthedragon.morph.client.gui;
+package org.bryanthedragon.morph.client.gui;
 
-import bryanthedragon.morph.client.gui.framework.elements.GuiScrollElement;
-import bryanthedragon.morph.client.gui.utils.keys.IKey;
-import bryanthedragon.morph.api.creative.categories.MorphCategory;
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
-import bryanthedragon.morph.client.gui.creative.GuiMorphSection;
+import org.bryanthedragon.morph.client.gui.framework.elements.GuiScrollElement;
+import org.bryanthedragon.morph.client.gui.utils.keys.IKey;
+import org.bryanthedragon.morph.api.creative.categories.MorphCategory;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.client.gui.creative.GuiMorphSection;
 
 import net.minecraft.client.Minecraft;
 

@@ -1,4 +1,4 @@
-package bryanthedragon.morph.utils.files.entries;
+package org.bryanthedragon.morph.utils.files.entries;
 
 import net.minecraft.resources.ResourceLocation;
 

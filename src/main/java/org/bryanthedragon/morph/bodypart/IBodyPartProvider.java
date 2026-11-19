@@ -1,4 +1,4 @@
-package bryanthedragon.morph.bodypart;
+package org.bryanthedragon.morph.bodypart;
 
 /**
  * Body part provider 

@@ -1,4 +1,4 @@
-package bryanthedragon.morph.api.settings;
+package org.bryanthedragon.morph.api.settings;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,11 +11,11 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.StringTag;
 
-import bryanthedragon.morph.api.MorphManager;
-import bryanthedragon.morph.api.abilities.IAbility;
-import bryanthedragon.morph.api.abilities.IAction;
-import bryanthedragon.morph.api.abilities.IAttackAbility;
-import bryanthedragon.morph.utils.bytebuf.ByteBufUtils;
+import org.bryanthedragon.morph.api.MorphManager;
+import org.bryanthedragon.morph.api.abilities.IAbility;
+import org.bryanthedragon.morph.api.abilities.IAction;
+import org.bryanthedragon.morph.api.abilities.IAttackAbility;
+import org.bryanthedragon.morph.utils.bytebuf.ByteBufUtils;
 
 
 /**
@@ -584,7 +584,7 @@ public class MorphSettings
             this.shadowOption = tag.getInt("ShadowOption");
         }
 
-        this.hasbetterLightsShadow = tag.contains("BetterLightsShadowOption");
+        this.hasbetterLightsShadow = tag.contains("BetterLightsShadow");
 
         if (this.hasbetterLightsShadow)
         {

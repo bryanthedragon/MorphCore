@@ -1,12 +1,12 @@
-package bryanthedragon.morph.commands;
+package org.bryanthedragon.morph.commands;
 
-import bryanthedragon.morph.api.MorphManager;
-import bryanthedragon.morph.api.MorphUtils;
-import bryanthedragon.morph.api.settings.MorphSettings;
-import bryanthedragon.morph.network.Dispatcher;
-import bryanthedragon.morph.network.IMessage;
-import bryanthedragon.morph.network.common.PacketBlacklist;
-import bryanthedragon.morph.network.common.PacketSettings;
+import org.bryanthedragon.morph.api.MorphManager;
+import org.bryanthedragon.morph.api.utils.morph.MorphUtils;
+import org.bryanthedragon.morph.api.settings.MorphSettings;
+import org.bryanthedragon.morph.network.Dispatcher;
+import org.bryanthedragon.morph.network.IMessage;
+import org.bryanthedragon.morph.network.common.PacketBlacklist;
+import org.bryanthedragon.morph.network.common.PacketSettings;
 
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.context.CommandContext;

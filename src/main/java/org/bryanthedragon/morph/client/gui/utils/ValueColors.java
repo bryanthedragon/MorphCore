@@ -1,14 +1,14 @@
-package bryanthedragon.morph.client.gui.utils;
+package org.bryanthedragon.morph.client.gui.utils;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonPrimitive;
 import io.netty.buffer.ByteBuf;
 
-import bryanthedragon.morph.config.values.IServerValue;
-import bryanthedragon.morph.config.values.Value;
-import bryanthedragon.morph.utils.color.Color;
-import bryanthedragon.morph.utils.color.ColorUtils;
+import org.bryanthedragon.morph.config.values.IServerValue;
+import org.bryanthedragon.morph.config.values.Value;
+import org.bryanthedragon.morph.utils.color.ColorUtils.Color;
+import org.bryanthedragon.morph.utils.color.ColorUtils;
 
 import java.util.ArrayList;
 import java.util.List;

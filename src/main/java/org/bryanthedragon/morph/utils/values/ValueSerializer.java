@@ -1,4 +1,4 @@
-package bryanthedragon.morph.utils.values;
+package org.bryanthedragon.morph.utils.values;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -12,12 +12,12 @@ import com.google.gson.JsonObject;
 
 import io.netty.buffer.ByteBuf;
 
-import bryanthedragon.morph.config.values.GenericBaseValue;
-import bryanthedragon.morph.config.values.GenericValue;
-import bryanthedragon.morph.network.IByteBufSerializable;
-import bryanthedragon.morph.network.INBTSerializable;
-import bryanthedragon.morph.utils.copy.ICopy;
-import bryanthedragon.morph.utils.interpolation.Interpolation;
+import org.bryanthedragon.morph.config.values.GenericBaseValue;
+import org.bryanthedragon.morph.config.values.GenericValue;
+import org.bryanthedragon.morph.network.IByteBufSerializable;
+import org.bryanthedragon.morph.network.INBTSerializable;
+import org.bryanthedragon.morph.utils.copy.ICopy;
+import org.bryanthedragon.morph.utils.interpolation.Interpolation;
 import net.minecraft.nbt.Tag;
 import net.minecraft.nbt.CompoundTag;
 

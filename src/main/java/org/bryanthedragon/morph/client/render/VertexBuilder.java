@@ -1,4 +1,4 @@
-package bryanthedragon.morph.client.render;
+package org.bryanthedragon.morph.client.render;
 
 import com.google.common.collect.ImmutableMap;
 

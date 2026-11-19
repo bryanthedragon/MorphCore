@@ -1,25 +1,25 @@
-package bryanthedragon.morph;
+package org.bryanthedragon.morph;
 
-import bryanthedragon.morph.api.MorphHandler;
-import bryanthedragon.morph.api.MorphManager;
-import bryanthedragon.morph.api.MorphUtils;
-import bryanthedragon.morph.api.RegisterHandler;
-import bryanthedragon.morph.capabilities.CapabilityHandler;
-import bryanthedragon.morph.capabilities.morphing.IMorphing;
-import bryanthedragon.morph.capabilities.render.IModelRenderer;
-import bryanthedragon.morph.client.EntityModelHandler;
-import bryanthedragon.morph.client.NetworkHandler;
-import bryanthedragon.morph.client.gui.overlays.GuiHud;
-import bryanthedragon.morph.client.gui.overlays.GuiOverlay;
-import bryanthedragon.morph.client.gui.survival.GuiSurvivalScreen;
-import bryanthedragon.morph.client.render.RenderMorph;
-import bryanthedragon.morph.core.registry.MorphCoreFactory;
-import bryanthedragon.morph.entity.SoundHandler;
-import bryanthedragon.morph.network.Dispatcher;
-import bryanthedragon.morph.utils.helpers.op.OpHelper;
-import bryanthedragon.morph.client.KeyboardHandler;
-import bryanthedragon.morph.client.RenderingHandler;
-import bryanthedragon.morph.entity.EntityMorph;
+import org.bryanthedragon.morph.api.MorphHandler;
+import org.bryanthedragon.morph.api.MorphManager;
+import org.bryanthedragon.morph.api.utils.morph.MorphUtils;
+import org.bryanthedragon.morph.api.RegisterHandler;
+import org.bryanthedragon.morph.api.morphs.main.MorphPickupEntity;
+import org.bryanthedragon.morph.capabilities.CapabilityHandler;
+import org.bryanthedragon.morph.capabilities.morphing.IMorphing;
+import org.bryanthedragon.morph.capabilities.render.IModelRenderer;
+import org.bryanthedragon.morph.client.EntityModelHandler;
+import org.bryanthedragon.morph.client.NetworkHandler;
+import org.bryanthedragon.morph.client.gui.overlays.GuiHud;
+import org.bryanthedragon.morph.client.gui.overlays.GuiOverlay;
+import org.bryanthedragon.morph.client.gui.survival.GuiSurvivalScreen;
+import org.bryanthedragon.morph.client.render.RenderMorph;
+import org.bryanthedragon.morph.core.registry.MorphCoreFactory;
+import org.bryanthedragon.morph.entity.SoundHandler;
+import org.bryanthedragon.morph.network.Dispatcher;
+import org.bryanthedragon.morph.utils.helpers.op.OpHelper;
+import org.bryanthedragon.morph.client.KeyboardHandler;
+import org.bryanthedragon.morph.client.RenderingHandler;
 
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Player;
@@ -30,6 +30,8 @@ import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.capabilities.RegisterCapabilitiesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.network.NetworkDirection;
+import net.minecraftforge.network.NetworkEvent;
 
 import java.io.File;
 
@@ -108,10 +110,10 @@ public class MorphCoreProxy
             /* Registering an event channel for custom payload */
             MorphCore.channel.registerMessage(0, PluginPayload.class, PluginPayload::encode, PluginPayload::decode, (payload, contextSupplier) ->
             {
-                net.minecraftforge.network.NetworkEvent.Context context = contextSupplier.get();
+                NetworkEvent.Context context = contextSupplier.get();
                 new NetworkHandler().handle(new net.minecraft.network.FriendlyByteBuf(io.netty.buffer.Unpooled.wrappedBuffer(payload.data)), context);
                 context.setPacketHandled(true);
-            }, java.util.Optional.of(net.minecraftforge.network.NetworkDirection.PLAY_TO_CLIENT));
+            }, java.util.Optional.of(NetworkDirection.PLAY_TO_CLIENT));
         }
 
         @Override
@@ -134,14 +136,14 @@ public class MorphCoreProxy
 
             if (!this.list.exists())
             {
-                MorphUtils.generateFile(this.selectors, "[]");
+                org.bryanthedragon.morph.api.utils.morph.MorphUtils.generateFile(this.selectors, "[]");
             }
         }
 
         @SubscribeEvent
         public void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event)
         {
-            event.registerEntityRenderer(EntityMorph.TYPE.get(), RenderMorph::new);
+            event.registerEntityRenderer(MorphPickupEntity.TYPE.get(), RenderMorph::new);
         }
 
         @Override

@@ -1,12 +1,12 @@
-package bryanthedragon.morph.api.editors;
+package org.bryanthedragon.morph.api.editors;
 
-import bryanthedragon.morph.client.gui.utils.Icons;
-import bryanthedragon.morph.client.gui.utils.Label;
-import bryanthedragon.morph.client.gui.utils.keys.IKey;
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
-import bryanthedragon.morph.api.morphs.main.BlockMorph;
-import bryanthedragon.morph.client.gui.editor.GuiAbstractMorph;
-import bryanthedragon.morph.api.editors.panels.GuiItemStackPanel;
+import org.bryanthedragon.morph.client.gui.utils.Icons;
+import org.bryanthedragon.morph.client.gui.utils.Label;
+import org.bryanthedragon.morph.client.gui.utils.keys.IKey;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.api.morphs.main.BlockMorph;
+import org.bryanthedragon.morph.client.gui.editor.GuiAbstractMorph;
+import org.bryanthedragon.morph.api.editors.panels.GuiItemStackPanel;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.nbt.CompoundTag;

@@ -1,6 +1,6 @@
-package bryanthedragon.morph.permissions.morphlib;
+package org.bryanthedragon.morph.permissions.morphlib;
 
-import bryanthedragon.morph.permissions.category.PermissionCategory;
+import org.bryanthedragon.morph.permissions.category.PermissionCategory;
 
 public class MorphLibPermissions
 {

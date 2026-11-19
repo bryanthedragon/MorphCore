@@ -1,6 +1,6 @@
-package bryanthedragon.morph.client.gui.utils;
+package org.bryanthedragon.morph.client.gui.utils;
 
-import bryanthedragon.morph.MorphLib;
+import org.bryanthedragon.morph.MorphLib;
 
 import net.minecraft.resources.ResourceLocation;
 

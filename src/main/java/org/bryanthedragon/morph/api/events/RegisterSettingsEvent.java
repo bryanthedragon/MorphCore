@@ -1,9 +1,9 @@
-package bryanthedragon.morph.api.events;
+package org.bryanthedragon.morph.api.events;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import bryanthedragon.morph.api.settings.MorphSettings;
+import org.bryanthedragon.morph.api.settings.MorphSettings;
 
 import net.minecraftforge.eventbus.api.Event;
 

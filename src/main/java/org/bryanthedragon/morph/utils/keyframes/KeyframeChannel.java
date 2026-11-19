@@ -1,4 +1,4 @@
-package bryanthedragon.morph.utils.keyframes;
+package org.bryanthedragon.morph.utils.keyframes;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -7,7 +7,7 @@ import com.google.gson.annotations.Expose;
 
 import io.netty.buffer.ByteBuf;
 
-import bryanthedragon.morph.network.IByteBufSerializable;
+import org.bryanthedragon.morph.network.IByteBufSerializable;
 
 import java.util.ArrayList;
 import java.util.Collections;

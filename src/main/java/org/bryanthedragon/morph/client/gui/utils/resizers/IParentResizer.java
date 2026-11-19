@@ -1,6 +1,6 @@
-package bryanthedragon.morph.client.gui.utils.resizers;
+package org.bryanthedragon.morph.client.gui.utils.resizers;
 
-import bryanthedragon.morph.client.gui.utils.Area;
+import org.bryanthedragon.morph.client.gui.utils.Area;
 
 public interface IParentResizer
 {

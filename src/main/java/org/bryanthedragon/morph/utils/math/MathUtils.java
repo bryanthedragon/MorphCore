@@ -1,4 +1,4 @@
-package bryanthedragon.morph.utils.math;
+package org.bryanthedragon.morph.utils.math;
 
 public class MathUtils
 {

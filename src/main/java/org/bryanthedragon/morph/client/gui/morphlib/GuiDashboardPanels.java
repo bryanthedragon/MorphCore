@@ -1,13 +1,13 @@
-package bryanthedragon.morph.client.gui.morphlib;
+package org.bryanthedragon.morph.client.gui.morphlib;
 
-import bryanthedragon.morph.client.gui.framework.GuiBase;
-import bryanthedragon.morph.client.gui.framework.elements.GuiPanelBase;
-import bryanthedragon.morph.client.gui.framework.elements.buttons.GuiIconElement;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
-import bryanthedragon.morph.client.gui.utils.Icon;
-import bryanthedragon.morph.client.gui.utils.keys.IKey;
-import bryanthedragon.morph.permissions.utils.PermissionUtils;
-import bryanthedragon.morph.utils.vector.Direction;
+import org.bryanthedragon.morph.client.gui.framework.GuiBase;
+import org.bryanthedragon.morph.client.gui.framework.elements.GuiPanelBase;
+import org.bryanthedragon.morph.client.gui.framework.elements.buttons.GuiIconElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
+import org.bryanthedragon.morph.client.gui.utils.Icon;
+import org.bryanthedragon.morph.client.gui.utils.keys.IKey;
+import org.bryanthedragon.morph.utils.permissions.PermissionUtils;
+import org.bryanthedragon.morph.utils.vector.Direction;
 
 import net.minecraft.client.Minecraft;
 

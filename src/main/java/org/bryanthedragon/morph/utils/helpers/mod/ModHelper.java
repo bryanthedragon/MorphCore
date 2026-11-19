@@ -1,4 +1,4 @@
-package bryanthedragon.morph.utils.helpers.mod;
+package org.bryanthedragon.morph.utils.helpers.mod;
 
 import java.net.URISyntaxException;
 import java.nio.file.Path;

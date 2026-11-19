@@ -1,4 +1,4 @@
-package bryanthedragon.morph.capabilities;
+package org.bryanthedragon.morph.capabilities;
 
 import java.util.concurrent.Callable;
 

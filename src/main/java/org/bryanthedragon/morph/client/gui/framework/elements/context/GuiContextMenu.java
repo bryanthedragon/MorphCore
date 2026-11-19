@@ -1,7 +1,7 @@
-package bryanthedragon.morph.client.gui.framework.elements.context;
+package org.bryanthedragon.morph.client.gui.framework.elements.context;
 
-import bryanthedragon.morph.client.gui.framework.elements.GuiElement;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
+import org.bryanthedragon.morph.client.gui.framework.elements.GuiElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
 import net.minecraft.client.Minecraft;
 
 public abstract class GuiContextMenu extends GuiElement
@@ -14,7 +14,7 @@ public abstract class GuiContextMenu extends GuiElement
     }
 
     /**
-     * Set mouse coordiante
+     * Set mouse coordinate
      *
      * In this method for subclasses, you should setup the resizer
      */

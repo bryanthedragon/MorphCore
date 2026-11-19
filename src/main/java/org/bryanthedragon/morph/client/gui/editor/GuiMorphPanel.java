@@ -1,7 +1,7 @@
-package bryanthedragon.morph.client.gui.editor;
+package org.bryanthedragon.morph.client.gui.editor;
 
-import bryanthedragon.morph.client.gui.framework.elements.GuiElement;
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.client.gui.framework.elements.GuiElement;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
 import net.minecraft.client.Minecraft;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraftforge.api.distmarker.Dist;

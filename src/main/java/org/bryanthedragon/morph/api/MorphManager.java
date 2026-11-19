@@ -1,14 +1,14 @@
-package bryanthedragon.morph.api;
+package org.bryanthedragon.morph.api;
 
-import bryanthedragon.morph.api.abilities.IAbility;
-import bryanthedragon.morph.api.abilities.IAction;
-import bryanthedragon.morph.api.abilities.IAttackAbility;
-import bryanthedragon.morph.api.creative.MorphList;
-import bryanthedragon.morph.api.creative.sections.UserSection;
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
-import bryanthedragon.morph.api.settings.MorphSettings;
-import bryanthedragon.morph.client.gui.editor.GuiAbstractMorph;
-import bryanthedragon.morph.core.registry.MorphCoreSection;
+import org.bryanthedragon.morph.api.abilities.IAbility;
+import org.bryanthedragon.morph.api.abilities.IAction;
+import org.bryanthedragon.morph.api.abilities.IAttackAbility;
+import org.bryanthedragon.morph.api.creative.MorphList;
+import org.bryanthedragon.morph.api.creative.sections.UserSection;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.api.settings.MorphSettings;
+import org.bryanthedragon.morph.client.gui.editor.GuiAbstractMorph;
+import org.bryanthedragon.morph.core.registry.MorphCoreSection;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.nbt.CompoundTag;

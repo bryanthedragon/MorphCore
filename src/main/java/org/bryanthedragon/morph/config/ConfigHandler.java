@@ -1,8 +1,8 @@
-package bryanthedragon.morph.config;
+package org.bryanthedragon.morph.config;
 
-import bryanthedragon.morph.MorphLib;
-import bryanthedragon.morph.network.morphlib.Dispatcher;
-import bryanthedragon.morph.network.morphlib.common.PacketConfig;
+import org.bryanthedragon.morph.MorphLib;
+import org.bryanthedragon.morph.network.morphlib.Dispatcher;
+import org.bryanthedragon.morph.network.morphlib.common.PacketConfig;
 
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerPlayer;

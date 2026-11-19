@@ -1,16 +1,16 @@
-package bryanthedragon.morph.config;
+package org.bryanthedragon.morph.config;
 
 import com.google.common.base.Predicates;
 
 import io.netty.buffer.ByteBuf;
 
-import bryanthedragon.morph.config.json.ConfigParser;
-import bryanthedragon.morph.config.values.Value;
-import bryanthedragon.morph.network.IByteBufSerializable;
-import bryanthedragon.morph.network.morphlib.Dispatcher;
-import bryanthedragon.morph.network.morphlib.common.PacketConfig;
-import bryanthedragon.morph.utils.bytebuf.ByteBufUtils;
-import bryanthedragon.morph.utils.json.JsonUtils;
+import org.bryanthedragon.morph.config.json.ConfigParser;
+import org.bryanthedragon.morph.config.values.Value;
+import org.bryanthedragon.morph.network.IByteBufSerializable;
+import org.bryanthedragon.morph.network.morphlib.Dispatcher;
+import org.bryanthedragon.morph.network.morphlib.common.PacketConfig;
+import org.bryanthedragon.morph.utils.bytebuf.ByteBufUtils;
+import org.bryanthedragon.morph.utils.json.JsonUtils;
 
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;

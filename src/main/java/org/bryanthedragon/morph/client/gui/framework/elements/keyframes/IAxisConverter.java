@@ -1,7 +1,7 @@
-package bryanthedragon.morph.client.gui.framework.elements.keyframes;
+package org.bryanthedragon.morph.client.gui.framework.elements.keyframes;
 
-import bryanthedragon.morph.client.gui.framework.elements.input.GuiTrackpadElement;
-import bryanthedragon.morph.utils.keyframes.Keyframe;
+import org.bryanthedragon.morph.client.gui.framework.elements.input.GuiTrackpadElement;
+import org.bryanthedragon.morph.utils.keyframes.Keyframe;
 
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;

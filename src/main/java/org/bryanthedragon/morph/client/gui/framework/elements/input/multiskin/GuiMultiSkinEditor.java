@@ -1,20 +1,20 @@
-package bryanthedragon.morph.client.gui.framework.elements.input.multiskin;
+package org.bryanthedragon.morph.client.gui.framework.elements.input.multiskin;
 
-import bryanthedragon.morph.client.gui.framework.elements.buttons.GuiToggleElement;
-import bryanthedragon.morph.client.gui.framework.elements.input.GuiColorElement;
-import bryanthedragon.morph.client.gui.framework.elements.input.GuiTexturePicker;
-import bryanthedragon.morph.client.gui.framework.elements.input.GuiTrackpadElement;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiCanvasEditor;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiDraw;
-import bryanthedragon.morph.client.gui.utils.Area;
-import bryanthedragon.morph.client.gui.utils.Elements;
-import bryanthedragon.morph.client.gui.utils.Icons;
-import bryanthedragon.morph.client.gui.utils.keys.IKey;
-import bryanthedragon.morph.utils.vector.Direction;
-import bryanthedragon.morph.utils.color.ColorUtils;
-import bryanthedragon.morph.utils.resources.FilteredResourceLocation;
-import bryanthedragon.morph.utils.shaders.Shader;
+import org.bryanthedragon.morph.client.gui.framework.elements.buttons.GuiToggleElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.input.GuiColorElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.input.GuiTexturePicker;
+import org.bryanthedragon.morph.client.gui.framework.elements.input.GuiTrackpadElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiCanvasEditor;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiDraw;
+import org.bryanthedragon.morph.client.gui.utils.Area;
+import org.bryanthedragon.morph.client.gui.utils.Elements;
+import org.bryanthedragon.morph.client.gui.utils.Icons;
+import org.bryanthedragon.morph.client.gui.utils.keys.IKey;
+import org.bryanthedragon.morph.utils.vector.Direction;
+import org.bryanthedragon.morph.utils.color.ColorUtils;
+import org.bryanthedragon.morph.utils.resources.FilteredResourceLocation;
+import org.bryanthedragon.morph.utils.shaders.Shader;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;

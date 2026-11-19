@@ -1,10 +1,10 @@
-package bryanthedragon.morph.utils.files;
+package org.bryanthedragon.morph.utils.files;
 
 import java.util.Comparator;
 
-import bryanthedragon.morph.client.gui.framework.elements.input.GuiTexturePicker;
-import bryanthedragon.morph.utils.files.entries.AbstractEntry;
-import bryanthedragon.morph.utils.files.entries.FolderEntry;
+import org.bryanthedragon.morph.client.gui.framework.elements.input.GuiTexturePicker;
+import org.bryanthedragon.morph.utils.files.entries.AbstractEntry;
+import org.bryanthedragon.morph.utils.files.entries.FolderEntry;
 
 /**
  * File tree

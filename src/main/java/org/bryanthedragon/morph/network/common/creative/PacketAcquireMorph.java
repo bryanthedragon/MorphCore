@@ -1,8 +1,8 @@
-package bryanthedragon.morph.network.common.creative;
+package org.bryanthedragon.morph.network.common.creative;
 
 import io.netty.buffer.ByteBuf;
 
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
 
 /**
  * Acquire morph packet

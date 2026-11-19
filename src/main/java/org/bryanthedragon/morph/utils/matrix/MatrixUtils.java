@@ -1,4 +1,4 @@
-package bryanthedragon.morph.utils.matrix;
+package org.bryanthedragon.morph.utils.matrix;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.entity.Entity;

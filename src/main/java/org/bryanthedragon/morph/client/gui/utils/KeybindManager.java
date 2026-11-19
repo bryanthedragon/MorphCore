@@ -1,9 +1,9 @@
-package bryanthedragon.morph.client.gui.utils;
+package org.bryanthedragon.morph.client.gui.utils;
 
-import bryanthedragon.morph.client.gui.framework.elements.input.GuiKeybinds;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
-import bryanthedragon.morph.client.gui.utils.keys.IKey;
-import bryanthedragon.morph.utils.helpers.mod.ModHelper;
+import org.bryanthedragon.morph.client.gui.framework.elements.input.GuiKeybinds;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
+import org.bryanthedragon.morph.client.gui.utils.keys.IKey;
+import org.bryanthedragon.morph.utils.helpers.mod.ModHelper;
 import net.minecraftforge.fml.ModContainer;
 
 import java.util.ArrayList;

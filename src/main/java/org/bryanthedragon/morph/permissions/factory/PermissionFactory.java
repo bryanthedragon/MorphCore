@@ -1,10 +1,10 @@
-package bryanthedragon.morph.permissions.factory;
+package org.bryanthedragon.morph.permissions.factory;
 
 import com.google.common.collect.BiMap;
 import com.google.common.collect.HashBiMap;
 
-import bryanthedragon.morph.MorphLib;
-import bryanthedragon.morph.permissions.category.PermissionCategory;
+import org.bryanthedragon.morph.MorphLib;
+import org.bryanthedragon.morph.permissions.category.PermissionCategory;
 
 import javax.annotation.Nullable;
 

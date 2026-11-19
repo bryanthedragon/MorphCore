@@ -1,6 +1,6 @@
-package bryanthedragon.morph.config;
+package org.bryanthedragon.morph.config;
 
-import bryanthedragon.morph.utils.time.Timer;
+import org.bryanthedragon.morph.utils.time.Timer;
 
 import java.util.ArrayList;
 import java.util.List;

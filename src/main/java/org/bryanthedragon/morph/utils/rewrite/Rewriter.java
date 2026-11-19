@@ -1,4 +1,4 @@
-package bryanthedragon.morph.utils.rewrite;
+package org.bryanthedragon.morph.utils.rewrite;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

@@ -1,11 +1,11 @@
-package bryanthedragon.morph.api.morphs.main;
+package org.bryanthedragon.morph.api.morphs.main;
 
 
-import bryanthedragon.morph.client.gui.framework.elements.GuiModelRenderer;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiInventoryElement;
-import bryanthedragon.morph.utils.resources.RLUtils;
-import bryanthedragon.morph.api.render.CachedExtrusion;
-import bryanthedragon.morph.api.render.ItemExtruder;
+import org.bryanthedragon.morph.client.gui.framework.elements.GuiModelRenderer;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiInventoryElement;
+import org.bryanthedragon.morph.utils.resources.RLUtils;
+import org.bryanthedragon.morph.api.render.CachedExtrusion;
+import org.bryanthedragon.morph.api.render.ItemExtruder;
 
 import com.google.common.collect.BiMap;
 import com.google.common.collect.HashBiMap;

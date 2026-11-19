@@ -1,9 +1,9 @@
-package bryanthedragon.morph.config.values;
+package org.bryanthedragon.morph.config.values;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonPrimitive;
 
-import bryanthedragon.morph.utils.math.MathUtils;
+import org.bryanthedragon.morph.utils.math.MathUtils;
 
 import javax.annotation.Nonnull;
 

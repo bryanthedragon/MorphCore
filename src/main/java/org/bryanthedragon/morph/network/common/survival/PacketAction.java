@@ -1,7 +1,7 @@
-package bryanthedragon.morph.network.common.survival;
+package org.bryanthedragon.morph.network.common.survival;
 
 import io.netty.buffer.ByteBuf;
-import bryanthedragon.morph.network.IMessage;
+import org.bryanthedragon.morph.network.IMessage;
 
 public class PacketAction implements IMessage
 {

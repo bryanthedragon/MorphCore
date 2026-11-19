@@ -1,15 +1,15 @@
-package bryanthedragon.morph.client.gui.editor;
+package org.bryanthedragon.morph.client.gui.editor;
 
-import bryanthedragon.morph.client.gui.framework.elements.GuiElement;
-import bryanthedragon.morph.client.gui.framework.elements.buttons.GuiButtonElement;
-import bryanthedragon.morph.client.gui.framework.elements.buttons.GuiToggleElement;
-import bryanthedragon.morph.client.gui.framework.elements.input.GuiTrackpadElement;
-import bryanthedragon.morph.client.gui.framework.elements.list.GuiInterpolationList;
-import bryanthedragon.morph.client.gui.framework.elements.list.GuiListElement;
-import bryanthedragon.morph.client.gui.framework.tooltips.InterpolationTooltip;
-import bryanthedragon.morph.client.gui.utils.keys.IKey;
-import bryanthedragon.morph.utils.interpolation.Interpolation;
-import bryanthedragon.morph.api.morphs.utils.Animation;
+import org.bryanthedragon.morph.client.gui.framework.elements.GuiElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.buttons.GuiButtonElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.buttons.GuiToggleElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.input.GuiTrackpadElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.list.GuiInterpolationList;
+import org.bryanthedragon.morph.client.gui.framework.elements.list.GuiListElement;
+import org.bryanthedragon.morph.client.gui.framework.tooltips.InterpolationTooltip;
+import org.bryanthedragon.morph.client.gui.utils.keys.IKey;
+import org.bryanthedragon.morph.utils.interpolation.Interpolation;
+import org.bryanthedragon.morph.api.morphs.utils.Animation;
 
 import net.minecraft.client.Minecraft;
 

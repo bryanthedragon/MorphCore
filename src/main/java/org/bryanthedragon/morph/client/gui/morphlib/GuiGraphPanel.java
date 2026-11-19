@@ -1,19 +1,21 @@
-package bryanthedragon.morph.client.gui.morphlib;
+package org.bryanthedragon.morph.client.gui.morphlib;
 
-import bryanthedragon.morph.client.gui.framework.elements.buttons.GuiIconElement;
-import bryanthedragon.morph.client.gui.framework.elements.input.GuiTextElement;
-import bryanthedragon.morph.client.gui.framework.elements.input.GuiTrackpadElement;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiCanvas;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
-import bryanthedragon.morph.client.gui.utils.GuiUtils;
-import bryanthedragon.morph.client.gui.utils.Icons;
-import bryanthedragon.morph.client.gui.utils.keys.IKey;
-import bryanthedragon.morph.math.IValue;
-import bryanthedragon.morph.math.MathBuilder;
-import bryanthedragon.morph.math.Variable;
-import bryanthedragon.morph.utils.vector.Direction;
-import bryanthedragon.morph.utils.color.ColorUtils;
+import org.bryanthedragon.morph.client.gui.framework.elements.buttons.GuiIconElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.input.GuiTextElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.input.GuiTrackpadElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiCanvas;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
+import org.bryanthedragon.morph.client.gui.utils.GuiUtils;
+import org.bryanthedragon.morph.client.gui.utils.Icons;
+import org.bryanthedragon.morph.client.gui.utils.keys.IKey;
+import org.bryanthedragon.morph.math.IValue;
+import org.bryanthedragon.morph.math.MathBuilder;
+import org.bryanthedragon.morph.math.Variable;
+import org.bryanthedragon.morph.utils.vector.Direction;
+import org.bryanthedragon.morph.utils.color.ColorUtils;
+
 import net.minecraft.client.Minecraft;
+
 import org.lwjgl.glfw.GLFW;
 
 public class GuiGraphPanel extends GuiDashboardPanel<GuiDashboard>

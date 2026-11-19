@@ -1,6 +1,6 @@
-package bryanthedragon.morph.utils.resources;
+package org.bryanthedragon.morph.utils.resources;
 
-import bryanthedragon.morph.utils.reflection.ReflectionUtils;
+import org.bryanthedragon.morph.utils.reflection.ReflectionUtils;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.AbstractTexture;

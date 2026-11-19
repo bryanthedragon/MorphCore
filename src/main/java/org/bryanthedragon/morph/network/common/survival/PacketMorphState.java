@@ -1,9 +1,9 @@
-package bryanthedragon.morph.network.common.survival;
+package org.bryanthedragon.morph.network.common.survival;
 
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
-import bryanthedragon.morph.api.morphs.main.EntityMorph;
-import bryanthedragon.morph.capabilities.morphing.IMorphing;
-import bryanthedragon.morph.network.IMessage;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.api.morphs.main.EntityMorph;
+import org.bryanthedragon.morph.capabilities.morphing.IMorphing;
+import org.bryanthedragon.morph.network.IMessage;
 
 import io.netty.buffer.ByteBuf;
 

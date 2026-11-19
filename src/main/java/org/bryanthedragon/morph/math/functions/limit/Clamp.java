@@ -1,8 +1,8 @@
-package bryanthedragon.morph.math.functions.limit;
+package org.bryanthedragon.morph.math.functions.limit;
 
-import bryanthedragon.morph.math.IValue;
-import bryanthedragon.morph.math.functions.NNFunction;
-import bryanthedragon.morph.utils.math.MathUtils;
+import org.bryanthedragon.morph.math.IValue;
+import org.bryanthedragon.morph.math.functions.NNFunction;
+import org.bryanthedragon.morph.utils.math.MathUtils;
 
 public class Clamp extends NNFunction
 {

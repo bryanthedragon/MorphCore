@@ -1,4 +1,4 @@
-package bryanthedragon.morph.utils.json;
+package org.bryanthedragon.morph.utils.json;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

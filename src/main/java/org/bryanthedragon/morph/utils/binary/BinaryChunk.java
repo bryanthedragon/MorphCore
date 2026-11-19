@@ -1,4 +1,4 @@
-package bryanthedragon.morph.utils.binary;
+package org.bryanthedragon.morph.utils.binary;
 
 public class BinaryChunk
 {

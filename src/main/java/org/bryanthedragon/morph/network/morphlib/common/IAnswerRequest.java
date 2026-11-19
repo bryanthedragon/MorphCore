@@ -1,6 +1,6 @@
-package bryanthedragon.morph.network.morphlib.common;
+package org.bryanthedragon.morph.network.morphlib.common;
 
-import bryanthedragon.morph.network.IMessage;
+import org.bryanthedragon.morph.network.IMessage;
 
 import java.io.Serializable;
 import java.util.NoSuchElementException;

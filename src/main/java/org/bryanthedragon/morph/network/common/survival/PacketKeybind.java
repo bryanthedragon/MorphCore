@@ -1,4 +1,4 @@
-package bryanthedragon.morph.network.common.survival;
+package org.bryanthedragon.morph.network.common.survival;
 
 import io.netty.buffer.ByteBuf;
 

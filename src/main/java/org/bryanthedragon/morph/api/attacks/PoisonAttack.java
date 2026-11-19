@@ -1,6 +1,6 @@
-package bryanthedragon.morph.api.attacks;
+package org.bryanthedragon.morph.api.attacks;
 
-import bryanthedragon.morph.api.abilities.IAttackAbility;
+import org.bryanthedragon.morph.api.abilities.IAttackAbility;
 
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;

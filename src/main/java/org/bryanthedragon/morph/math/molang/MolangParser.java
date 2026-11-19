@@ -1,22 +1,22 @@
-package bryanthedragon.morph.math.molang;
+package org.bryanthedragon.morph.math.molang;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonPrimitive;
 
-import bryanthedragon.morph.math.Constant;
-import bryanthedragon.morph.math.IValue;
-import bryanthedragon.morph.math.MathBuilder;
-import bryanthedragon.morph.math.Variable;
-import bryanthedragon.morph.math.molang.expressions.MolangAssignment;
-import bryanthedragon.morph.math.molang.expressions.MolangExpression;
-import bryanthedragon.morph.math.molang.expressions.MolangMultiStatement;
-import bryanthedragon.morph.math.molang.expressions.MolangValue;
-import bryanthedragon.morph.math.molang.functions.AcosDegrees;
-import bryanthedragon.morph.math.molang.functions.AsinDegrees;
-import bryanthedragon.morph.math.molang.functions.Atan2Degrees;
-import bryanthedragon.morph.math.molang.functions.AtanDegrees;
-import bryanthedragon.morph.math.molang.functions.CosDegrees;
-import bryanthedragon.morph.math.molang.functions.SinDegrees;
+import org.bryanthedragon.morph.math.Constant;
+import org.bryanthedragon.morph.math.IValue;
+import org.bryanthedragon.morph.math.MathBuilder;
+import org.bryanthedragon.morph.math.Variable;
+import org.bryanthedragon.morph.math.molang.expressions.MolangAssignment;
+import org.bryanthedragon.morph.math.molang.expressions.MolangExpression;
+import org.bryanthedragon.morph.math.molang.expressions.MolangMultiStatement;
+import org.bryanthedragon.morph.math.molang.expressions.MolangValue;
+import org.bryanthedragon.morph.math.molang.functions.AcosDegrees;
+import org.bryanthedragon.morph.math.molang.functions.AsinDegrees;
+import org.bryanthedragon.morph.math.molang.functions.Atan2Degrees;
+import org.bryanthedragon.morph.math.molang.functions.AtanDegrees;
+import org.bryanthedragon.morph.math.molang.functions.CosDegrees;
+import org.bryanthedragon.morph.math.molang.functions.SinDegrees;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -162,11 +162,14 @@ public class MolangParser extends MathBuilder
     {
         this.registerAsGlobals = true;
 
-        MolangExpression expression = parseJson(element);
-
-        this.registerAsGlobals = false;
-
-        return expression;
+        try
+        {
+            return parseJson(element);
+        }
+        finally
+        {
+            this.registerAsGlobals = false;
+        }
     }
 
     /**

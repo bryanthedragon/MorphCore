@@ -1,10 +1,10 @@
-package bryanthedragon.morph.client.gui.framework.elements.input.color;
+package org.bryanthedragon.morph.client.gui.framework.elements.input.color;
 
-import bryanthedragon.morph.client.gui.framework.elements.GuiElement;
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
-import bryanthedragon.morph.client.gui.utils.Icons;
-import bryanthedragon.morph.utils.math.MathUtils;
-import bryanthedragon.morph.utils.color.Color;
+import org.bryanthedragon.morph.client.gui.framework.elements.GuiElement;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiContext;
+import org.bryanthedragon.morph.client.gui.utils.Icons;
+import org.bryanthedragon.morph.utils.math.MathUtils;
+import org.bryanthedragon.morph.utils.color.ColorUtils.Color;
 
 import net.minecraft.client.Minecraft;
 

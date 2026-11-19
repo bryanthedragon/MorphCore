@@ -1,8 +1,8 @@
-package bryanthedragon.morph.utils.obfuscated;
+package org.bryanthedragon.morph.utils.obfuscated;
 
 import javax.annotation.Nonnull;
 
-import bryanthedragon.morph.utils.mappings.MappingsUtil.DevMappings;
+import org.bryanthedragon.morph.utils.mappings.MappingsUtil.DevMappings;
 import net.minecraftforge.fml.loading.FMLEnvironment;
 
 /**

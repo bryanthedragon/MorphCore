@@ -1,4 +1,4 @@
-package bryanthedragon.morph.commands.config;
+package org.bryanthedragon.morph.commands.config;
 
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.StringArgumentType;

@@ -1,4 +1,4 @@
-package bryanthedragon.morph.client.gui.framework.elements.list;
+package org.bryanthedragon.morph.client.gui.framework.elements.list;
 
 import java.util.Collections;
 import java.util.List;

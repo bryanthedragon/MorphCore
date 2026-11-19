@@ -1,12 +1,14 @@
-package bryanthedragon.morph.api;
+package org.bryanthedragon.morph.api;
 
-import bryanthedragon.morph.MorphCoreProxy.ClientCoreProxy;
-import bryanthedragon.morph.MorphCore;
-import bryanthedragon.morph.api.events.SpawnGhostEvent;
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
-import bryanthedragon.morph.api.morphs.main.EntityMorph;
-import bryanthedragon.morph.capabilities.morphing.IMorphing;
-import bryanthedragon.morph.capabilities.morphing.Morphing;
+import org.bryanthedragon.morph.MorphCoreProxy.ClientCoreProxy;
+import org.bryanthedragon.morph.MorphCore;
+import org.bryanthedragon.morph.api.events.SpawnGhostEvent;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.api.morphs.main.EntityMorph;
+import org.bryanthedragon.morph.api.morphs.main.MorphPickupEntity;
+import org.bryanthedragon.morph.api.utils.entity.EntityUtils;
+import org.bryanthedragon.morph.capabilities.morphing.IMorphing;
+import org.bryanthedragon.morph.capabilities.morphing.Morphing;
 
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
@@ -189,7 +191,7 @@ public class MorphHandler
             }
             morph = spawnGhostEvent.morph;
 
-            bryanthedragon.morph.entity.EntityMorph morphEntity = new bryanthedragon.morph.entity.EntityMorph(null, player.level(), player.getUUID(), morph);
+            MorphPickupEntity morphEntity = new MorphPickupEntity(null, player.level(), player.getUUID(), morph);
 
             morphEntity.setPos(target.getX(), target.getY() + target.getBbHeight() / 2, target.getZ());
             morphEntity.setYRot(target.getYRot());

@@ -1,15 +1,15 @@
-package bryanthedragon.morph.api;
+package org.bryanthedragon.morph.api;
 
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-import bryanthedragon.morph.MorphCore;
-import bryanthedragon.morph.api.events.RegisterBlacklistEvent;
-import bryanthedragon.morph.api.events.RegisterRemapEvent;
-import bryanthedragon.morph.api.events.RegisterSettingsEvent;
-import bryanthedragon.morph.api.json.MorphSettingsAdapter;
-import bryanthedragon.morph.api.settings.MorphSettings;
+import org.bryanthedragon.morph.MorphCore;
+import org.bryanthedragon.morph.api.events.RegisterBlacklistEvent;
+import org.bryanthedragon.morph.api.events.RegisterRemapEvent;
+import org.bryanthedragon.morph.api.events.RegisterSettingsEvent;
+import org.bryanthedragon.morph.api.json.MorphSettingsAdapter;
+import org.bryanthedragon.morph.api.settings.MorphSettings;
 
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
@@ -49,7 +49,7 @@ public class RegisterHandler
      * Load morph settings into {@link MorphManager} with given {@link File} and 
      * with a try-catch which logs out an error in case of failure.
      */
-    private void loadMorphSettings(Map<String, MorphSettings> settings, File config)
+    public void loadMorphSettings(Map<String, MorphSettings> settings, File config)
     {
         try
         {

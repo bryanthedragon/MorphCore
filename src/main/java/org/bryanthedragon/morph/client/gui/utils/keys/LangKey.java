@@ -1,4 +1,4 @@
-package bryanthedragon.morph.client.gui.utils.keys;
+package org.bryanthedragon.morph.client.gui.utils.keys;
 
 import net.minecraft.client.resources.language.I18n;
 public class LangKey implements IKey

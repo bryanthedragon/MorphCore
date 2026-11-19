@@ -1,7 +1,7 @@
-package bryanthedragon.morph.math.functions.rounding;
+package org.bryanthedragon.morph.math.functions.rounding;
 
-import bryanthedragon.morph.math.IValue;
-import bryanthedragon.morph.math.functions.NNFunction;
+import org.bryanthedragon.morph.math.IValue;
+import org.bryanthedragon.morph.math.functions.NNFunction;
 
 public class Floor extends NNFunction
 {

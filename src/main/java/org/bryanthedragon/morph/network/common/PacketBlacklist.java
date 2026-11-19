@@ -1,4 +1,4 @@
-package bryanthedragon.morph.network.common;
+package org.bryanthedragon.morph.network.common;
 
 import java.util.Iterator;
 import java.util.Set;
@@ -6,8 +6,8 @@ import java.util.TreeSet;
 
 import io.netty.buffer.ByteBuf;
 
-import bryanthedragon.morph.network.IMessage;
-import bryanthedragon.morph.utils.bytebuf.ByteBufUtils;
+import org.bryanthedragon.morph.network.IMessage;
+import org.bryanthedragon.morph.utils.bytebuf.ByteBufUtils;
 
 public class PacketBlacklist implements IMessage
 {

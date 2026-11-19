@@ -1,8 +1,8 @@
-package bryanthedragon.morph.client.gui.framework.tooltips.styles;
+package org.bryanthedragon.morph.client.gui.framework.tooltips.styles;
 
-import bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiDraw;
-import bryanthedragon.morph.client.gui.utils.Area;
-import bryanthedragon.morph.utils.color.ColorUtils;
+import org.bryanthedragon.morph.client.gui.framework.elements.utils.gui.GuiDraw;
+import org.bryanthedragon.morph.client.gui.utils.Area;
+import org.bryanthedragon.morph.utils.color.ColorUtils;
 
 public class LightTooltipStyle extends TooltipStyle
 {

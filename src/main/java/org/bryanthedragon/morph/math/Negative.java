@@ -1,4 +1,4 @@
-package bryanthedragon.morph.math;
+package org.bryanthedragon.morph.math;
 
 /**
  * Negative operator class

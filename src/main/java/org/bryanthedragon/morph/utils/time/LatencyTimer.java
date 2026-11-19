@@ -1,8 +1,8 @@
-package bryanthedragon.morph.utils.time;
+package org.bryanthedragon.morph.utils.time;
 
 import io.netty.buffer.ByteBuf;
 
-import bryanthedragon.morph.network.IByteBufSerializable;
+import org.bryanthedragon.morph.network.IByteBufSerializable;
 
 /**
  * This class is used to clock the time it takes to

@@ -1,11 +1,11 @@
-package bryanthedragon.morph.api.creative.categories;
+package org.bryanthedragon.morph.api.creative.categories;
 
-import bryanthedragon.morph.MorphCore;
-import bryanthedragon.morph.api.MorphManager;
-import bryanthedragon.morph.api.creative.sections.MorphSection;
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
-import bryanthedragon.morph.network.Dispatcher;
-import bryanthedragon.morph.network.common.creative.PacketMorph;
+import org.bryanthedragon.morph.MorphCore;
+import org.bryanthedragon.morph.api.MorphManager;
+import org.bryanthedragon.morph.api.creative.sections.MorphSection;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.network.Dispatcher;
+import org.bryanthedragon.morph.network.common.creative.PacketMorph;
 
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.world.entity.player.Player;

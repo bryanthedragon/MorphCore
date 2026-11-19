@@ -1,8 +1,8 @@
-package bryanthedragon.morph.commands;
+package org.bryanthedragon.morph.commands;
 
-import bryanthedragon.morph.api.MorphAPI;
-import bryanthedragon.morph.api.MorphManager;
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.api.MorphAPI;
+import org.bryanthedragon.morph.api.MorphManager;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
 
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.StringArgumentType;

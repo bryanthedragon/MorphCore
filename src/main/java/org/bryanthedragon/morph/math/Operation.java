@@ -1,4 +1,4 @@
-package bryanthedragon.morph.math;
+package org.bryanthedragon.morph.math;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -7,7 +7,7 @@ import java.util.Set;
  * Operation enumeration
  * 
  * This enumeration provides different hardcoded enumerations of default 
- * math operators such addition, substraction, multiplication, division, 
+ * math operators such addition, subtraction, multiplication, division, 
  * modulo and power.
  * 
  * TODO: maybe convert to classes (for the sake of API)?
@@ -189,7 +189,7 @@ public enum Operation
     }
 
     /**
-     * String-ified name of this operation  
+     * Stringified name of this operation  
      */
     public final String sign;
 

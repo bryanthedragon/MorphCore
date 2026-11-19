@@ -1,4 +1,4 @@
-package bryanthedragon.morph.api.render;
+package org.bryanthedragon.morph.api.render;
 
 import com.mojang.blaze3d.platform.GlStateManager;
 

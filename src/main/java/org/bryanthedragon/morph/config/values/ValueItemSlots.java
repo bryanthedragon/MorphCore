@@ -1,9 +1,11 @@
-package bryanthedragon.morph.config.values;
+package org.bryanthedragon.morph.config.values;
 
 import com.google.gson.JsonElement;
 
-import bryanthedragon.morph.utils.interpolation.Interpolation;
+import org.bryanthedragon.morph.utils.interpolation.Interpolation;
+
 import io.netty.buffer.ByteBuf;
+
 import net.minecraft.nbt.Tag;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.nbt.CompoundTag;

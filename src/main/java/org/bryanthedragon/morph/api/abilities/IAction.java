@@ -1,8 +1,8 @@
-package bryanthedragon.morph.api.abilities;
+package org.bryanthedragon.morph.api.abilities;
 
 import javax.annotation.Nullable;
 
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
 
 import net.minecraft.world.entity.LivingEntity;
 

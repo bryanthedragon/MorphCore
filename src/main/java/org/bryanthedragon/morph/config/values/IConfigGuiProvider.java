@@ -1,7 +1,7 @@
-package bryanthedragon.morph.config.values;
+package org.bryanthedragon.morph.config.values;
 
-import bryanthedragon.morph.client.gui.framework.elements.GuiElement;
-import bryanthedragon.morph.config.gui.GuiConfigPanel;
+import org.bryanthedragon.morph.client.gui.framework.elements.GuiElement;
+import org.bryanthedragon.morph.config.gui.GuiConfigPanel;
 
 import net.minecraft.client.Minecraft;
 

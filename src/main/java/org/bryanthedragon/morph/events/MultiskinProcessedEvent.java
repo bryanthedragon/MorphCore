@@ -1,6 +1,6 @@
-package bryanthedragon.morph.events;
+package org.bryanthedragon.morph.events;
 
-import bryanthedragon.morph.utils.resources.MultiResourceLocation;
+import org.bryanthedragon.morph.utils.resources.MultiResourceLocation;
 
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;

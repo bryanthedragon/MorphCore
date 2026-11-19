@@ -1,14 +1,14 @@
-package bryanthedragon.morph.permissions.utils;
+package org.bryanthedragon.morph.utils.permissions;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.entity.player.Player;
 
 import java.util.function.Consumer;
 
-import bryanthedragon.morph.network.Dispatcher;
-import bryanthedragon.morph.network.morphlib.client.ClientHandlerAnswer;
-import bryanthedragon.morph.network.morphlib.common.PacketRequestPermission;
-import bryanthedragon.morph.permissions.category.PermissionCategory;
+import org.bryanthedragon.morph.network.Dispatcher;
+import org.bryanthedragon.morph.network.morphlib.client.ClientHandlerAnswer;
+import org.bryanthedragon.morph.network.morphlib.common.PacketRequestPermission;
+import org.bryanthedragon.morph.permissions.category.PermissionCategory;
 
 public class PermissionUtils
 {

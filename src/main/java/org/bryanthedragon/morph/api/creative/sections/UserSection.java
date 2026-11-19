@@ -1,18 +1,18 @@
-package bryanthedragon.morph.api.creative.sections;
+package org.bryanthedragon.morph.api.creative.sections;
 
-import bryanthedragon.morph.utils.json.JsonUtils;
-import bryanthedragon.morph.MorphCore;
-import bryanthedragon.morph.api.MorphManager;
-import bryanthedragon.morph.api.creative.categories.AcquiredCategory;
-import bryanthedragon.morph.api.creative.categories.MorphCategory;
-import bryanthedragon.morph.api.creative.categories.RecentCategory;
-import bryanthedragon.morph.api.creative.categories.UserCategory;
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
-import bryanthedragon.morph.capabilities.morphing.IMorphing;
-import bryanthedragon.morph.capabilities.morphing.Morphing;
-import bryanthedragon.morph.client.gui.creative.GuiCreativeMorphsList;
-import bryanthedragon.morph.client.gui.creative.GuiMorphSection;
-import bryanthedragon.morph.client.gui.creative.GuiUserSection;
+import org.bryanthedragon.morph.utils.json.JsonUtils;
+import org.bryanthedragon.morph.MorphCore;
+import org.bryanthedragon.morph.api.MorphManager;
+import org.bryanthedragon.morph.api.creative.categories.AcquiredCategory;
+import org.bryanthedragon.morph.api.creative.categories.MorphCategory;
+import org.bryanthedragon.morph.api.creative.categories.RecentCategory;
+import org.bryanthedragon.morph.api.creative.categories.UserCategory;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.capabilities.morphing.IMorphing;
+import org.bryanthedragon.morph.capabilities.morphing.Morphing;
+import org.bryanthedragon.morph.client.gui.creative.GuiCreativeMorphsList;
+import org.bryanthedragon.morph.client.gui.creative.GuiMorphSection;
+import org.bryanthedragon.morph.client.gui.creative.GuiUserSection;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;

@@ -1,12 +1,12 @@
-package bryanthedragon.morph.network.morphlib.common;
+package org.bryanthedragon.morph.network.morphlib.common;
 
 import io.netty.buffer.ByteBuf;
 
-import bryanthedragon.morph.client.gui.utils.keys.IKey;
-import bryanthedragon.morph.client.gui.utils.keys.KeyParser;
-import bryanthedragon.morph.network.morphlib.client.ClientHandlerConfirm;
-import bryanthedragon.morph.network.morphlib.server.ServerHandlerConfirm;
-import bryanthedragon.morph.network.IMessage;
+import org.bryanthedragon.morph.client.gui.utils.keys.IKey;
+import org.bryanthedragon.morph.client.gui.utils.keys.KeyParser;
+import org.bryanthedragon.morph.network.morphlib.client.ClientHandlerConfirm;
+import org.bryanthedragon.morph.network.morphlib.server.ServerHandlerConfirm;
+import org.bryanthedragon.morph.network.IMessage;
 
 import java.util.Map;
 import java.util.function.Consumer;

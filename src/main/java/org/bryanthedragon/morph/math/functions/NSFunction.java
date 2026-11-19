@@ -1,6 +1,6 @@
-package bryanthedragon.morph.math.functions;
+package org.bryanthedragon.morph.math.functions;
 
-import bryanthedragon.morph.math.IValue;
+import org.bryanthedragon.morph.math.IValue;
 
 
 /**

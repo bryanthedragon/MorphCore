@@ -1,4 +1,4 @@
-package bryanthedragon.morph.api.morphs.utils;
+package org.bryanthedragon.morph.api.morphs.utils;
 
 import net.minecraft.nbt.CompoundTag;
 

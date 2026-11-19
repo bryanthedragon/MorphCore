@@ -1,10 +1,10 @@
-package bryanthedragon.morph.utils.resources;
+package org.bryanthedragon.morph.utils.resources;
 
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferByte;
 import java.awt.image.DataBufferInt;
 
-import bryanthedragon.morph.utils.color.Color;
+import org.bryanthedragon.morph.utils.color.ColorUtils.Color;
 
 public class Pixels
 {

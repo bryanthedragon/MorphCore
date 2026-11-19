@@ -1,10 +1,11 @@
-package bryanthedragon.morph.entity;
+package org.bryanthedragon.morph.entity;
 
-import bryanthedragon.morph.MorphCore;
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
-import bryanthedragon.morph.capabilities.morphing.IMorphing;
-import bryanthedragon.morph.capabilities.morphing.Morphing;
-import bryanthedragon.morph.utils.obfuscated.ObfuscatedUtils.ObfuscatedName;
+import org.bryanthedragon.morph.MorphCore;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.capabilities.morphing.IMorphing;
+import org.bryanthedragon.morph.capabilities.morphing.Morphing;
+import org.bryanthedragon.morph.utils.obfuscated.ObfuscatedUtils.ObfuscatedName;
+
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;

@@ -1,13 +1,13 @@
-package bryanthedragon.morph.config.builder;
+package org.bryanthedragon.morph.config.builder;
 
-import bryanthedragon.morph.config.Config;
-import bryanthedragon.morph.config.values.Value;
-import bryanthedragon.morph.config.values.ValueBoolean;
-import bryanthedragon.morph.config.values.ValueDouble;
-import bryanthedragon.morph.config.values.ValueFloat;
-import bryanthedragon.morph.config.values.ValueInt;
-import bryanthedragon.morph.config.values.ValueRL;
-import bryanthedragon.morph.config.values.ValueString;
+import org.bryanthedragon.morph.config.Config;
+import org.bryanthedragon.morph.config.values.Value;
+import org.bryanthedragon.morph.config.values.ValueBoolean;
+import org.bryanthedragon.morph.config.values.ValueDouble;
+import org.bryanthedragon.morph.config.values.ValueFloat;
+import org.bryanthedragon.morph.config.values.ValueInt;
+import org.bryanthedragon.morph.config.values.ValueRL;
+import org.bryanthedragon.morph.config.values.ValueString;
 
 import net.minecraft.resources.ResourceLocation;
 

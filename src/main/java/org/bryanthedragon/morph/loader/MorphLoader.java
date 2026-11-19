@@ -1,6 +1,6 @@
-package bryanthedragon.morph.loader;
+package org.bryanthedragon.morph.loader;
 
-import bryanthedragon.morph.loader.state.MorphLoaderState;
+import org.bryanthedragon.morph.loader.state.MorphLoaderState;
 
 public final class MorphLoader
 {

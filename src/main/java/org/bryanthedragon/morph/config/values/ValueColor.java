@@ -1,10 +1,13 @@
-package bryanthedragon.morph.config.values;
+package org.bryanthedragon.morph.config.values;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonPrimitive;
+
 import io.netty.buffer.ByteBuf;
-import bryanthedragon.morph.utils.color.Color;
-import bryanthedragon.morph.utils.interpolation.Interpolation;
+
+import org.bryanthedragon.morph.utils.color.ColorUtils.Color;
+import org.bryanthedragon.morph.utils.interpolation.Interpolation;
+
 import net.minecraft.nbt.Tag;
 import net.minecraft.nbt.IntTag;
 

@@ -1,13 +1,13 @@
-package bryanthedragon.morph.commands.config;
+package org.bryanthedragon.morph.commands.config;
 
 import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.context.CommandContext;
 
-import bryanthedragon.morph.MorphLib;
-import bryanthedragon.morph.config.Config;
-import bryanthedragon.morph.config.ConfigManager;
-import bryanthedragon.morph.config.values.IServerValue;
-import bryanthedragon.morph.config.values.Value;
+import org.bryanthedragon.morph.MorphLib;
+import org.bryanthedragon.morph.config.Config;
+import org.bryanthedragon.morph.config.ConfigManager;
+import org.bryanthedragon.morph.config.values.IServerValue;
+import org.bryanthedragon.morph.config.values.Value;
 
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.network.chat.Component;

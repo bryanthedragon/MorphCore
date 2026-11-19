@@ -1,4 +1,4 @@
-package bryanthedragon.morph.network;
+package org.bryanthedragon.morph.network;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;

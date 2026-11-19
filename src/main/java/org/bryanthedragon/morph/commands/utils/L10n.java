@@ -1,4 +1,4 @@
-package bryanthedragon.morph.commands.utils;
+package org.bryanthedragon.morph.commands.utils;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.commands.CommandSourceStack;

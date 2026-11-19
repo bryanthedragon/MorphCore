@@ -1,9 +1,9 @@
-package bryanthedragon.morph.bodypart;
+package org.bryanthedragon.morph.bodypart;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
 
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;

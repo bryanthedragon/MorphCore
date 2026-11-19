@@ -1,26 +1,32 @@
-package bryanthedragon.morph.api.utils.entity;
+package org.bryanthedragon.morph.api.utils.entity;
 
 import java.util.List;
-import java.util.Optional;
 
+import javax.annotation.Nullable;
+
+import com.google.common.base.Predicate;
 import com.google.common.collect.Lists;
 
-import bryanthedragon.morph.api.models.IMorphProvider;
-import bryanthedragon.morph.api.morphs.main.AbstractMorph;
-import bryanthedragon.morph.api.morphs.main.EntityMorph;
-import bryanthedragon.morph.capabilities.morphing.IMorphing;
-import bryanthedragon.morph.capabilities.morphing.MorphingProvider;
+import org.bryanthedragon.morph.api.models.IMorphProvider;
+import org.bryanthedragon.morph.api.morphs.main.AbstractMorph;
+import org.bryanthedragon.morph.api.morphs.main.EntityMorph;
+import org.bryanthedragon.morph.capabilities.morphing.IMorphing;
+import org.bryanthedragon.morph.capabilities.morphing.MorphingProvider;
 
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.nbt.StringTag;
-import net.minecraft.nbt.Tag;
-import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.HitResult;
+import net.minecraft.world.level.ClipContext;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.StringTag;
+import net.minecraft.nbt.NumericTag;
+import net.minecraft.nbt.Tag;
+
+import net.minecraftforge.common.util.LazyOptional;
 
 /**
  * Entity utilities methods
@@ -118,9 +124,9 @@ public class EntityUtils
                 return false;
             }
 
-            /* We check only strings and primitives, lists and compounds aren't 
+            /* We check only strings and primitives, lists and compounds aren't
              * concern of mine */
-            if (!(aTag instanceof net.minecraft.nbt.NumericTag) && !(aTag instanceof StringTag))
+            if (!(aTag instanceof NumericTag) && !(aTag instanceof StringTag))
             {
                 continue;
             }
@@ -176,11 +182,11 @@ public class EntityUtils
         }
         else
         {
-            IMorphing cap = entity.getCapability(MorphingProvider.MORPHING_CAP, null).orElse(null);
+            LazyOptional<IMorphing> cap = entity.getCapability(MorphingProvider.MORPHING_CAP, null);
 
-            if (cap != null)
+            if (cap.isPresent())
             {
-                return cap.getCurrentMorph();
+                return cap.map(IMorphing::getCurrentMorph).orElse(null);
             }
         }
 
@@ -208,7 +214,7 @@ public class EntityUtils
         {
             return "riding";
         }
-        else if (entity.isCrouching())
+        else if (entity.isShiftKeyDown())
         {
             return sneak && !empty ? custom : "sneaking";
         }
@@ -226,23 +232,28 @@ public class EntityUtils
     {
         double blockDistance = maxReach;
 
-        net.minecraft.world.phys.HitResult result = rayTrace(input, maxReach, 1.0F);
-        Vec3 eyes = input.getEyePosition(1.0F);
+        HitResult result = rayTrace(input, maxReach, 1.0F);
+        Vec3 eyes = new Vec3(input.getX(), input.getY() + input.getEyeHeight(), input.getZ());
 
         if (result != null)
         {
             blockDistance = result.getLocation().distanceTo(eyes);
         }
 
-        Vec3 look = input.getViewVector(1.0F);
+        Vec3 look = input.getLookAngle();
         Vec3 max = eyes.add(look.scale(maxReach));
         Entity target = null;
 
         float area = 1.0F;
 
-        List<Entity> list = input.level().getEntities(input,
-            input.getBoundingBox().expandTowards(look.scale(maxReach)).inflate(area),
-            entity -> entity.canBeCollidedWith());
+        List<Entity> list = input.level().getEntities(input, input.getBoundingBox().move(look.scale(maxReach)).inflate(area, area, area), new Predicate<Entity>()
+        {
+            @Override
+            public boolean apply(@Nullable Entity entity)
+            {
+                return entity != null && entity.canBeCollidedWith();
+            }
+        });
 
         double entityDistance = blockDistance;
 
@@ -256,7 +267,7 @@ public class EntityUtils
             }
 
             AABB aabb = entity.getBoundingBox().inflate(entity.getPickRadius());
-            Optional<Vec3> intercept = aabb.clip(eyes, max);
+            java.util.Optional<Vec3> interceptOpt = aabb.clip(eyes, max);
 
             if (aabb.contains(eyes))
             {
@@ -266,9 +277,10 @@ public class EntityUtils
                     entityDistance = 0.0D;
                 }
             }
-            else if (intercept.isPresent())
+            else if (interceptOpt.isPresent())
             {
-                double eyesDistance = eyes.distanceTo(intercept.get());
+                Vec3 intercept = interceptOpt.get();
+                double eyesDistance = eyes.distanceTo(intercept);
 
                 if (eyesDistance < entityDistance || entityDistance == 0.0D)
                 {
@@ -295,10 +307,11 @@ public class EntityUtils
      * This method is extracted from {@link Entity} class, because it was marked
      * as client side only code.
      */
-    public static net.minecraft.world.phys.HitResult rayTrace(Entity input, double blockReachDistance, float partialTicks)
+    public static HitResult rayTrace(Entity input, double blockReachDistance, float partialTicks)
     {
-        Vec3 eyePos = input.getEyePosition(partialTicks);
-        Vec3 eyeReach = eyePos.add(input.getViewVector(partialTicks).scale(blockReachDistance));
+        Vec3 eyePos = new Vec3(input.getX(), input.getY() + input.getEyeHeight(), input.getZ());
+        Vec3 eyeDir = input.getLookAngle();
+        Vec3 eyeReach = eyePos.add(eyeDir.scale(blockReachDistance));
 
         return input.level().clip(new ClipContext(eyePos, eyeReach, ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, input));
     }
@@ -323,7 +336,7 @@ public class EntityUtils
                 width = 0.2F;
                 height = 0.2F;
             }
-            else if (player.isCrouching())
+            else if (player.isShiftKeyDown())
             {
                 width = 0.6F;
                 height = 1.65F;
